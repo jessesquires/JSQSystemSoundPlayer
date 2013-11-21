@@ -11,6 +11,8 @@
 #import "JSQSystemSoundPlayer.h"
 
 NSString * const kJSQSystemSoundTypeCAF = @"caf";
+NSString * const kJSQSystemSoundTypeAIF = @"aif";
+NSString * const kJSQSystemSoundTypeWAV = @"wav";
 
 @interface JSQSystemSoundPlayer ()
 
