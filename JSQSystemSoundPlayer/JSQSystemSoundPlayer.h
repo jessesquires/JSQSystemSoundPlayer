@@ -11,9 +11,21 @@
 #import <Foundation/Foundation.h>
 #import <AudioToolbox/AudioToolbox.h>
 
+/**
+ *  String constant for .caf audio file extension.
+ */
 extern NSString * const kJSQSystemSoundTypeCAF;
+
+/**
+ *  String constant for .aif audio file extension.
+ */
 extern NSString * const kJSQSystemSoundTypeAIF;
+
+/**
+ *  String constant for .wav audio file extension.
+ */
 extern NSString * const kJSQSystemSoundTypeWAV;
+
 
 @interface JSQSystemSoundPlayer : NSObject
 
