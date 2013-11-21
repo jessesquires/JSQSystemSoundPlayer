@@ -1,0 +1,8 @@
+language: objective-c
+
+script: 
+- xctool -project SoundPlayerDemo.xcodeproj -scheme SoundPlayerDemo -sdk iphonesimulator -arch i386 ONLY_ACTIVE_ARCH=NO build test
+
+branches:
+only:
+- master
