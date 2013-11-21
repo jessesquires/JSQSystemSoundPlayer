@@ -12,4 +12,6 @@
 
 @interface JSQViewController : UIViewController
 
+- (IBAction)playPressed:(id)sender;
+
 @end

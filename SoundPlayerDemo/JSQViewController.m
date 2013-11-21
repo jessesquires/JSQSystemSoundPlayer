@@ -12,4 +12,9 @@
 
 @implementation JSQViewController
 
+- (IBAction)playPressed:(id)sender
+{
+    
+}
+
 @end
