@@ -1,6 +1,22 @@
 # JSQSystemSoundPlayer 
 
-A fancy Obj-C wrapper for iOS System Sound Services.
+A fancy Obj-C wrapper for iOS [System Sound Services](https://developer.apple.com/library/ios/documentation/AudioToolbox/Reference/SystemSoundServicesReference/Reference/reference.html).
+
+This class is a light-weight, drop-in component to play sound effects, or other short sounds in your iOS app. 
+To determine your audio needs, see [Best Practices for iOS Audio](https://developer.apple.com/library/ios/DOCUMENTATION/AudioVideo/Conceptual/MultimediaPG/UsingAudio/UsingAudio.html#//apple_ref/doc/uid/TP40009767-CH2-SW10).
+Or, read the tl;dr version:
+
+>*When your sole audio need is to play alerts and user-interface sound effects, use Core Audio’s System Sound Services.*
+>
+>Your sound files must be:
+>
+>* No longer than 30 seconds in duration
+>* In linear PCM or IMA4 (IMA/ADPCM) format
+>* Packaged in a `.caf`, `.aif`, or `.wav` file
+
+If this does not fit your needs, then this control is not for you! 
+See [AVAudioPlayer](https://developer.apple.com/library/ios/DOCUMENTATION/AVFoundation/Reference/AVAudioPlayerClassReference/Reference/Reference.html), instead.
+
 
 ## Credits
 
