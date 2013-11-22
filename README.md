@@ -1,4 +1,4 @@
-# JSQSystemSoundPlayer [![Build Status](https://secure.travis-ci.org/jessesquires/JSQSystemSoundPlayer.png)](http://travis-ci.org/jessesquires/JSQSystemSoundPlayer)
+# JSQSystemSoundPlayer [![Build Status](https://secure.travis-ci.org/jessesquires/JSQSystemSoundPlayer.png)](http://travis-ci.org/jessesquires/JSQSystemSoundPlayer) [![Version Status](https://cocoapod-badges.herokuapp.com/v/JSQSystemSoundPlayer/badge.png)][docsLink]
 
 A fancy Obj-C wrapper for iOS [System Sound Services](https://developer.apple.com/library/ios/documentation/AudioToolbox/Reference/SystemSoundServicesReference/Reference/reference.html).
 
