@@ -29,6 +29,7 @@ extern NSString * const kJSQSystemSoundTypeWAV;
 
 @interface JSQSystemSoundPlayer : NSObject
 
+
 + (JSQSystemSoundPlayer *)sharedPlayer;
 
 - (void)playSoundWithName:(NSString *)filename extension:(NSString *)ext;

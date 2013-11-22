@@ -24,6 +24,8 @@
 		881C49901834CC6200FED604 /* JSQSystemSoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 881C498D1834CC6200FED604 /* JSQSystemSoundPlayer.m */; };
 		881C49911834CC6200FED604 /* JSQSystemSoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 881C498D1834CC6200FED604 /* JSQSystemSoundPlayer.m */; };
 		881C49931834CD1500FED604 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 881C49921834CD1500FED604 /* AudioToolbox.framework */; };
+		888C81E6183F2B5400F326C2 /* Basso.aif in Resources */ = {isa = PBXBuildFile; fileRef = 888C81E5183F2B5400F326C2 /* Basso.aif */; };
+		888C81E7183F2B5400F326C2 /* Basso.aif in Resources */ = {isa = PBXBuildFile; fileRef = 888C81E5183F2B5400F326C2 /* Basso.aif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,7 @@
 		881C498C1834CC6200FED604 /* JSQSystemSoundPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSQSystemSoundPlayer.h; sourceTree = "<group>"; };
 		881C498D1834CC6200FED604 /* JSQSystemSoundPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSQSystemSoundPlayer.m; sourceTree = "<group>"; };
 		881C49921834CD1500FED604 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		888C81E5183F2B5400F326C2 /* Basso.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = Basso.aif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,12 +124,13 @@
 		881C495A1834CB9900FED604 /* SoundPlayerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				888C81E5183F2B5400F326C2 /* Basso.aif */,
+				881C496C1834CB9A00FED604 /* Images.xcassets */,
 				881C49631834CB9900FED604 /* JSQAppDelegate.h */,
 				881C49641834CB9900FED604 /* JSQAppDelegate.m */,
-				881C49661834CB9A00FED604 /* Main.storyboard */,
 				881C49691834CB9A00FED604 /* JSQViewController.h */,
 				881C496A1834CB9A00FED604 /* JSQViewController.m */,
-				881C496C1834CB9A00FED604 /* Images.xcassets */,
+				881C49661834CB9A00FED604 /* Main.storyboard */,
 				881C495B1834CB9900FED604 /* Supporting Files */,
 			);
 			path = SoundPlayerDemo;
@@ -250,6 +254,7 @@
 				881C496D1834CB9A00FED604 /* Images.xcassets in Resources */,
 				881C495F1834CB9900FED604 /* InfoPlist.strings in Resources */,
 				881C49681834CB9A00FED604 /* Main.storyboard in Resources */,
+				888C81E6183F2B5400F326C2 /* Basso.aif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				881C497E1834CB9B00FED604 /* InfoPlist.strings in Resources */,
+				888C81E7183F2B5400F326C2 /* Basso.aif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

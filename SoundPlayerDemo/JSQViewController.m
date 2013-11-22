@@ -9,12 +9,14 @@
 //
 
 #import "JSQViewController.h"
+#import "JSQSystemSoundPlayer.h"
 
 @implementation JSQViewController
 
 - (IBAction)playPressed:(id)sender
 {
-    
+    [[JSQSystemSoundPlayer sharedPlayer] playSoundWithName:@"Basso"
+                                                 extension:kJSQSystemSoundTypeAIF];
 }
 
 @end
