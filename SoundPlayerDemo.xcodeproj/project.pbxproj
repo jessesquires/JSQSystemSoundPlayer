@@ -21,9 +21,9 @@
 		881C49761834CB9A00FED604 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 881C49581834CB9900FED604 /* UIKit.framework */; };
 		881C497E1834CB9B00FED604 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 881C497C1834CB9B00FED604 /* InfoPlist.strings */; };
 		881C49801834CB9B00FED604 /* SoundPlayerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 881C497F1834CB9B00FED604 /* SoundPlayerDemoTests.m */; };
-		881C49901834CC6200FED604 /* JSQSystemSoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 881C498D1834CC6200FED604 /* JSQSystemSoundPlayer.m */; };
-		881C49911834CC6200FED604 /* JSQSystemSoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 881C498D1834CC6200FED604 /* JSQSystemSoundPlayer.m */; };
 		881C49931834CD1500FED604 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 881C49921834CD1500FED604 /* AudioToolbox.framework */; };
+		88484DE8183F350C00242F9E /* JSQSystemSoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 88484DE7183F350C00242F9E /* JSQSystemSoundPlayer.m */; };
+		88484DE9183F350C00242F9E /* JSQSystemSoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 88484DE7183F350C00242F9E /* JSQSystemSoundPlayer.m */; };
 		888C81E6183F2B5400F326C2 /* Basso.aif in Resources */ = {isa = PBXBuildFile; fileRef = 888C81E5183F2B5400F326C2 /* Basso.aif */; };
 		888C81E7183F2B5400F326C2 /* Basso.aif in Resources */ = {isa = PBXBuildFile; fileRef = 888C81E5183F2B5400F326C2 /* Basso.aif */; };
 /* End PBXBuildFile section */
@@ -58,9 +58,9 @@
 		881C497B1834CB9B00FED604 /* SoundPlayerDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SoundPlayerDemoTests-Info.plist"; sourceTree = "<group>"; };
 		881C497D1834CB9B00FED604 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		881C497F1834CB9B00FED604 /* SoundPlayerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoundPlayerDemoTests.m; sourceTree = "<group>"; };
-		881C498C1834CC6200FED604 /* JSQSystemSoundPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSQSystemSoundPlayer.h; sourceTree = "<group>"; };
-		881C498D1834CC6200FED604 /* JSQSystemSoundPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSQSystemSoundPlayer.m; sourceTree = "<group>"; };
 		881C49921834CD1500FED604 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		88484DE6183F350C00242F9E /* JSQSystemSoundPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSQSystemSoundPlayer.h; sourceTree = "<group>"; };
+		88484DE7183F350C00242F9E /* JSQSystemSoundPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSQSystemSoundPlayer.m; sourceTree = "<group>"; };
 		888C81E5183F2B5400F326C2 /* Basso.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = Basso.aif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,7 +92,6 @@
 		881C49481834CB9900FED604 = {
 			isa = PBXGroup;
 			children = (
-				881C49891834CC6200FED604 /* JSQSystemSoundPlayer */,
 				881C495A1834CB9900FED604 /* SoundPlayerDemo */,
 				881C49791834CB9B00FED604 /* SoundPlayerDemoTests */,
 				881C49531834CB9900FED604 /* Frameworks */,
@@ -124,6 +123,7 @@
 		881C495A1834CB9900FED604 /* SoundPlayerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				88484DE4183F350C00242F9E /* JSQSystemSoundPlayer */,
 				888C81E5183F2B5400F326C2 /* Basso.aif */,
 				881C496C1834CB9A00FED604 /* Images.xcassets */,
 				881C49631834CB9900FED604 /* JSQAppDelegate.h */,
@@ -165,13 +165,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		881C49891834CC6200FED604 /* JSQSystemSoundPlayer */ = {
+		88484DE4183F350C00242F9E /* JSQSystemSoundPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				881C498C1834CC6200FED604 /* JSQSystemSoundPlayer.h */,
-				881C498D1834CC6200FED604 /* JSQSystemSoundPlayer.m */,
+				88484DE5183F350C00242F9E /* Classes */,
 			);
 			path = JSQSystemSoundPlayer;
+			sourceTree = SOURCE_ROOT;
+		};
+		88484DE5183F350C00242F9E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				88484DE6183F350C00242F9E /* JSQSystemSoundPlayer.h */,
+				88484DE7183F350C00242F9E /* JSQSystemSoundPlayer.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,9 +282,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				881C49901834CC6200FED604 /* JSQSystemSoundPlayer.m in Sources */,
 				881C49611834CB9900FED604 /* main.m in Sources */,
 				881C49651834CB9900FED604 /* JSQAppDelegate.m in Sources */,
+				88484DE8183F350C00242F9E /* JSQSystemSoundPlayer.m in Sources */,
 				881C496B1834CB9A00FED604 /* JSQViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,7 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				881C49911834CC6200FED604 /* JSQSystemSoundPlayer.m in Sources */,
+				88484DE9183F350C00242F9E /* JSQSystemSoundPlayer.m in Sources */,
 				881C49801834CB9B00FED604 /* SoundPlayerDemoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
