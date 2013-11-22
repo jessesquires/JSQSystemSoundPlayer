@@ -19,11 +19,15 @@ NSString * const kJSQSystemSoundTypeWAV = @"wav";
 @property (strong, nonatomic) NSMutableDictionary *sounds;
 
 - (SystemSoundID)soundIDForFilename:(NSString *)filenameKey;
+
 - (void)addSoundIDForAudioFileWithName:(NSString *)filename
                              extension:(NSString *)ext;
+
 - (SystemSoundID)createSoundIDWithName:(NSString *)filename
                              extension:(NSString *)ext;
+
 - (void)unloadSoundIDs;
+
 - (void)didReceiveMemoryWarningNotification:(NSNotification *)notification;
 
 @end
@@ -115,7 +119,7 @@ NSString * const kJSQSystemSoundTypeWAV = @"wav";
         OSStatus error = AudioServicesCreateSystemSoundID((__bridge CFURLRef)fileURL, &soundID);
 
         if(error) {
-            NSLog(@"AudioServicesCreateSystemSoundID error code: %d", (NSInteger)error);
+            NSLog(@"AudioServicesCreateSystemSoundID error code: %d", (int)error);
             return 0;
         }
         else {
