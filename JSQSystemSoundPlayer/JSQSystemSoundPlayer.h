@@ -26,12 +26,24 @@ extern NSString * const kJSQSystemSoundTypeAIF;
  */
 extern NSString * const kJSQSystemSoundTypeWAV;
 
-
+/**
+ *  The `JSQSystemSoundPlayer` class enables you to play sound effects, alert sounds, or other short sounds. It lazily loads and caches all `SystemSoundID`s and purges them upon receiving the `UIApplicationDidReceiveMemoryWarningNotification` notification.
+ */
 @interface JSQSystemSoundPlayer : NSObject
 
-
+/**
+ *  Returns the shared `JSQSystemSoundPlayer` object. This method always returns the same sound system player object.
+ *
+ *  @return An initialized `JSQSystemSoundPlayer` object if successful, `nil` otherwise.
+ */
 + (JSQSystemSoundPlayer *)sharedPlayer;
 
-- (void)playSoundWithName:(NSString *)filename extension:(NSString *)ext;
+/**
+ *  Plays an audio file with the given filename and extension. The system sound player will lazily initialize and load the file before playing it, and then cache its corresponding `SystemSoundID`. If this file has previously been played, it will be loaded from cache and played immediately.
+ *
+ *  @param filename  A string containing the base name of the audio file to play.
+ *  @param extension A string containing the extension of the audio file to play. This parameter must be one of `kJSQSystemSoundTypeCAF`, `kJSQSystemSoundTypeAIF`, or `kJSQSystemSoundTypeWAV`.
+ */
+- (void)playSoundWithName:(NSString *)filename extension:(NSString *)extension;
 
 @end
