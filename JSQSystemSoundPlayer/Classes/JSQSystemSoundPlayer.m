@@ -169,6 +169,11 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 
 #pragma mark - Public API
 
+- (void)stopAllSoundsImmediately
+{
+    [self unloadSoundIDs];
+}
+
 - (void)toggleSoundPlayerOn:(BOOL)on
 {
     _on = on;
