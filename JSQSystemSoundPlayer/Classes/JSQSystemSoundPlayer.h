@@ -46,4 +46,10 @@ extern NSString * const kJSQSystemSoundTypeWAV;
  */
 - (void)playSoundWithName:(NSString *)filename extension:(NSString *)extension;
 
+/** Vibrate the device
+ *  - iOS only
+ *  - on a device with no vibration capability (like iPod Touch) this will do nothing
+ */
+- (void)vibrate;
+
 @end
