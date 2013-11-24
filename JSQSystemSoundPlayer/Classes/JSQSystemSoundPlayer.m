@@ -87,6 +87,14 @@ NSString * const kJSQSystemSoundTypeWAV = @"wav";
     }
 }
 
+- (void)vibrate {
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+}
+
+- (void)stopAllSoundsImmediately {
+    [self unloadSoundIDs];
+}
+
 #pragma mark - Utilities
 
 - (SystemSoundID)soundIDForFilename:(NSString *)filenameKey
