@@ -87,12 +87,20 @@ NSString * const kJSQSystemSoundTypeWAV = @"wav";
     }
 }
 
+- (void)vibrate {
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+}
+
+- (void)stopAllSoundsImmediately {
+    [self unloadSoundIDs];
+}
+
 #pragma mark - Utilities
 
 - (SystemSoundID)soundIDForFilename:(NSString *)filenameKey
 {
     NSData *soundData = [self.sounds objectForKey:filenameKey];
-    SystemSoundID soundID;
+    SystemSoundID soundID = 0;
     [soundData getBytes:&soundID length:sizeof(SystemSoundID)];
     return soundID;
 }
