@@ -99,6 +99,14 @@
     XCTAssertNoThrow([self.sharedPlayer vibrate], @"should vibrate device and not throw an exception");
 }
 
+- (void)testStopAllSoundsImmediately
+{
+    [self.sharedPlayer addSoundIDForAudioFileWithName:self.filename extension:kJSQSystemSoundTypeAIF];
+    XCTAssertEqual(1ul, [self.sharedPlayer.sounds count], @"should have 1 sound loaded");
+    XCTAssertNoThrow([self.sharedPlayer stopAllSoundsImmediately], @"should not throw an exception");
+    XCTAssertEqual(0ul, [self.sharedPlayer.sounds count], @"should have all sounds unloaded");
+}
+
 
 - (void)testMemoryWarning
 {

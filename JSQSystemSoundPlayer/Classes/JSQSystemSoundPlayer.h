@@ -52,4 +52,8 @@ extern NSString * const kJSQSystemSoundTypeWAV;
  */
 - (void)vibrate;
 
+/** Stops all currently playing sounds
+ *  - causes release of previously loaded sounds from memory
+ */
+- (void)stopAllSoundsImmediately;
 @end
