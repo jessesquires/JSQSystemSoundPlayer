@@ -94,6 +94,12 @@
     XCTAssert(retrievedSoundID, @"SoundID should not be nil");
 }
 
+- (void)testVibrate
+{
+    XCTAssertNoThrow([self.sharedPlayer vibrate], @"should vibrate device and not throw an exception");
+}
+
+
 - (void)testMemoryWarning
 {
 
