@@ -89,6 +89,7 @@
 
 - (void)testRetrievingSounds
 {
+    [self.sharedPlayer addSoundIDForAudioFileWithName:self.filename extension:kJSQSystemSoundTypeAIF];
     SystemSoundID retrievedSoundID = [self.sharedPlayer soundIDForFilename:self.filename];
     XCTAssert(retrievedSoundID, @"SoundID should not be nil");
 }
