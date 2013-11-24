@@ -100,7 +100,7 @@ NSString * const kJSQSystemSoundTypeWAV = @"wav";
 - (SystemSoundID)soundIDForFilename:(NSString *)filenameKey
 {
     NSData *soundData = [self.sounds objectForKey:filenameKey];
-    SystemSoundID soundID;
+    SystemSoundID soundID = 0;
     [soundData getBytes:&soundID length:sizeof(SystemSoundID)];
     return soundID;
 }
