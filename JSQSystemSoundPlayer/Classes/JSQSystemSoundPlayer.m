@@ -18,13 +18,17 @@ NSString * const kJSQSystemSoundTypeWAV = @"wav";
 
 @property (strong, nonatomic) NSMutableDictionary *sounds;
 
+- (void)playSoundWithName:(NSString *)filename
+                extension:(NSString *)extension
+                  isAlert:(BOOL)isAlert;
+
 - (SystemSoundID)soundIDForFilename:(NSString *)filenameKey;
 
 - (void)addSoundIDForAudioFileWithName:(NSString *)filename
-                             extension:(NSString *)ext;
+                             extension:(NSString *)extension;
 
 - (SystemSoundID)createSoundIDWithName:(NSString *)filename
-                             extension:(NSString *)ext;
+                             extension:(NSString *)extension;
 
 - (void)unloadSoundIDs;
 
@@ -74,17 +78,43 @@ NSString * const kJSQSystemSoundTypeWAV = @"wav";
 
 #pragma mark - Sounds
 
-- (void)playSoundWithName:(NSString *)filename extension:(NSString *)ext
+- (void)playSoundWithName:(NSString *)filename
+                extension:(NSString *)extension
+                  isAlert:(BOOL)isAlert
 {
     if(![self.sounds objectForKey:filename]) {
-        NSLog(@"Need to add sound: %@.%@", filename, ext);
-        [self addSoundIDForAudioFileWithName:filename extension:ext];
+        NSLog(@"Need to add sound: %@.%@", filename, extension);
+        [self addSoundIDForAudioFileWithName:filename extension:extension];
     }
 
     SystemSoundID soundID = [self soundIDForFilename:filename];
     if(soundID) {
-        AudioServicesPlaySystemSound(soundID);
+        if(isAlert) {
+            AudioServicesPlaySystemSound(soundID);
+        }
+        else {
+            AudioServicesPlayAlertSound(soundID);
+        }
     }
+}
+
+- (void)playSoundWithName:(NSString *)filename extension:(NSString *)extension
+{
+    [self playSoundWithName:filename
+                  extension:extension
+                    isAlert:NO];
+}
+
+- (void)playAlertSoundWithName:(NSString *)filename extension:(NSString *)extension
+{
+    [self playSoundWithName:filename
+                  extension:extension
+                    isAlert:YES];
+}
+
+- (void)playVibrateSound
+{
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 }
 
 #pragma mark - Utilities
@@ -98,9 +128,10 @@ NSString * const kJSQSystemSoundTypeWAV = @"wav";
 }
 
 - (void)addSoundIDForAudioFileWithName:(NSString *)filename
-                             extension:(NSString *)ext
+                             extension:(NSString *)extension
 {
-    SystemSoundID soundID = [self createSoundIDWithName:filename extension:ext];
+    SystemSoundID soundID = [self createSoundIDWithName:filename
+                                              extension:extension];
     if(soundID) {
         NSData *data = [NSData dataWithBytes:&soundID length:sizeof(SystemSoundID)];
         [self.sounds setObject:data forKey:filename];
@@ -108,11 +139,12 @@ NSString * const kJSQSystemSoundTypeWAV = @"wav";
 }
 
 - (SystemSoundID)createSoundIDWithName:(NSString *)filename
-                             extension:(NSString *)ext
+                             extension:(NSString *)extension
 {
-    NSLog(@"Creating soundID for %@.%@", filename, ext);
+    NSLog(@"Creating soundID for %@.%@", filename, extension);
 
-    NSURL *fileURL = [[NSBundle mainBundle] URLForResource:filename withExtension:ext];
+    NSURL *fileURL = [[NSBundle mainBundle] URLForResource:filename
+                                             withExtension:extension];
 
     if([[NSFileManager defaultManager] fileExistsAtPath:[fileURL path]]) {
         SystemSoundID soundID;
