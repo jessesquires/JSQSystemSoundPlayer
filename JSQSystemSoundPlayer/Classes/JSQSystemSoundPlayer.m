@@ -85,6 +85,10 @@ NSString * const kJSQSystemSoundTypeWAV = @"wav";
                 extension:(NSString *)extension
                   isAlert:(BOOL)isAlert
 {
+    if(!filename || !extension) {
+        return;
+    }
+    
     if(![self.sounds objectForKey:filename]) {
         NSLog(@"Need to add sound: %@.%@", filename, extension);
         [self addSoundIDForAudioFileWithName:filename extension:extension];
