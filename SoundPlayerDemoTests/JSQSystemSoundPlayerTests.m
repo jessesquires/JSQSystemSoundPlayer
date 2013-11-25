@@ -9,6 +9,9 @@
 //
 
 #import <XCTest/XCTest.h>
+
+#import <AudioToolbox/AudioToolbox.h>
+
 #import "JSQSystemSoundPlayer.h"
 
 
