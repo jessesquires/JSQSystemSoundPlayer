@@ -20,7 +20,7 @@
 		881C49751834CB9A00FED604 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 881C49541834CB9900FED604 /* Foundation.framework */; };
 		881C49761834CB9A00FED604 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 881C49581834CB9900FED604 /* UIKit.framework */; };
 		881C497E1834CB9B00FED604 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 881C497C1834CB9B00FED604 /* InfoPlist.strings */; };
-		881C49801834CB9B00FED604 /* SoundPlayerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 881C497F1834CB9B00FED604 /* SoundPlayerDemoTests.m */; };
+		881C49801834CB9B00FED604 /* JSQSystemSoundPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 881C497F1834CB9B00FED604 /* JSQSystemSoundPlayerTests.m */; };
 		881C49931834CD1500FED604 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 881C49921834CD1500FED604 /* AudioToolbox.framework */; };
 		88484DE8183F350C00242F9E /* JSQSystemSoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 88484DE7183F350C00242F9E /* JSQSystemSoundPlayer.m */; };
 		88484DE9183F350C00242F9E /* JSQSystemSoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 88484DE7183F350C00242F9E /* JSQSystemSoundPlayer.m */; };
@@ -58,7 +58,7 @@
 		881C49731834CB9A00FED604 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		881C497B1834CB9B00FED604 /* SoundPlayerDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SoundPlayerDemoTests-Info.plist"; sourceTree = "<group>"; };
 		881C497D1834CB9B00FED604 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		881C497F1834CB9B00FED604 /* SoundPlayerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoundPlayerDemoTests.m; sourceTree = "<group>"; };
+		881C497F1834CB9B00FED604 /* JSQSystemSoundPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSQSystemSoundPlayerTests.m; sourceTree = "<group>"; };
 		881C49921834CD1500FED604 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		88484DE6183F350C00242F9E /* JSQSystemSoundPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSQSystemSoundPlayer.h; sourceTree = "<group>"; };
 		88484DE7183F350C00242F9E /* JSQSystemSoundPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSQSystemSoundPlayer.m; sourceTree = "<group>"; };
@@ -94,6 +94,7 @@
 		881C49481834CB9900FED604 = {
 			isa = PBXGroup;
 			children = (
+				88484DE4183F350C00242F9E /* JSQSystemSoundPlayer */,
 				881C495A1834CB9900FED604 /* SoundPlayerDemo */,
 				881C49791834CB9B00FED604 /* SoundPlayerDemoTests */,
 				881C49531834CB9900FED604 /* Frameworks */,
@@ -125,7 +126,6 @@
 		881C495A1834CB9900FED604 /* SoundPlayerDemo */ = {
 			isa = PBXGroup;
 			children = (
-				88484DE4183F350C00242F9E /* JSQSystemSoundPlayer */,
 				888C81E5183F2B5400F326C2 /* Basso.aif */,
 				88EEDE7C1842FB5C00A12E01 /* Funk.aiff */,
 				881C496C1834CB9A00FED604 /* Images.xcassets */,
@@ -153,7 +153,7 @@
 		881C49791834CB9B00FED604 /* SoundPlayerDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				881C497F1834CB9B00FED604 /* SoundPlayerDemoTests.m */,
+				881C497F1834CB9B00FED604 /* JSQSystemSoundPlayerTests.m */,
 				881C497A1834CB9B00FED604 /* Supporting Files */,
 			);
 			path = SoundPlayerDemoTests;
@@ -298,7 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88484DE9183F350C00242F9E /* JSQSystemSoundPlayer.m in Sources */,
-				881C49801834CB9B00FED604 /* SoundPlayerDemoTests.m in Sources */,
+				881C49801834CB9B00FED604 /* JSQSystemSoundPlayerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
