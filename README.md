@@ -17,11 +17,14 @@ Or, read the tl;dr version:
 If this does not fit your needs, then this control is not for you! 
 See [AVAudioPlayer](https://developer.apple.com/library/ios/DOCUMENTATION/AVFoundation/Reference/AVAudioPlayerClassReference/Reference/Reference.html), instead.
 
+![JSQSystemSoundPlayer Screenshot][imgLink] 
+
 ## Features
 
 * Play sound effects and alert sounds with a single line of code
+* "Play" vibration (if available)
 * Sweet and efficient memory management
-* Caches sounds (`SystemSoundID`s) and purges on memory warning
+* Caches sounds (`SystemSoundID` objects) and purges on memory warning
 
 ## Requirements
 
@@ -50,7 +53,7 @@ See [AVAudioPlayer](https://developer.apple.com/library/ios/DOCUMENTATION/AVFoun
 
 ````
 
-And that's all! Extension string constants provided for you: `kJSQSystemSoundTypeCAF`, `kJSQSystemSoundTypeAIF`, `kJSQSystemSoundTypeWAV`.
+And that's all! Extension string constants provided for you: `kJSQSystemSoundTypeCAF`, `kJSQSystemSoundTypeAIF`, `kJSQSystemSoundTypeAIFF`, `kJSQSystemSoundTypeWAV`.
 
 Also see the included demo project: `SoundPlayerDemo.xcodeproj`
 
@@ -91,3 +94,5 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 [docsLink]:http://cocoadocs.org/docsets/JSQSystemSoundPlayer/1.1.0
+
+[imgLink]:https://raw.github.com/jessesquires/JSQSystemSoundPlayer/master/Screenshots/screenshot.png
