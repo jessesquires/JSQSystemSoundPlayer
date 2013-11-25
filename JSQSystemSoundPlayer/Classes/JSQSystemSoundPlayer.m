@@ -10,6 +10,8 @@
 
 #import "JSQSystemSoundPlayer.h"
 
+#import <AudioToolbox/AudioToolbox.h>
+
 NSString * const kJSQSystemSoundTypeCAF = @"caf";
 NSString * const kJSQSystemSoundTypeAIF = @"aif";
 NSString * const kJSQSystemSoundTypeAIFF = @"aiff";

@@ -9,7 +9,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <AudioToolbox/AudioToolbox.h>
 
 /**
  *  String constant for .caf audio file extension.
