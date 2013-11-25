@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
-        <development version="4600" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
@@ -10,16 +9,17 @@
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="JSQViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V7g-cc-eMq"/>
+                        <viewControllerLayoutGuide type="bottom" id="szh-j7-bM0"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2J7-OW-q6r">
-                                <rect key="frame" x="0.0" y="187" width="321" height="55"/>
+                                <rect key="frame" x="0.0" y="137" width="320" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="qCR-T2-b7L"/>
-                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="JSQSystemSoundPlayer">
                                         <attributes>
@@ -31,33 +31,61 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4n-Kf-UN3">
-                                <rect key="frame" x="89" y="250" width="143" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gn2-Cp-R8O">
+                                <rect key="frame" x="62" y="200" width="196" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="ggQ-Fw-q7L"/>
+                                    <constraint firstAttribute="height" constant="42" id="ecq-hS-AT2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Play Sound Effect">
-                                    <color key="titleColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Play System Sound Effect">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="playSystemSoundPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9ah-Zv-hXZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3j-dg-CuU">
+                                <rect key="frame" x="62" y="250" width="196" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="Qji-xM-VWw"/>
+                                </constraints>
+                                <state key="normal" title="Play Alert Sound Effect">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="playPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ixd-jz-FuU"/>
+                                    <action selector="playAlertSoundPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TrR-CW-5LB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOm-US-lo9">
+                                <rect key="frame" x="62" y="300" width="196" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="c6Q-0f-y5o"/>
+                                </constraints>
+                                <state key="normal" title="Play Vibration">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playVibratePressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sm9-oZ-lfq"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="L4n-Kf-UN3" firstAttribute="centerX" secondItem="2J7-OW-q6r" secondAttribute="centerX" type="default" id="DLD-75-3Ni"/>
-                            <constraint firstItem="2J7-OW-q6r" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="187" id="NDJ-vV-Hdq"/>
-                            <constraint firstItem="L4n-Kf-UN3" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" type="default" id="QrZ-yD-TZ0"/>
-                            <constraint firstItem="L4n-Kf-UN3" firstAttribute="top" secondItem="2J7-OW-q6r" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Tqr-ue-aBq"/>
-                            <constraint firstItem="2J7-OW-q6r" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" type="default" id="fcv-DT-nHl"/>
-                            <constraint firstItem="L4n-Kf-UN3" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="89" type="default" id="tgx-ep-zlq"/>
+                            <constraint firstItem="2J7-OW-q6r" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="1MS-SF-EJH"/>
+                            <constraint firstItem="rOm-US-lo9" firstAttribute="top" secondItem="q3j-dg-CuU" secondAttribute="bottom" constant="8" symbolic="YES" id="5gk-Dt-MUI"/>
+                            <constraint firstItem="rOm-US-lo9" firstAttribute="trailing" secondItem="q3j-dg-CuU" secondAttribute="trailing" id="BRZ-Vy-U69"/>
+                            <constraint firstItem="q3j-dg-CuU" firstAttribute="top" secondItem="Gn2-Cp-R8O" secondAttribute="bottom" constant="8" symbolic="YES" id="GPN-dJ-cKQ"/>
+                            <constraint firstItem="2J7-OW-q6r" firstAttribute="top" secondItem="V7g-cc-eMq" secondAttribute="bottom" constant="117" id="MiW-Dy-Fqw"/>
+                            <constraint firstItem="2J7-OW-q6r" firstAttribute="centerX" secondItem="Gn2-Cp-R8O" secondAttribute="centerX" id="VON-Ud-jTv"/>
+                            <constraint firstItem="Gn2-Cp-R8O" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="62" id="YRV-rq-JaQ"/>
+                            <constraint firstItem="Gn2-Cp-R8O" firstAttribute="leading" secondItem="q3j-dg-CuU" secondAttribute="leading" id="ZOk-yO-ht4"/>
+                            <constraint firstItem="Gn2-Cp-R8O" firstAttribute="trailing" secondItem="q3j-dg-CuU" secondAttribute="trailing" id="Zw7-B5-9iS"/>
+                            <constraint firstItem="Gn2-Cp-R8O" firstAttribute="top" secondItem="2J7-OW-q6r" secondAttribute="bottom" constant="8" symbolic="YES" id="ecu-Dn-dWq"/>
+                            <constraint firstAttribute="trailing" secondItem="2J7-OW-q6r" secondAttribute="trailing" id="eww-h1-Vu6"/>
+                            <constraint firstItem="szh-j7-bM0" firstAttribute="top" secondItem="rOm-US-lo9" secondAttribute="bottom" constant="138" id="kFU-L0-fyI"/>
+                            <constraint firstItem="q3j-dg-CuU" firstAttribute="leading" secondItem="rOm-US-lo9" secondAttribute="leading" id="upd-4G-SVl"/>
                         </constraints>
                     </view>
                 </viewController>

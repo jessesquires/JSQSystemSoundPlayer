@@ -13,10 +13,21 @@
 
 @implementation JSQViewController
 
-- (IBAction)playPressed:(id)sender
+- (IBAction)playSystemSoundPressed:(id)sender
 {
     [[JSQSystemSoundPlayer sharedPlayer] playSoundWithName:@"Basso"
                                                  extension:kJSQSystemSoundTypeAIF];
+}
+
+- (IBAction)playAlertSoundPressed:(id)sender
+{
+    [[JSQSystemSoundPlayer sharedPlayer] playAlertSoundWithName:@"Basso"
+                                                      extension:kJSQSystemSoundTypeAIF];
+}
+
+- (IBAction)playVibratePressed:(id)sender
+{
+    [[JSQSystemSoundPlayer sharedPlayer] playVibrateSound];
 }
 
 @end

@@ -12,6 +12,10 @@
 
 @interface JSQViewController : UIViewController
 
-- (IBAction)playPressed:(id)sender;
+- (IBAction)playSystemSoundPressed:(id)sender;
+
+- (IBAction)playAlertSoundPressed:(id)sender;
+
+- (IBAction)playVibratePressed:(id)sender;
 
 @end
