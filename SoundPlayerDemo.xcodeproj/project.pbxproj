@@ -26,6 +26,7 @@
 		88484DE9183F350C00242F9E /* JSQSystemSoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 88484DE7183F350C00242F9E /* JSQSystemSoundPlayer.m */; };
 		888C81E6183F2B5400F326C2 /* Basso.aif in Resources */ = {isa = PBXBuildFile; fileRef = 888C81E5183F2B5400F326C2 /* Basso.aif */; };
 		888C81E7183F2B5400F326C2 /* Basso.aif in Resources */ = {isa = PBXBuildFile; fileRef = 888C81E5183F2B5400F326C2 /* Basso.aif */; };
+		88EEDE7D1842FB5C00A12E01 /* Funk.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 88EEDE7C1842FB5C00A12E01 /* Funk.aiff */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		88484DE6183F350C00242F9E /* JSQSystemSoundPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSQSystemSoundPlayer.h; sourceTree = "<group>"; };
 		88484DE7183F350C00242F9E /* JSQSystemSoundPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSQSystemSoundPlayer.m; sourceTree = "<group>"; };
 		888C81E5183F2B5400F326C2 /* Basso.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = Basso.aif; sourceTree = "<group>"; };
+		88EEDE7C1842FB5C00A12E01 /* Funk.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Funk.aiff; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			children = (
 				88484DE4183F350C00242F9E /* JSQSystemSoundPlayer */,
 				888C81E5183F2B5400F326C2 /* Basso.aif */,
+				88EEDE7C1842FB5C00A12E01 /* Funk.aiff */,
 				881C496C1834CB9A00FED604 /* Images.xcassets */,
 				881C49631834CB9900FED604 /* JSQAppDelegate.h */,
 				881C49641834CB9900FED604 /* JSQAppDelegate.m */,
@@ -263,6 +266,7 @@
 				881C495F1834CB9900FED604 /* InfoPlist.strings in Resources */,
 				881C49681834CB9A00FED604 /* Main.storyboard in Resources */,
 				888C81E6183F2B5400F326C2 /* Basso.aif in Resources */,
+				88EEDE7D1842FB5C00A12E01 /* Funk.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
