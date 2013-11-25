@@ -21,8 +21,8 @@
 
 - (IBAction)playAlertSoundPressed:(id)sender
 {
-    [[JSQSystemSoundPlayer sharedPlayer] playAlertSoundWithName:@"Basso"
-                                                      extension:kJSQSystemSoundTypeAIF];
+    [[JSQSystemSoundPlayer sharedPlayer] playAlertSoundWithName:@"Funk"
+                                                      extension:kJSQSystemSoundTypeAIFF];
 }
 
 - (IBAction)playVibratePressed:(id)sender

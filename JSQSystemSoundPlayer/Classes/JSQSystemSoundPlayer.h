@@ -22,6 +22,11 @@ extern NSString * const kJSQSystemSoundTypeCAF;
 extern NSString * const kJSQSystemSoundTypeAIF;
 
 /**
+ *  String constant for .aiff audio file extension.
+ */
+extern NSString * const kJSQSystemSoundTypeAIFF;
+
+/**
  *  String constant for .wav audio file extension.
  */
 extern NSString * const kJSQSystemSoundTypeWAV;
@@ -42,7 +47,7 @@ extern NSString * const kJSQSystemSoundTypeWAV;
  *  Plays a system sound object corresponding to an audio file with the given filename and extension. The system sound player will lazily initialize and load the file before playing it, and then cache its corresponding `SystemSoundID`. If this file has previously been played, it will be loaded from cache and played immediately.
  *
  *  @param filename  A string containing the base name of the audio file to play.
- *  @param extension A string containing the extension of the audio file to play. This parameter must be one of `kJSQSystemSoundTypeCAF`, `kJSQSystemSoundTypeAIF`, or `kJSQSystemSoundTypeWAV`.
+ *  @param extension A string containing the extension of the audio file to play. This parameter must be one of `kJSQSystemSoundTypeCAF`, `kJSQSystemSoundTypeAIF`, `kJSQSystemSoundTypeAIFF`, or `kJSQSystemSoundTypeWAV`.
  */
 - (void)playSoundWithName:(NSString *)filename extension:(NSString *)extension;
 
@@ -50,7 +55,7 @@ extern NSString * const kJSQSystemSoundTypeWAV;
  *  Plays a system sound object *as an alert* corresponding to an audio file with the given filename and extension. The system sound player will lazily initialize and load the file before playing it, and then cache its corresponding `SystemSoundID`. If this file has previously been played, it will be loaded from cache and played immediately.
  *
  *  @param filename  A string containing the base name of the audio file to play.
- *  @param extension A string containing the extension of the audio file to play. This parameter must be one of `kJSQSystemSoundTypeCAF`, `kJSQSystemSoundTypeAIF`, or `kJSQSystemSoundTypeWAV`.
+ *  @param extension A string containing the extension of the audio file to play. This parameter must be one of `kJSQSystemSoundTypeCAF`, `kJSQSystemSoundTypeAIF`, `kJSQSystemSoundTypeAIFF`, or `kJSQSystemSoundTypeWAV`.
  *
  *  @warning This method performs the same functions as `playSoundWithName: extension:`, with the excepion that, depending on the particular iOS device, this method may invoke vibration.
  */
