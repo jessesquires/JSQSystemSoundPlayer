@@ -90,10 +90,10 @@ NSString * const kJSQSystemSoundTypeWAV = @"wav";
     SystemSoundID soundID = [self soundIDForFilename:filename];
     if(soundID) {
         if(isAlert) {
-            AudioServicesPlaySystemSound(soundID);
+            AudioServicesPlayAlertSound(soundID);
         }
         else {
-            AudioServicesPlayAlertSound(soundID);
+            AudioServicesPlaySystemSound(soundID);
         }
     }
 }
