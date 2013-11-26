@@ -9,9 +9,7 @@
 //
 
 #import <XCTest/XCTest.h>
-
 #import <AudioToolbox/AudioToolbox.h>
-
 #import "JSQSystemSoundPlayer.h"
 
 
@@ -96,11 +94,8 @@
 
 - (void)testMemoryWarning
 {
-
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wundeclared-selector"
-        [[UIApplication sharedApplication] performSelector:@selector(_performMemoryWarning)];
-#pragma clang diagnostic pop
+    [[NSNotificationCenter defaultCenter] postNotificationName:UIApplicationDidReceiveMemoryWarningNotification
+                                                        object:nil];
     
     XCTAssertTrue([self.sharedPlayer.sounds count] == 0, @"Sounds should have been purged on memory warning.");
 }
