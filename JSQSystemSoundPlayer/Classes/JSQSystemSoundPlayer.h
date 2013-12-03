@@ -49,6 +49,8 @@ typedef void(^JSQSystemSoundPlayerCompletionBlock)(BOOL success);
  *
  *  @param filename  A string containing the base name of the audio file to play.
  *  @param extension A string containing the extension of the audio file to play. This parameter must be one of `kJSQSystemSoundTypeCAF`, `kJSQSystemSoundTypeAIF`, `kJSQSystemSoundTypeAIFF`, or `kJSQSystemSoundTypeWAV`.
+ *
+ *  @warning If the system sound object cannot be created, this method does nothing.
  */
 - (void)playSoundWithName:(NSString *)filename extension:(NSString *)extension;
 
@@ -61,6 +63,8 @@ typedef void(^JSQSystemSoundPlayerCompletionBlock)(BOOL success);
  *
  *  @param filename  A string containing the base name of the audio file to play.
  *  @param extension A string containing the extension of the audio file to play. This parameter must be one of `kJSQSystemSoundTypeCAF`, `kJSQSystemSoundTypeAIF`, `kJSQSystemSoundTypeAIFF`, or `kJSQSystemSoundTypeWAV`.
+ *
+ *  @warning If the system sound object cannot be created, this method does nothing.
  *
  *  @warning This method performs the same functions as `playSoundWithName: extension:`, with the excepion that, depending on the particular iOS device, this method may invoke vibration.
  */
