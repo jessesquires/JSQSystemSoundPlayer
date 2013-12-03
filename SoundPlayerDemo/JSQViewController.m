@@ -16,7 +16,12 @@
 - (IBAction)playSystemSoundPressed:(id)sender
 {
     [[JSQSystemSoundPlayer sharedPlayer] playSoundWithName:@"Basso"
-                                                 extension:kJSQSystemSoundTypeAIF];
+                                                 extension:kJSQSystemSoundTypeAIF
+     completion:^(BOOL success) {
+         NSLog(@"DID COMPLETE! success = %d", success);
+         [[JSQSystemSoundPlayer sharedPlayer] playAlertSoundWithName:@"Funk"
+                                                           extension:kJSQSystemSoundTypeAIFF];
+     }];
 }
 
 - (IBAction)playAlertSoundPressed:(id)sender
