@@ -9,9 +9,7 @@
 //
 
 #import <XCTest/XCTest.h>
-
 #import <AudioToolbox/AudioToolbox.h>
-
 #import "JSQSystemSoundPlayer.h"
 
 
@@ -94,17 +92,6 @@
     XCTAssert(retrievedSoundID, @"SoundID should not be nil");
 }
 
-- (void)testMemoryWarning
-{
-
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wundeclared-selector"
-        [[UIApplication sharedApplication] performSelector:@selector(_performMemoryWarning)];
-#pragma clang diagnostic pop
-    
-    XCTAssertTrue([self.sharedPlayer.sounds count] == 0, @"Sounds should have been purged on memory warning.");
-}
-
 - (void)testPlayingSounds
 {
     XCTAssertNoThrow([self.sharedPlayer playSoundWithName:@"Basso" extension:kJSQSystemSoundTypeAIF], @"Player should play sound and not throw");
@@ -114,6 +101,14 @@
     XCTAssertNoThrow([self.sharedPlayer playAlertSoundWithName:nil extension:nil], @"Player should fail gracefully, not throw");
     
     XCTAssertNoThrow([self.sharedPlayer playVibrateSound], @"Player should vibrate, not throw");
+}
+
+- (void)testMemoryWarning
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:UIApplicationDidReceiveMemoryWarningNotification
+                                                        object:nil];
+    
+    XCTAssertTrue([self.sharedPlayer.sounds count] == 0, @"Sounds should have been purged on memory warning.");
 }
 
 @end
