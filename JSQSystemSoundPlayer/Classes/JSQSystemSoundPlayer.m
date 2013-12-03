@@ -36,6 +36,7 @@ NSString * const kJSQSystemSoundTypeWAV = @"wav";
 - (JSQSystemSoundPlayerCompletionBlock)completionBlockForSoundID:(SystemSoundID)soundID;
 - (void)addCompletionBlock:(JSQSystemSoundPlayerCompletionBlock)block
                  toSoundID:(SystemSoundID)soundID;
+- (void)removeCompletionBlockForSoundID:(SystemSoundID)soundID;
 
 - (SystemSoundID)createSoundIDWithName:(NSString *)filename
                              extension:(NSString *)extension;
@@ -52,9 +53,12 @@ NSString * const kJSQSystemSoundTypeWAV = @"wav";
 
 void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 {
-    JSQSystemSoundPlayerCompletionBlock block = [[JSQSystemSoundPlayer sharedPlayer] completionBlockForSoundID:soundID];
+    JSQSystemSoundPlayer *player = [JSQSystemSoundPlayer sharedPlayer];
+    
+    JSQSystemSoundPlayerCompletionBlock block = [player completionBlockForSoundID:soundID];
     if(block) {
         block(YES);
+        [player removeCompletionBlockForSoundID:soundID];
     }
 }
 
@@ -107,6 +111,8 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
                   isAlert:(BOOL)isAlert
           completionBlock:(JSQSystemSoundPlayerCompletionBlock)completionBlock
 {
+    NSLog(@"Playing %@...", filename);
+    
     if(!filename || !extension) {
         return;
     }
@@ -229,6 +235,14 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
     [self.completionBlocks setObject:block forKey:data];
 }
 
+- (void)removeCompletionBlockForSoundID:(SystemSoundID)soundID
+{
+    NSLog(@"Releasing completion block for sound %u", (unsigned int)soundID);
+    NSData *key = [self dataWithSoundID:soundID];
+    [self.completionBlocks removeObjectForKey:key];
+    AudioServicesRemoveSystemSoundCompletion(soundID);
+}
+
 #pragma mark - Managing sounds
 
 - (SystemSoundID)createSoundIDWithName:(NSString *)filename
@@ -248,7 +262,7 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
             return 0;
         }
         else {
-            NSLog(@"Create soundID success");
+            NSLog(@"Create soundID %u success!", (unsigned int)soundID);
             return soundID;
         }
     }
