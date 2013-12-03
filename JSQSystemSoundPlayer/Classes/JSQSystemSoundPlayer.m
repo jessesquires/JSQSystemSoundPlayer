@@ -9,7 +9,6 @@
 //
 
 #import "JSQSystemSoundPlayer.h"
-
 #import <AudioToolbox/AudioToolbox.h>
 
 NSString * const kJSQSystemSoundTypeCAF = @"caf";
@@ -20,15 +19,23 @@ NSString * const kJSQSystemSoundTypeWAV = @"wav";
 @interface JSQSystemSoundPlayer ()
 
 @property (strong, nonatomic) NSMutableDictionary *sounds;
+@property (strong, nonatomic) NSMutableDictionary *completionBlocks;
 
 - (void)playSoundWithName:(NSString *)filename
                 extension:(NSString *)extension
-                  isAlert:(BOOL)isAlert;
+                  isAlert:(BOOL)isAlert
+          completionBlock:(JSQSystemSoundPlayerCompletionBlock)completionBlock;
+
+- (NSData *)dataWithSoundID:(SystemSoundID)soundID;
+- (SystemSoundID)soundIDFromData:(NSData *)data;
 
 - (SystemSoundID)soundIDForFilename:(NSString *)filenameKey;
-
 - (void)addSoundIDForAudioFileWithName:(NSString *)filename
                              extension:(NSString *)extension;
+
+- (JSQSystemSoundPlayerCompletionBlock)completionBlockForSoundID:(SystemSoundID)soundID;
+- (void)addCompletionBlock:(JSQSystemSoundPlayerCompletionBlock)block
+                 toSoundID:(SystemSoundID)soundID;
 
 - (SystemSoundID)createSoundIDWithName:(NSString *)filename
                              extension:(NSString *)extension;
@@ -38,6 +45,16 @@ NSString * const kJSQSystemSoundTypeWAV = @"wav";
 - (void)didReceiveMemoryWarningNotification:(NSNotification *)notification;
 
 @end
+
+
+
+void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
+{
+    JSQSystemSoundPlayerCompletionBlock block = [[JSQSystemSoundPlayer sharedPlayer] completionBlockForSoundID:soundID];
+    if(block) {
+        block(YES);
+    }
+}
 
 
 
@@ -62,6 +79,7 @@ NSString * const kJSQSystemSoundTypeWAV = @"wav";
     self = [super init];
     if(self) {
         _sounds = [[NSMutableDictionary alloc] init];
+        _completionBlocks = [[NSMutableDictionary alloc] init];
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(didReceiveMemoryWarningNotification:)
                                                      name:UIApplicationDidReceiveMemoryWarningNotification
@@ -74,16 +92,18 @@ NSString * const kJSQSystemSoundTypeWAV = @"wav";
 {
     [self unloadSoundIDs];
     _sounds = nil;
+    _completionBlocks = nil;
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:UIApplicationDidReceiveMemoryWarningNotification
                                                   object:nil];
 }
 
-#pragma mark - Sounds
+#pragma mark - Playing sounds
 
 - (void)playSoundWithName:(NSString *)filename
                 extension:(NSString *)extension
                   isAlert:(BOOL)isAlert
+          completionBlock:(JSQSystemSoundPlayerCompletionBlock)completionBlock
 {
     if(!filename || !extension) {
         return;
@@ -96,6 +116,15 @@ NSString * const kJSQSystemSoundTypeWAV = @"wav";
 
     SystemSoundID soundID = [self soundIDForFilename:filename];
     if(soundID) {
+        if(completionBlock) {
+            [self addCompletionBlock:completionBlock toSoundID:soundID];
+            AudioServicesAddSystemSoundCompletion(soundID,
+                                                  NULL,
+                                                  NULL,
+                                                  systemServicesSoundCompletion,
+                                                  NULL);
+        }
+        
         if(isAlert) {
             AudioServicesPlayAlertSound(soundID);
         }
@@ -109,14 +138,34 @@ NSString * const kJSQSystemSoundTypeWAV = @"wav";
 {
     [self playSoundWithName:filename
                   extension:extension
-                    isAlert:NO];
+                 completion:nil];
+}
+
+- (void)playSoundWithName:(NSString *)filename
+                extension:(NSString *)extension
+               completion:(JSQSystemSoundPlayerCompletionBlock)completionBlock
+{
+    [self playSoundWithName:filename
+                  extension:extension
+                    isAlert:NO
+            completionBlock:completionBlock];
+}
+
+- (void)playAlertSoundWithName:(NSString *)filename
+                     extension:(NSString *)extension
+                    completion:(JSQSystemSoundPlayerCompletionBlock)completionBlock
+{
+    [self playSoundWithName:filename
+                  extension:extension
+                    isAlert:YES
+            completionBlock:completionBlock];
 }
 
 - (void)playAlertSoundWithName:(NSString *)filename extension:(NSString *)extension
 {
-    [self playSoundWithName:filename
-                  extension:extension
-                    isAlert:YES];
+    [self playAlertSoundWithName:filename
+                       extension:extension
+                      completion:nil];
 }
 
 - (void)playVibrateSound
@@ -124,14 +173,26 @@ NSString * const kJSQSystemSoundTypeWAV = @"wav";
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 }
 
-#pragma mark - Utilities
+#pragma mark - Sound data
+
+- (NSData *)dataWithSoundID:(SystemSoundID)soundID
+{
+    return [NSData dataWithBytes:&soundID length:sizeof(SystemSoundID)];
+}
+
+- (SystemSoundID)soundIDFromData:(NSData *)data
+{
+    SystemSoundID soundID;
+    [data getBytes:&soundID length:sizeof(SystemSoundID)];
+    return soundID;
+}
+
+#pragma mark - Sound files
 
 - (SystemSoundID)soundIDForFilename:(NSString *)filenameKey
 {
     NSData *soundData = [self.sounds objectForKey:filenameKey];
-    SystemSoundID soundID;
-    [soundData getBytes:&soundID length:sizeof(SystemSoundID)];
-    return soundID;
+    return [self soundIDFromData:soundData];
 }
 
 - (void)addSoundIDForAudioFileWithName:(NSString *)filename
@@ -140,10 +201,27 @@ NSString * const kJSQSystemSoundTypeWAV = @"wav";
     SystemSoundID soundID = [self createSoundIDWithName:filename
                                               extension:extension];
     if(soundID) {
-        NSData *data = [NSData dataWithBytes:&soundID length:sizeof(SystemSoundID)];
+        NSData *data = [self dataWithSoundID:soundID];
         [self.sounds setObject:data forKey:filename];
     }
 }
+
+#pragma mark - Sound completion blocks
+
+- (JSQSystemSoundPlayerCompletionBlock)completionBlockForSoundID:(SystemSoundID)soundID
+{
+    NSData *data = [self dataWithSoundID:soundID];
+    return [self.completionBlocks objectForKey:data];
+}
+
+- (void)addCompletionBlock:(JSQSystemSoundPlayerCompletionBlock)block
+                 toSoundID:(SystemSoundID)soundID
+{
+    NSData *data = [self dataWithSoundID:soundID];
+    [self.completionBlocks setObject:block forKey:data];
+}
+
+#pragma mark - Managing sounds
 
 - (SystemSoundID)createSoundIDWithName:(NSString *)filename
                              extension:(NSString *)extension
@@ -173,23 +251,25 @@ NSString * const kJSQSystemSoundTypeWAV = @"wav";
 
 - (void)unloadSoundIDs
 {
-    NSLog(@"Unloading sound IDs");
-
+    NSLog(@"Unloading sound IDs...");
+    
     for(NSString *eachFilename in [_sounds allKeys]) {
         SystemSoundID soundID = [self soundIDForFilename:eachFilename];
         if(soundID) {
+            AudioServicesRemoveSystemSoundCompletion(soundID);
             AudioServicesDisposeSystemSoundID(soundID);
         }
     }
     
     [_sounds removeAllObjects];
+    [_completionBlocks removeAllObjects];
 }
 
 #pragma mark - Notifications
 
 - (void)didReceiveMemoryWarningNotification:(NSNotification *)notification
 {
-    NSLog(@"%@ received memory warning", [self class]);
+    NSLog(@"%@ received memory warning!", [self class]);
     [self unloadSoundIDs];
 }
 

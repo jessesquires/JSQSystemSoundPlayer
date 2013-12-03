@@ -30,6 +30,8 @@ extern NSString * const kJSQSystemSoundTypeAIFF;
  */
 extern NSString * const kJSQSystemSoundTypeWAV;
 
+typedef void(^JSQSystemSoundPlayerCompletionBlock)(BOOL success);
+
 /**
  *  The `JSQSystemSoundPlayer` class enables you to play sound effects, alert sounds, or other short sounds. It lazily loads and caches all `SystemSoundID`s and purges them upon receiving the `UIApplicationDidReceiveMemoryWarningNotification` notification.
  */
@@ -50,6 +52,10 @@ extern NSString * const kJSQSystemSoundTypeWAV;
  */
 - (void)playSoundWithName:(NSString *)filename extension:(NSString *)extension;
 
+- (void)playSoundWithName:(NSString *)filename
+                extension:(NSString *)extension
+               completion:(JSQSystemSoundPlayerCompletionBlock)completionBlock;
+
 /**
  *  Plays a system sound object *as an alert* corresponding to an audio file with the given filename and extension. The system sound player will lazily initialize and load the file before playing it, and then cache its corresponding `SystemSoundID`. If this file has previously been played, it will be loaded from cache and played immediately.
  *
@@ -59,6 +65,10 @@ extern NSString * const kJSQSystemSoundTypeWAV;
  *  @warning This method performs the same functions as `playSoundWithName: extension:`, with the excepion that, depending on the particular iOS device, this method may invoke vibration.
  */
 - (void)playAlertSoundWithName:(NSString *)filename extension:(NSString *)extension;
+
+- (void)playAlertSoundWithName:(NSString *)filename
+                     extension:(NSString *)extension
+                    completion:(JSQSystemSoundPlayerCompletionBlock)completionBlock;
 
 /**
  *  On some iOS devices, you can call this method to invoke vibration. On other iOS devices this functionaly is not available, and calling this method does nothing.
