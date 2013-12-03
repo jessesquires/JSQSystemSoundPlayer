@@ -42,6 +42,8 @@ NSString * const kJSQSystemSoundTypeWAV = @"wav";
 
 - (void)unloadSoundIDs;
 
+- (void)logError:(OSStatus)error withMessage:(NSString *)message;
+
 - (void)didReceiveMemoryWarningNotification:(NSNotification *)notification;
 
 @end
@@ -117,12 +119,18 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
     SystemSoundID soundID = [self soundIDForFilename:filename];
     if(soundID) {
         if(completionBlock) {
-            [self addCompletionBlock:completionBlock toSoundID:soundID];
-            AudioServicesAddSystemSoundCompletion(soundID,
-                                                  NULL,
-                                                  NULL,
-                                                  systemServicesSoundCompletion,
-                                                  NULL);
+            OSStatus error = AudioServicesAddSystemSoundCompletion(soundID,
+                                                                   NULL,
+                                                                   NULL,
+                                                                   systemServicesSoundCompletion,
+                                                                   NULL);
+            
+            if(error) {
+                [self logError:error withMessage:@"Warning! Completion block could not be added to SystemSoundID."];
+            }
+            else {
+                [self addCompletionBlock:completionBlock toSoundID:soundID];
+            }
         }
         
         if(isAlert) {
@@ -236,7 +244,7 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
         OSStatus error = AudioServicesCreateSystemSoundID((__bridge CFURLRef)fileURL, &soundID);
 
         if(error) {
-            NSLog(@"AudioServicesCreateSystemSoundID error code: %d", (int)error);
+            [self logError:error withMessage:@"Warning! SystemSoundID could not be created."];
             return 0;
         }
         else {
@@ -257,12 +265,41 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
         SystemSoundID soundID = [self soundIDForFilename:eachFilename];
         if(soundID) {
             AudioServicesRemoveSystemSoundCompletion(soundID);
-            AudioServicesDisposeSystemSoundID(soundID);
+            
+            OSStatus error = AudioServicesDisposeSystemSoundID(soundID);
+            if(error) {
+                [self logError:error withMessage:@"Warning! SystemSoundID could not be disposed."];
+            }
         }
     }
     
     [_sounds removeAllObjects];
     [_completionBlocks removeAllObjects];
+}
+
+- (void)logError:(OSStatus)error withMessage:(NSString *)message
+{
+    NSString *errorMessage = nil;
+    
+    switch (error) {
+        case kAudioServicesUnsupportedPropertyError:
+            errorMessage = @"The property is not supported.";
+            break;
+        case kAudioServicesBadPropertySizeError:
+            errorMessage = @"The size of the property data was not correct.";
+            break;
+        case kAudioServicesBadSpecifierSizeError:
+            errorMessage = @"The size of the specifier data was not correct.";
+            break;
+        case kAudioServicesSystemSoundUnspecifiedError:
+            errorMessage = @"An unspecified error has occurred.";
+            break;
+        case kAudioServicesSystemSoundClientTimedOutError:
+            errorMessage = @"System sound client message timed out.";
+            break;
+    }
+    
+    NSLog(@"%@ Error: (code %d) %@", message, (int)error, errorMessage);
 }
 
 #pragma mark - Notifications
