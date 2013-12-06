@@ -20,4 +20,6 @@
 
 - (IBAction)playLongSoundPressed:(id)sender;
 
+- (IBAction)stopPressed:(id)sender;
+
 @end

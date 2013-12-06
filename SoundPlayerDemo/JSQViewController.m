@@ -48,4 +48,9 @@
                                                 }];
 }
 
+- (IBAction)stopPressed:(id)sender
+{
+    [[JSQSystemSoundPlayer sharedPlayer] stopAllSounds];
+}
+
 @end
