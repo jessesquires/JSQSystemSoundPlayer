@@ -64,6 +64,7 @@
 		88484DE7183F350C00242F9E /* JSQSystemSoundPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSQSystemSoundPlayer.m; sourceTree = "<group>"; };
 		888C81E5183F2B5400F326C2 /* Basso.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = Basso.aif; sourceTree = "<group>"; };
 		88EEDE7C1842FB5C00A12E01 /* Funk.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Funk.aiff; sourceTree = "<group>"; };
+		88FA61A01851889100BB4358 /* 70s Ballad Piano 01.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "70s Ballad Piano 01.caf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,8 +127,7 @@
 		881C495A1834CB9900FED604 /* SoundPlayerDemo */ = {
 			isa = PBXGroup;
 			children = (
-				888C81E5183F2B5400F326C2 /* Basso.aif */,
-				88EEDE7C1842FB5C00A12E01 /* Funk.aiff */,
+				88FA61A1185188B800BB4358 /* Sample sounds */,
 				881C496C1834CB9A00FED604 /* Images.xcassets */,
 				881C49631834CB9900FED604 /* JSQAppDelegate.h */,
 				881C49641834CB9900FED604 /* JSQAppDelegate.m */,
@@ -183,6 +183,16 @@
 				88484DE7183F350C00242F9E /* JSQSystemSoundPlayer.m */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		88FA61A1185188B800BB4358 /* Sample sounds */ = {
+			isa = PBXGroup;
+			children = (
+				888C81E5183F2B5400F326C2 /* Basso.aif */,
+				88EEDE7C1842FB5C00A12E01 /* Funk.aiff */,
+				88FA61A01851889100BB4358 /* 70s Ballad Piano 01.caf */,
+			);
+			name = "Sample sounds";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
