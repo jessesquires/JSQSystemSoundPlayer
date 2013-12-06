@@ -148,6 +148,8 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
     }
 }
 
+#pragma mark - Public API
+
 - (void)playSoundWithName:(NSString *)filename extension:(NSString *)extension
 {
     [self playSoundWithName:filename
@@ -185,6 +187,12 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 - (void)playVibrateSound
 {
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+}
+
+- (void)stopAllSounds
+{
+    NSLog(@"Stopping all sounds...");
+    [self unloadSoundIDs];
 }
 
 #pragma mark - Sound data

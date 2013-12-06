@@ -36,7 +36,7 @@ extern NSString * const kJSQSystemSoundTypeWAV;
 typedef void(^JSQSystemSoundPlayerCompletionBlock)(void);
 
 /**
- *  The `JSQSystemSoundPlayer` class enables you to play sound effects, alert sounds, or other short sounds. It lazily loads and caches all `SystemSoundID`s and purges them upon receiving the `UIApplicationDidReceiveMemoryWarningNotification` notification.
+ *  The `JSQSystemSoundPlayer` class enables you to play sound effects, alert sounds, or other short sounds. It lazily loads and caches all `SystemSoundID` objects and purges them upon receiving the `UIApplicationDidReceiveMemoryWarningNotification` notification.
  */
 @interface JSQSystemSoundPlayer : NSObject
 
@@ -101,5 +101,12 @@ typedef void(^JSQSystemSoundPlayerCompletionBlock)(void);
  *  On some iOS devices, you can call this method to invoke vibration. On other iOS devices this functionaly is not available, and calling this method does nothing.
  */
 - (void)playVibrateSound;
+
+/**
+ *  Stops playing all sounds immediately.
+ *
+ *  @warning Any completion blocks attached to any currently playing sound will *not* be executed. Also, calling this method will purge all `SystemSoundID` objects from cache, regardless of whether or not they were currently playing.
+ */
+- (void)stopAllSounds;
 
 @end
