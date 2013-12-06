@@ -57,7 +57,7 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
     
     JSQSystemSoundPlayerCompletionBlock block = [player completionBlockForSoundID:soundID];
     if(block) {
-        block(YES);
+        block();
         [player removeCompletionBlockForSoundID:soundID];
     }
 }

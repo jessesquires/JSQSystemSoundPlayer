@@ -19,8 +19,8 @@
     
     [sharedPlayer playSoundWithName:@"Basso"
                           extension:kJSQSystemSoundTypeAIF
-                         completion:^(BOOL success) {
-                             NSLog(@"Sound finished playing, success = %d", success);
+                         completion:^{
+                             NSLog(@"Sound finished playing. Executing completion block...");
                              
                              [sharedPlayer playAlertSoundWithName:@"Funk"
                                                         extension:kJSQSystemSoundTypeAIFF];
@@ -43,7 +43,7 @@
     NSLog(@"Playing long sound...");
     [[JSQSystemSoundPlayer sharedPlayer] playSoundWithName:@"BalladPiano"
                                                  extension:kJSQSystemSoundTypeCAF
-                                                completion:^(BOOL success) {
+                                                completion:^{
                                                     NSLog(@"Long sound complete!");
                                                 }];
 }
