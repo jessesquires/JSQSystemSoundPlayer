@@ -48,8 +48,12 @@ See [AVAudioPlayer](https://developer.apple.com/library/ios/DOCUMENTATION/AVFoun
 ## Getting Started
 
 ````
+
 [[JSQSystemSoundPlayer sharedPlayer] playSoundWithName:@"mySoundFile"
-                                             extension:kJSQSystemSoundTypeAIF];
+                                             extension:kJSQSystemSoundTypeAIF
+                                            completion:^{
+                                                // completion block code
+                                            }];
 
 ````
 
