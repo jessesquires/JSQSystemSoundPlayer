@@ -15,13 +15,16 @@
 
 - (IBAction)playSystemSoundPressed:(id)sender
 {
-    [[JSQSystemSoundPlayer sharedPlayer] playSoundWithName:@"Basso"
-                                                 extension:kJSQSystemSoundTypeAIF
-     completion:^(BOOL success) {
-         NSLog(@"DID COMPLETE! success = %d", success);
-         [[JSQSystemSoundPlayer sharedPlayer] playAlertSoundWithName:@"Funk"
-                                                           extension:kJSQSystemSoundTypeAIFF];
-     }];
+    JSQSystemSoundPlayer *sharedPlayer = [JSQSystemSoundPlayer sharedPlayer];
+    
+    [sharedPlayer playSoundWithName:@"Basso"
+                          extension:kJSQSystemSoundTypeAIF
+                         completion:^(BOOL success) {
+                             NSLog(@"Sound finished playing, success = %d", success);
+                             
+                             [sharedPlayer playAlertSoundWithName:@"Funk"
+                                                        extension:kJSQSystemSoundTypeAIFF];
+                         }];
 }
 
 - (IBAction)playAlertSoundPressed:(id)sender
@@ -33,6 +36,16 @@
 - (IBAction)playVibratePressed:(id)sender
 {
     [[JSQSystemSoundPlayer sharedPlayer] playVibrateSound];
+}
+
+- (IBAction)playLongSoundPressed:(id)sender
+{
+    NSLog(@"Playing long sound...");
+    [[JSQSystemSoundPlayer sharedPlayer] playSoundWithName:@"BalladPiano"
+                                                 extension:kJSQSystemSoundTypeCAF
+                                                completion:^(BOOL success) {
+                                                    NSLog(@"Long sound complete!");
+                                                }];
 }
 
 @end

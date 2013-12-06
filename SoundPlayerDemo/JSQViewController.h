@@ -18,4 +18,6 @@
 
 - (IBAction)playVibratePressed:(id)sender;
 
+- (IBAction)playLongSoundPressed:(id)sender;
+
 @end

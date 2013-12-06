@@ -14,12 +14,15 @@
                         <viewControllerLayoutGuide type="bottom" id="szh-j7-bM0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2J7-OW-q6r">
-                                <rect key="frame" x="0.0" y="137" width="320" height="55"/>
+                                <rect key="frame" x="0.0" y="160" width="320" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="fcc-xf-TFJ"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="JSQSystemSoundPlayer">
                                         <attributes>
@@ -32,7 +35,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gn2-Cp-R8O">
-                                <rect key="frame" x="62" y="200" width="196" height="42"/>
+                                <rect key="frame" x="62" y="227" width="196" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="ecq-hS-AT2"/>
@@ -45,7 +48,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3j-dg-CuU">
-                                <rect key="frame" x="62" y="250" width="196" height="42"/>
+                                <rect key="frame" x="62" y="277" width="196" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="Qji-xM-VWw"/>
@@ -58,7 +61,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOm-US-lo9">
-                                <rect key="frame" x="62" y="300" width="196" height="42"/>
+                                <rect key="frame" x="62" y="327" width="197" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="c6Q-0f-y5o"/>
@@ -70,32 +73,52 @@
                                     <action selector="playVibratePressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sm9-oZ-lfq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k42-dH-Va5">
+                                <rect key="frame" x="62" y="377" width="197" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play Long Sound">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playLongSoundPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Vc9-tq-oZL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2J7-OW-q6r" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="1MS-SF-EJH"/>
                             <constraint firstItem="rOm-US-lo9" firstAttribute="top" secondItem="q3j-dg-CuU" secondAttribute="bottom" constant="8" symbolic="YES" id="5gk-Dt-MUI"/>
+                            <constraint firstItem="rOm-US-lo9" firstAttribute="width" secondItem="q3j-dg-CuU" secondAttribute="width" id="A5P-sc-bsC"/>
                             <constraint firstItem="rOm-US-lo9" firstAttribute="trailing" secondItem="q3j-dg-CuU" secondAttribute="trailing" id="BRZ-Vy-U69"/>
+                            <constraint firstItem="rOm-US-lo9" firstAttribute="width" secondItem="k42-dH-Va5" secondAttribute="width" id="Cpk-j7-x03"/>
                             <constraint firstItem="q3j-dg-CuU" firstAttribute="top" secondItem="Gn2-Cp-R8O" secondAttribute="bottom" constant="8" symbolic="YES" id="GPN-dJ-cKQ"/>
-                            <constraint firstItem="2J7-OW-q6r" firstAttribute="top" secondItem="V7g-cc-eMq" secondAttribute="bottom" constant="117" id="MiW-Dy-Fqw"/>
+                            <constraint firstItem="rOm-US-lo9" firstAttribute="height" secondItem="Gn2-Cp-R8O" secondAttribute="height" id="Gvv-uH-c8X"/>
+                            <constraint firstItem="k42-dH-Va5" firstAttribute="leading" secondItem="rOm-US-lo9" secondAttribute="leading" id="Itl-JV-giW"/>
+                            <constraint firstItem="2J7-OW-q6r" firstAttribute="top" secondItem="V7g-cc-eMq" secondAttribute="bottom" constant="140" id="MiW-Dy-Fqw"/>
                             <constraint firstItem="2J7-OW-q6r" firstAttribute="centerX" secondItem="Gn2-Cp-R8O" secondAttribute="centerX" id="VON-Ud-jTv"/>
                             <constraint firstItem="Gn2-Cp-R8O" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="62" id="YRV-rq-JaQ"/>
                             <constraint firstItem="Gn2-Cp-R8O" firstAttribute="leading" secondItem="q3j-dg-CuU" secondAttribute="leading" id="ZOk-yO-ht4"/>
                             <constraint firstItem="Gn2-Cp-R8O" firstAttribute="trailing" secondItem="q3j-dg-CuU" secondAttribute="trailing" id="Zw7-B5-9iS"/>
                             <constraint firstItem="Gn2-Cp-R8O" firstAttribute="top" secondItem="2J7-OW-q6r" secondAttribute="bottom" constant="8" symbolic="YES" id="ecu-Dn-dWq"/>
                             <constraint firstAttribute="trailing" secondItem="2J7-OW-q6r" secondAttribute="trailing" id="eww-h1-Vu6"/>
-                            <constraint firstItem="szh-j7-bM0" firstAttribute="top" secondItem="rOm-US-lo9" secondAttribute="bottom" constant="138" id="kFU-L0-fyI"/>
+                            <constraint firstItem="szh-j7-bM0" firstAttribute="top" secondItem="rOm-US-lo9" secondAttribute="bottom" constant="199" id="kFU-L0-fyI"/>
+                            <constraint firstItem="rOm-US-lo9" firstAttribute="width" secondItem="Gn2-Cp-R8O" secondAttribute="width" id="mCD-VL-byp"/>
+                            <constraint firstItem="k42-dH-Va5" firstAttribute="trailing" secondItem="rOm-US-lo9" secondAttribute="trailing" id="uZB-s0-aIh"/>
                             <constraint firstItem="q3j-dg-CuU" firstAttribute="leading" secondItem="rOm-US-lo9" secondAttribute="leading" id="upd-4G-SVl"/>
+                            <constraint firstItem="rOm-US-lo9" firstAttribute="height" secondItem="q3j-dg-CuU" secondAttribute="height" id="vaW-LM-cxr"/>
+                            <constraint firstItem="rOm-US-lo9" firstAttribute="height" secondItem="k42-dH-Va5" secondAttribute="height" id="x56-29-xRs"/>
+                            <constraint firstItem="k42-dH-Va5" firstAttribute="top" secondItem="rOm-US-lo9" secondAttribute="bottom" constant="8" symbolic="YES" id="yvx-nA-6ZY"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="57" y="412"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
 </document>

@@ -64,7 +64,7 @@
 		88484DE7183F350C00242F9E /* JSQSystemSoundPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSQSystemSoundPlayer.m; sourceTree = "<group>"; };
 		888C81E5183F2B5400F326C2 /* Basso.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = Basso.aif; sourceTree = "<group>"; };
 		88EEDE7C1842FB5C00A12E01 /* Funk.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Funk.aiff; sourceTree = "<group>"; };
-		88FA61A01851889100BB4358 /* 70s Ballad Piano 01.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "70s Ballad Piano 01.caf"; sourceTree = "<group>"; };
+		88FA61A01851889100BB4358 /* BalladPiano.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BalladPiano.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,7 +190,7 @@
 			children = (
 				888C81E5183F2B5400F326C2 /* Basso.aif */,
 				88EEDE7C1842FB5C00A12E01 /* Funk.aiff */,
-				88FA61A01851889100BB4358 /* 70s Ballad Piano 01.caf */,
+				88FA61A01851889100BB4358 /* BalladPiano.caf */,
 			);
 			name = "Sample sounds";
 			sourceTree = "<group>";
