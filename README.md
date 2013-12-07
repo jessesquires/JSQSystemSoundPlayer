@@ -75,7 +75,7 @@ Support the developement of this **free**, open-source control! via [Square Cash
 
 <h4><a href="mailto:jesse.squires.developer@gmail.com?cc=cash@square.com&subject=$1&body=Thanks for developing JSQSystemSoundPlayer!">Send $1</a> <em>Just saying thanks!</em></h4>
 <h4><a href="mailto:jesse.squires.developer@gmail.com?cc=cash@square.com&subject=$5&body=Thanks for developing JSQSystemSoundPlayer!">Send $5</a> <em>This control is great!</em></h4>
-<h4><a href="mailto:jesse.squires.developer@gmail.com?cc=cash@square.com&subject=$10&body=Thanks for developing JSQSystemSoundPlayer!">Send $10</a> <em>This totally save me time!</em></h4>
+<h4><a href="mailto:jesse.squires.developer@gmail.com?cc=cash@square.com&subject=$10&body=Thanks for developing JSQSystemSoundPlayer!">Send $10</a> <em>This totally saved me time!</em></h4>
 
 ## How To Contribute
 
