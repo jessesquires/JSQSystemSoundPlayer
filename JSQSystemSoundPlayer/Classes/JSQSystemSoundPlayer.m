@@ -313,7 +313,7 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 {
     SystemSoundID soundID = [self soundIDForFilename:filename];
     
-    NSLog(@"Unloading soundID %d", (unsigned int)soundID);
+    NSLog(@"Unloading soundID %u", (unsigned int)soundID);
     if(soundID) {
         AudioServicesRemoveSystemSoundCompletion(soundID);
         
