@@ -47,23 +47,35 @@ See [AVAudioPlayer](https://developer.apple.com/library/ios/DOCUMENTATION/AVFoun
 
 ## Getting Started
 
-````
-
+````objective-c
 [[JSQSystemSoundPlayer sharedPlayer] playSoundWithName:@"mySoundFile"
                                              extension:kJSQSystemSoundTypeAIF
                                             completion:^{
                                                 // completion block code
                                             }];
-
 ````
 
-And that's all! Extension string constants provided for you: `kJSQSystemSoundTypeCAF`, `kJSQSystemSoundTypeAIF`, `kJSQSystemSoundTypeAIFF`, `kJSQSystemSoundTypeWAV`.
+And that's all! 
+
+String constants for file extensions provided for you: 
+* `kJSQSystemSoundTypeCAF`
+* `kJSQSystemSoundTypeAIF`
+* `kJSQSystemSoundTypeAIFF`
+* `kJSQSystemSoundTypeWAV`
 
 Also see the included demo project: `SoundPlayerDemo.xcodeproj`
 
 ## Documentation
 
 Documentation is [available here][docsLink] via [CocoaDocs](http://cocoadocs.org). Thanks [@CocoaDocs](https://twitter.com/CocoaDocs)!
+
+## Donate
+
+Support the developement of this **free**, open-source control! via [Square Cash](https://square.com/cash).
+
+<h4><a href="mailto:jesse.squires.developer@gmail.com?cc=cash@square.com&subject=$1&body=Thanks for developing JSQSystemSoundPlayer!">Send $1</a> <em>Just saying thanks!</em></h4>
+<h4><a href="mailto:jesse.squires.developer@gmail.com?cc=cash@square.com&subject=$5&body=Thanks for developing JSQSystemSoundPlayer!">Send $5</a> <em>This control is great!</em></h4>
+<h4><a href="mailto:jesse.squires.developer@gmail.com?cc=cash@square.com&subject=$10&body=Thanks for developing JSQSystemSoundPlayer!">Send $10</a> <em>This totally save me time!</em></h4>
 
 ## How To Contribute
 
