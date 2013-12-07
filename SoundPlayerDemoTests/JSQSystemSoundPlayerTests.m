@@ -173,6 +173,17 @@
     XCTAssertNoThrow([self.sharedPlayer playVibrateSound], @"Player should vibrate and not throw");
 }
 
+- (void)testStoppingSounds
+{
+    [self.sharedPlayer playSoundWithName:kSoundBasso extension:kJSQSystemSoundTypeAIF];
+    [self.sharedPlayer playSoundWithName:kSoundBalladPiano extension:kJSQSystemSoundTypeCAF];
+    
+    XCTAssertTrue([self.sharedPlayer.sounds count] == 2, @"Player should have 2 sounds cached");
+    
+    [self.sharedPlayer stopSoundWithFilename:kSoundBalladPiano];
+    XCTAssertTrue([self.sharedPlayer.sounds count] == 1, @"Player should have 1 sound cached");
+}
+
 - (void)testSoundCompletionBlocks
 {
     XCTAssertNoThrow([self.sharedPlayer playSoundWithName:kSoundBasso
