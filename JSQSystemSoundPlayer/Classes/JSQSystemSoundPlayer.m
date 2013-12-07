@@ -42,6 +42,7 @@ NSString * const kJSQSystemSoundTypeWAV = @"wav";
                              extension:(NSString *)extension;
 
 - (void)unloadSoundIDs;
+- (void)unloadSoundIDForFileNamed:(NSString *)filename;
 
 - (void)logError:(OSStatus)error withMessage:(NSString *)message;
 
@@ -195,6 +196,19 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
     [self unloadSoundIDs];
 }
 
+- (void)stopSoundWithFilename:(NSString *)filename
+{
+    NSLog(@"Stopping sound: %@...", filename);
+    
+    SystemSoundID soundID = [self soundIDForFilename:filename];
+    NSData *data = [self dataWithSoundID:soundID];
+    
+    [self unloadSoundIDForFileNamed:filename];
+    
+    [_sounds removeObjectForKey:filename];
+    [_completionBlocks removeObjectForKey:data];
+}
+
 #pragma mark - Sound data
 
 - (NSData *)dataWithSoundID:(SystemSoundID)soundID
@@ -204,6 +218,10 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 
 - (SystemSoundID)soundIDFromData:(NSData *)data
 {
+    if(!data) {
+        return 0;
+    }
+    
     SystemSoundID soundID;
     [data getBytes:&soundID length:sizeof(SystemSoundID)];
     return soundID;
@@ -281,22 +299,29 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 
 - (void)unloadSoundIDs
 {
-    NSLog(@"Unloading sound IDs...");
+    NSLog(@"Unloading all soundIDs...");
     
     for(NSString *eachFilename in [_sounds allKeys]) {
-        SystemSoundID soundID = [self soundIDForFilename:eachFilename];
-        if(soundID) {
-            AudioServicesRemoveSystemSoundCompletion(soundID);
-            
-            OSStatus error = AudioServicesDisposeSystemSoundID(soundID);
-            if(error) {
-                [self logError:error withMessage:@"Warning! SystemSoundID could not be disposed."];
-            }
-        }
+        [self unloadSoundIDForFileNamed:eachFilename];
     }
     
     [_sounds removeAllObjects];
     [_completionBlocks removeAllObjects];
+}
+
+- (void)unloadSoundIDForFileNamed:(NSString *)filename
+{
+    SystemSoundID soundID = [self soundIDForFilename:filename];
+    
+    NSLog(@"Unloading soundID %d", (unsigned int)soundID);
+    if(soundID) {
+        AudioServicesRemoveSystemSoundCompletion(soundID);
+        
+        OSStatus error = AudioServicesDisposeSystemSoundID(soundID);
+        if(error) {
+            [self logError:error withMessage:@"Warning! SystemSoundID could not be disposed."];
+        }
+    }
 }
 
 - (void)logError:(OSStatus)error withMessage:(NSString *)message

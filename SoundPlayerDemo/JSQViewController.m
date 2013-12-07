@@ -51,6 +51,9 @@
 - (IBAction)stopPressed:(id)sender
 {
     [[JSQSystemSoundPlayer sharedPlayer] stopAllSounds];
+    
+    //  Stop playing specific sound
+    //  [[JSQSystemSoundPlayer sharedPlayer] stopSoundWithFilename:@"BalladPiano"];
 }
 
 @end
