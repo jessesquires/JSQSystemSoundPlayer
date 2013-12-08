@@ -39,7 +39,8 @@ See [AVAudioPlayer](https://developer.apple.com/library/ios/DOCUMENTATION/AVFoun
 
 #### From source
 
-* Drag the `JSQSystemSoundPlayer/` folder to your project.
+* Drag the `JSQSystemSoundPlayer/` folder to your project
+* Add the `AudioToolbox.framework` to your project
 
 #### Too cool for [ARC](https://developer.apple.com/library/mac/releasenotes/ObjectiveC/RN-TransitioningToARC/Introduction/Introduction.html)?
 
