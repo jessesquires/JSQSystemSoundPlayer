@@ -120,3 +120,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 [docsLink]:http://cocoadocs.org/docsets/JSQSystemSoundPlayer/1.3.0
 [imgLink]:https://raw.github.com/jessesquires/JSQSystemSoundPlayer/master/Screenshots/screenshot.png
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jessesquires/jsqsystemsoundplayer/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
