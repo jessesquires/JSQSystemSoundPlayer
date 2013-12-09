@@ -98,6 +98,14 @@ Created by [@jesse_squires](https://twitter.com/jesse_squires), a [programming-m
 
 Many thanks to [the contributors](https://github.com/jessesquires/JSQSystemSoundPlayer/graphs/contributors) of this project.
 
+## Apps Using This Control
+
+[Hemoglobe](http://bit.ly/hemoglobeapp)
+
+[iPaint uPaint](http://bit.ly/ipupappstr)
+
+[MUDRammer](https://itunes.apple.com/us/app/mudrammer-a-modern-mud-client/id597157072?mt=8)
+
 ## [MIT License](http://opensource.org/licenses/MIT)
 
 You are free to use this as you please. **No attribution necessary, but much appreciated.**
