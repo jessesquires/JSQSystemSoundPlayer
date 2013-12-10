@@ -112,14 +112,11 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
                   isAlert:(BOOL)isAlert
           completionBlock:(JSQSystemSoundPlayerCompletionBlock)completionBlock
 {
-    NSLog(@"Playing %@...", filename);
-    
     if(!filename || !extension) {
         return;
     }
     
     if(![self.sounds objectForKey:filename]) {
-        NSLog(@"Need to add sound: %@.%@", filename, extension);
         [self addSoundIDForAudioFileWithName:filename extension:extension];
     }
 
@@ -192,14 +189,11 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 
 - (void)stopAllSounds
 {
-    NSLog(@"Stopping all sounds...");
     [self unloadSoundIDs];
 }
 
 - (void)stopSoundWithFilename:(NSString *)filename
 {
-    NSLog(@"Stopping sound: %@...", filename);
-    
     SystemSoundID soundID = [self soundIDForFilename:filename];
     NSData *data = [self dataWithSoundID:soundID];
     
@@ -263,7 +257,6 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 
 - (void)removeCompletionBlockForSoundID:(SystemSoundID)soundID
 {
-    NSLog(@"Releasing completion block for sound %u", (unsigned int)soundID);
     NSData *key = [self dataWithSoundID:soundID];
     [self.completionBlocks removeObjectForKey:key];
     AudioServicesRemoveSystemSoundCompletion(soundID);
@@ -274,8 +267,6 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 - (SystemSoundID)createSoundIDWithName:(NSString *)filename
                              extension:(NSString *)extension
 {
-    NSLog(@"Creating soundID for %@.%@", filename, extension);
-
     NSURL *fileURL = [[NSBundle mainBundle] URLForResource:filename
                                              withExtension:extension];
 
@@ -288,7 +279,6 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
             return 0;
         }
         else {
-            NSLog(@"Create soundID %u success!", (unsigned int)soundID);
             return soundID;
         }
     }
@@ -299,8 +289,6 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 
 - (void)unloadSoundIDs
 {
-    NSLog(@"Unloading all soundIDs...");
-    
     for(NSString *eachFilename in [_sounds allKeys]) {
         [self unloadSoundIDForFileNamed:eachFilename];
     }
@@ -313,7 +301,6 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 {
     SystemSoundID soundID = [self soundIDForFilename:filename];
     
-    NSLog(@"Unloading soundID %u", (unsigned int)soundID);
     if(soundID) {
         AudioServicesRemoveSystemSoundCompletion(soundID);
         
