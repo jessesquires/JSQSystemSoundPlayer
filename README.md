@@ -39,7 +39,8 @@ See [AVAudioPlayer](https://developer.apple.com/library/ios/DOCUMENTATION/AVFoun
 
 #### From source
 
-* Drag the `JSQSystemSoundPlayer/` folder to your project.
+* Drag the `JSQSystemSoundPlayer/` folder to your project
+* Add the `AudioToolbox.framework` to your project
 
 #### Too cool for [ARC](https://developer.apple.com/library/mac/releasenotes/ObjectiveC/RN-TransitioningToARC/Introduction/Introduction.html)?
 
@@ -97,6 +98,14 @@ Created by [@jesse_squires](https://twitter.com/jesse_squires), a [programming-m
 
 Many thanks to [the contributors](https://github.com/jessesquires/JSQSystemSoundPlayer/graphs/contributors) of this project.
 
+## Apps Using This Control
+
+[Hemoglobe](http://bit.ly/hemoglobeapp)
+
+[iPaint uPaint](http://bit.ly/ipupappstr)
+
+[MUDRammer](https://itunes.apple.com/us/app/mudrammer-a-modern-mud-client/id597157072?mt=8)
+
 ## [MIT License](http://opensource.org/licenses/MIT)
 
 You are free to use this as you please. **No attribution necessary, but much appreciated.**
@@ -111,3 +120,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 [docsLink]:http://cocoadocs.org/docsets/JSQSystemSoundPlayer/1.3.1
 [imgLink]:https://raw.github.com/jessesquires/JSQSystemSoundPlayer/master/Screenshots/screenshot.png
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jessesquires/jsqsystemsoundplayer/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
