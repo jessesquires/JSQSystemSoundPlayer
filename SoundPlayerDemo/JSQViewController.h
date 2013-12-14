@@ -12,14 +12,18 @@
 
 @interface JSQViewController : UIViewController
 
-- (IBAction)playSystemSoundPressed:(id)sender;
+@property (weak, nonatomic) IBOutlet UISwitch *soundSwitch;
 
-- (IBAction)playAlertSoundPressed:(id)sender;
+- (IBAction)playSystemSoundPressed:(UIButton *)sender;
 
-- (IBAction)playVibratePressed:(id)sender;
+- (IBAction)playAlertSoundPressed:(UIButton *)sender;
 
-- (IBAction)playLongSoundPressed:(id)sender;
+- (IBAction)playVibratePressed:(UIButton *)sender;
 
-- (IBAction)stopPressed:(id)sender;
+- (IBAction)playLongSoundPressed:(UIButton *)sender;
+
+- (IBAction)stopPressed:(UIButton *)sender;
+
+- (IBAction)toggleSwitch:(UISwitch *)sender;
 
 @end

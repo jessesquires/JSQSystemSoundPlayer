@@ -12,6 +12,8 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import "JSQSystemSoundPlayer.h"
 
+#define kJSQSystemSoundPlayerUserDefaultsKey @"kJSQSystemSoundPlayerUserDefaultsKey"
+
 #define kSoundBasso @"Basso"
 #define kSoundFunk @"Funk"
 #define kSoundBalladPiano @"BalladPiano"
@@ -216,6 +218,23 @@
     
     XCTAssertTrue([self.sharedPlayer.sounds count] == 0, @"Sounds should have been purged on memory warning");
     XCTAssertTrue([self.sharedPlayer.completionBlocks count] == 0, @"Completion blocks should have been purged on memory warning");
+}
+
+- (void)testUserDefaultsSettings
+{
+    BOOL soundPlayerOn = self.sharedPlayer.on;
+    BOOL soundSetting = [[[NSUserDefaults standardUserDefaults] objectForKey:kJSQSystemSoundPlayerUserDefaultsKey] boolValue];
+    XCTAssertEqual(soundPlayerOn, soundSetting, @"Sound setting values should be equal");
+    
+    [self.sharedPlayer toggleSoundPlayerOn:NO];
+    soundPlayerOn = self.sharedPlayer.on;
+    soundSetting = [[[NSUserDefaults standardUserDefaults] objectForKey:kJSQSystemSoundPlayerUserDefaultsKey] boolValue];
+    XCTAssertEqual(soundPlayerOn, soundSetting, @"Sound setting values should be equal");
+    
+    [self.sharedPlayer toggleSoundPlayerOn:YES];
+    soundPlayerOn = self.sharedPlayer.on;
+    soundSetting = [[[NSUserDefaults standardUserDefaults] objectForKey:kJSQSystemSoundPlayerUserDefaultsKey] boolValue];
+    XCTAssertEqual(soundPlayerOn, soundSetting, @"Sound setting values should be equal");
 }
 
 @end

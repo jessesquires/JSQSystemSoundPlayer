@@ -13,7 +13,14 @@
 
 @implementation JSQViewController
 
-- (IBAction)playSystemSoundPressed:(id)sender
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.soundSwitch.on = [JSQSystemSoundPlayer sharedPlayer].on;
+}
+
+- (IBAction)playSystemSoundPressed:(UIButton *)sender
 {
     JSQSystemSoundPlayer *sharedPlayer = [JSQSystemSoundPlayer sharedPlayer];
     
@@ -27,18 +34,18 @@
                          }];
 }
 
-- (IBAction)playAlertSoundPressed:(id)sender
+- (IBAction)playAlertSoundPressed:(UIButton *)sender
 {
     [[JSQSystemSoundPlayer sharedPlayer] playAlertSoundWithName:@"Funk"
                                                       extension:kJSQSystemSoundTypeAIFF];
 }
 
-- (IBAction)playVibratePressed:(id)sender
+- (IBAction)playVibratePressed:(UIButton *)sender
 {
     [[JSQSystemSoundPlayer sharedPlayer] playVibrateSound];
 }
 
-- (IBAction)playLongSoundPressed:(id)sender
+- (IBAction)playLongSoundPressed:(UIButton *)sender
 {
     NSLog(@"Playing long sound...");
     [[JSQSystemSoundPlayer sharedPlayer] playSoundWithName:@"BalladPiano"
@@ -48,12 +55,17 @@
                                                 }];
 }
 
-- (IBAction)stopPressed:(id)sender
+- (IBAction)stopPressed:(UIButton *)sender
 {
     [[JSQSystemSoundPlayer sharedPlayer] stopAllSounds];
     
     //  Stop playing specific sound
     //  [[JSQSystemSoundPlayer sharedPlayer] stopSoundWithFilename:@"BalladPiano"];
+}
+
+- (IBAction)toggleSwitch:(UISwitch *)sender
+{
+    [[JSQSystemSoundPlayer sharedPlayer] toggleSoundPlayerOn:sender.on];
 }
 
 @end

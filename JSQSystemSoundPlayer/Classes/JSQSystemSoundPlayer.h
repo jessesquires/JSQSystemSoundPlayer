@@ -41,11 +41,27 @@ typedef void(^JSQSystemSoundPlayerCompletionBlock)(void);
 @interface JSQSystemSoundPlayer : NSObject
 
 /**
+ *  Returns whether or not the sound player is on. That is, whether the sound player is enabled or disabled. If disabled, it will not play sounds.
+ *
+ *  @see `toggleSoundPlayerOn:`
+ */
+@property (assign, nonatomic, readonly) BOOL on;
+
+/**
  *  Returns the shared `JSQSystemSoundPlayer` object. This method always returns the same sound system player object.
  *
  *  @return An initialized `JSQSystemSoundPlayer` object if successful, `nil` otherwise.
  */
 + (JSQSystemSoundPlayer *)sharedPlayer;
+
+/**
+ *  Toggles the sound player on or off by setting the `kJSQSystemSoundPlayerUserDefaultsKey` key in `NSUserDefaults` to the given value. This will enable or disable the playing of sounds via `JSQSystemSoundPlayer` globally. This setting is persisted across application launches.
+ *
+ *  @param on A boolean indicating whether or not to enable or disable the sound player settings. Pass `YES` to turn sounds on, and `NO` to turn sounds off.
+ *
+ *  @warning Disabling the sound player (passing a value of `NO`) will invoke the `stopAllSounds` method.
+ */
+- (void)toggleSoundPlayerOn:(BOOL)on;
 
 /**
  *  Plays a system sound object corresponding to an audio file with the given filename and extension. The system sound player will lazily initialize and load the file before playing it, and then cache its corresponding `SystemSoundID`. If this file has previously been played, it will be loaded from cache and played immediately.

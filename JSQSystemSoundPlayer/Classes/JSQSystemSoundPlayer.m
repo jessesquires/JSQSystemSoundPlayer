@@ -11,6 +11,8 @@
 #import "JSQSystemSoundPlayer.h"
 #import <AudioToolbox/AudioToolbox.h>
 
+static NSString * const kJSQSystemSoundPlayerUserDefaultsKey = @"kJSQSystemSoundPlayerUserDefaultsKey";
+
 NSString * const kJSQSystemSoundTypeCAF = @"caf";
 NSString * const kJSQSystemSoundTypeAIF = @"aif";
 NSString * const kJSQSystemSoundTypeAIFF = @"aiff";
@@ -25,6 +27,8 @@ NSString * const kJSQSystemSoundTypeWAV = @"wav";
                 extension:(NSString *)extension
                   isAlert:(BOOL)isAlert
           completionBlock:(JSQSystemSoundPlayerCompletionBlock)completionBlock;
+
+- (BOOL)readSoundPlayerOnFromUserDefaults;
 
 - (NSData *)dataWithSoundID:(SystemSoundID)soundID;
 - (SystemSoundID)soundIDFromData:(NSData *)data;
@@ -85,6 +89,7 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 {
     self = [super init];
     if(self) {
+        _on = [self readSoundPlayerOnFromUserDefaults];
         _sounds = [[NSMutableDictionary alloc] init];
         _completionBlocks = [[NSMutableDictionary alloc] init];
         [[NSNotificationCenter defaultCenter] addObserver:self
@@ -112,6 +117,10 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
                   isAlert:(BOOL)isAlert
           completionBlock:(JSQSystemSoundPlayerCompletionBlock)completionBlock
 {
+    if (!self.on) {
+        return;
+    }
+    
     if(!filename || !extension) {
         return;
     }
@@ -146,7 +155,32 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
     }
 }
 
+- (BOOL)readSoundPlayerOnFromUserDefaults
+{
+    NSNumber *setting = [[NSUserDefaults standardUserDefaults] objectForKey:kJSQSystemSoundPlayerUserDefaultsKey];
+    
+    if (!setting) {
+        [self toggleSoundPlayerOn:YES];
+        return YES;
+    }
+    
+    return [setting boolValue];
+}
+
 #pragma mark - Public API
+
+- (void)toggleSoundPlayerOn:(BOOL)on
+{
+    _on = on;
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:[NSNumber numberWithBool:on] forKey:kJSQSystemSoundPlayerUserDefaultsKey];
+    [userDefaults synchronize];
+    
+    if (!on) {
+        [self stopAllSounds];
+    }
+}
 
 - (void)playSoundWithName:(NSString *)filename extension:(NSString *)extension
 {
@@ -184,7 +218,9 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 
 - (void)playVibrateSound
 {
-    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    if (self.on) {
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    }
 }
 
 - (void)stopAllSounds
