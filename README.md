@@ -22,7 +22,9 @@ See [AVAudioPlayer](https://developer.apple.com/library/ios/DOCUMENTATION/AVFoun
 ## Features
 
 * Play sound effects and alert sounds with a single line of code
-* "Play" vibration (if available)
+* "Play" vibration (if available on device)
+* Block-based completion handlers
+* Integration with `NSUserDefaults` to globally toggle sound effects in your app
 * Sweet and efficient memory management
 * Caches sounds (`SystemSoundID` objects) and purges on memory warning
 
@@ -63,6 +65,12 @@ String constants for file extensions provided for you:
 * `kJSQSystemSoundTypeAIF`
 * `kJSQSystemSoundTypeAIFF`
 * `kJSQSystemSoundTypeWAV`
+
+Need a setting in your app's preferences to toggle sound effects on/off? `JSQSystemSoundPlayer` can do that, too! There's no need to ever check the saved settings (`[JSQSystemSoundPlayer sharedPlayer].on`) before you play a sound effect. Just play a sound like in the example above, `JSQSystemSoundPlayer` respect whatever setting has been previously saved.
+
+````objective-c
+[[JSQSystemSoundPlayer sharedPlayer] toggleSoundPlayerOn:sender.on];
+````
 
 Also see the included demo project: `SoundPlayerDemo.xcodeproj`
 
