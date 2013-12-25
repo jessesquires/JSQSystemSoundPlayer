@@ -3,7 +3,3 @@ language: objective-c
 script: 
 - xctool -project SoundPlayerDemo.xcodeproj -scheme SoundPlayerDemo -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO clean build test
 - xctool -project SoundPlayerDemo.xcodeproj -scheme SoundPlayerDemoTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO clean build run-tests -freshSimulator -freshInstall
-
-branches:
-only:
-- master
