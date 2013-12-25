@@ -116,6 +116,8 @@ Many thanks to [the contributors](https://github.com/jessesquires/JSQSystemSound
 
 [MUDRammer](https://itunes.apple.com/us/app/mudrammer-a-modern-mud-client/id597157072?mt=8)
 
+*[Contact me](mailto:jesse.squires.developer@gmail.com) to have your app listed here.*
+
 ## [MIT License][mitLink]
 
 You are free to use this as you please. **No attribution necessary, but much appreciated.**
