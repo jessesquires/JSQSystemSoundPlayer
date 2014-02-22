@@ -134,4 +134,8 @@ typedef void(^JSQSystemSoundPlayerCompletionBlock)(void);
  */
 - (void)stopSoundWithFilename:(NSString *)filename;
 
+/** Stops all currently playing sounds
+ *  - causes release of previously loaded sounds from memory
+ */
+- (void)stopAllSoundsImmediately;
 @end

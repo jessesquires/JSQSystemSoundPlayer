@@ -237,4 +237,13 @@
     XCTAssertEqual(soundPlayerOn, soundSetting, @"Sound setting values should be equal");
 }
 
+- (void)testStopAllSoundsImmediately
+{
+    [self.sharedPlayer addSoundIDForAudioFileWithName:kSoundBasso extension:kJSQSystemSoundTypeAIF];
+    XCTAssertEqual(1ul, [self.sharedPlayer.sounds count], @"should have 1 sound loaded");
+    XCTAssertNoThrow([self.sharedPlayer stopAllSoundsImmediately], @"should not throw an exception");
+    XCTAssertEqual(0ul, [self.sharedPlayer.sounds count], @"should have all sounds unloaded");
+}
+
+
 @end
