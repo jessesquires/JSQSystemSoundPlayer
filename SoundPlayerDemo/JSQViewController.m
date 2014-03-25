@@ -48,8 +48,8 @@
 - (IBAction)playLongSoundPressed:(UIButton *)sender
 {
     NSLog(@"Playing long sound...");
-    [[JSQSystemSoundPlayer sharedPlayer] playSoundWithName:@"BalladPiano"
-                                                 extension:kJSQSystemSoundTypeCAF
+    [[JSQSystemSoundPlayer sharedPlayer] playSoundWithName:@"ttttt"
+                                                 extension:kJSQSystemSoundTypeMP3
                                                 completion:^{
                                                     NSLog(@"Long sound complete!");
                                                 }];

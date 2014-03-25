@@ -31,6 +31,11 @@ extern NSString * const kJSQSystemSoundTypeAIFF;
 extern NSString * const kJSQSystemSoundTypeWAV;
 
 /**
+ *  String constant for .mp3 audio file extension.
+ */
+extern NSString * const kJSQSystemSoundTypeMP3;
+
+/**
  *  A completion block to be called after a system sound has finished playing.
  */
 typedef void(^JSQSystemSoundPlayerCompletionBlock)(void);
