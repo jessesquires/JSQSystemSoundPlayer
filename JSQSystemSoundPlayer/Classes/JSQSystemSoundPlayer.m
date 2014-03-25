@@ -17,6 +17,7 @@ NSString * const kJSQSystemSoundTypeCAF = @"caf";
 NSString * const kJSQSystemSoundTypeAIF = @"aif";
 NSString * const kJSQSystemSoundTypeAIFF = @"aiff";
 NSString * const kJSQSystemSoundTypeWAV = @"wav";
+NSString * const kJSQSystemSoundTypeMP3 = @"mp3";
 
 @interface JSQSystemSoundPlayer ()
 

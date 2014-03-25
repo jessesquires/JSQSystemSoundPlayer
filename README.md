@@ -13,7 +13,7 @@ Or, read the tl;dr version:
 >
 >* No longer than 30 seconds in duration
 >* In linear PCM or IMA4 (IMA/ADPCM) format
->* Packaged in a `.caf`, `.aif`, or `.wav` file
+>* Packaged in a `.caf`, `.aif`, `.wav`, or `.mp3` file
 
 If this does not fit your needs, then this control is not for you! 
 See [AVAudioPlayer](https://developer.apple.com/library/ios/DOCUMENTATION/AVFoundation/Reference/AVAudioPlayerClassReference/Reference/Reference.html), instead.
@@ -66,6 +66,7 @@ String constants for file extensions provided for you:
 * `kJSQSystemSoundTypeAIF`
 * `kJSQSystemSoundTypeAIFF`
 * `kJSQSystemSoundTypeWAV`
+* `kJSQSystemSoundTypeMP3`
 
 Need a setting in your app's preferences to toggle sound effects on/off? `JSQSystemSoundPlayer` can do that, too! There's no need to ever check the saved settings (`[JSQSystemSoundPlayer sharedPlayer].on`) before you play a sound effect. Just play a sound like in the example above. `JSQSystemSoundPlayer` respects whatever setting has been previously saved.
 
