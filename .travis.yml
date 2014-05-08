@@ -1,5 +1,8 @@
 language: objective-c
 
+before_install: 
+- brew update
+- brew upgrade xctool
+
 script: 
-- xctool -project SoundPlayerDemo.xcodeproj -scheme SoundPlayerDemo -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO clean build test
-- xctool -project SoundPlayerDemo.xcodeproj -scheme SoundPlayerDemoTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO clean build run-tests -freshSimulator -freshInstall
+- xctool clean build test -project SoundPlayerDemo.xcodeproj -scheme SoundPlayerDemo -sdk iphonesimulator7.0 ONLY_ACTIVE_ARCH=NO
