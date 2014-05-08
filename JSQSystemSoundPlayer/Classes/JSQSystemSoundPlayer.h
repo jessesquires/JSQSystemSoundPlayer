@@ -21,22 +21,22 @@
 /**
  *  String constant for .caf audio file extension.
  */
-extern NSString * const kJSQSystemSoundTypeCAF;
+FOUNDATION_EXPORT NSString * const kJSQSystemSoundTypeCAF;
 
 /**
  *  String constant for .aif audio file extension.
  */
-extern NSString * const kJSQSystemSoundTypeAIF;
+FOUNDATION_EXPORT NSString * const kJSQSystemSoundTypeAIF;
 
 /**
  *  String constant for .aiff audio file extension.
  */
-extern NSString * const kJSQSystemSoundTypeAIFF;
+FOUNDATION_EXPORT NSString * const kJSQSystemSoundTypeAIFF;
 
 /**
  *  String constant for .wav audio file extension.
  */
-extern NSString * const kJSQSystemSoundTypeWAV;
+FOUNDATION_EXPORT NSString * const kJSQSystemSoundTypeWAV;
 
 /**
  *  A completion block to be called after a system sound has finished playing.
