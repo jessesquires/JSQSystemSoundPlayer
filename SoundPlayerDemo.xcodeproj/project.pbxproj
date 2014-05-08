@@ -64,9 +64,6 @@
 		88484DE6183F350C00242F9E /* JSQSystemSoundPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSQSystemSoundPlayer.h; sourceTree = "<group>"; };
 		88484DE7183F350C00242F9E /* JSQSystemSoundPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSQSystemSoundPlayer.m; sourceTree = "<group>"; };
 		888C81E5183F2B5400F326C2 /* Basso.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = Basso.aif; sourceTree = "<group>"; };
-		88E221D6185D131700135A07 /* JSQSystemSoundPlayer.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = JSQSystemSoundPlayer.podspec; sourceTree = SOURCE_ROOT; };
-		88E221D7185D131700135A07 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE.txt; path = ../LICENSE.txt; sourceTree = "<group>"; };
-		88E221D8185D131700135A07 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		88EEDE7C1842FB5C00A12E01 /* Funk.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Funk.aiff; sourceTree = "<group>"; };
 		88FA61A218518FCB00BB4358 /* BalladPiano.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BalladPiano.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,9 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				88484DE5183F350C00242F9E /* Classes */,
-				88E221D6185D131700135A07 /* JSQSystemSoundPlayer.podspec */,
-				88E221D7185D131700135A07 /* LICENSE.txt */,
-				88E221D8185D131700135A07 /* README.md */,
 			);
 			path = JSQSystemSoundPlayer;
 			sourceTree = SOURCE_ROOT;

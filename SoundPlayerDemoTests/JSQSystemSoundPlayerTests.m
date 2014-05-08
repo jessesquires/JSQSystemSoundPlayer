@@ -3,9 +3,9 @@
 //  http://www.hexedbits.com
 //
 //
-//  The MIT License
+//  License
 //  Copyright (c) 2013 Jesse Squires
-//  http://opensource.org/licenses/MIT
+//  Released under an MIT license: http://opensource.org/licenses/MIT
 //
 
 #import <XCTest/XCTest.h>
@@ -17,6 +17,7 @@
 #define kSoundBasso @"Basso"
 #define kSoundFunk @"Funk"
 #define kSoundBalladPiano @"BalladPiano"
+
 
 // Declare private interface here in order to test private methods
 // ***************************************************************

@@ -3,9 +3,17 @@
 //  http://www.hexedbits.com
 //
 //
-//  The MIT License
+//  Documentation
+//  http://cocoadocs.org/docsets/JSQSystemSoundPlayer
+//
+//
+//  GitHub
+//  https://github.com/jessesquires/JSQSystemSoundPlayer
+//
+//
+//  License
 //  Copyright (c) 2013 Jesse Squires
-//  http://opensource.org/licenses/MIT
+//  Released under an MIT license: http://opensource.org/licenses/MIT
 //
 
 #import <Foundation/Foundation.h>
