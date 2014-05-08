@@ -238,4 +238,14 @@
     XCTAssertEqual(soundPlayerOn, soundSetting, @"Sound setting values should be equal");
 }
 
+- (void)testPreloadSounds
+{
+    XCTAssertTrue([self.sharedPlayer.sounds count] == 0, @"Player should begin with no sounds");
+    
+    [self.sharedPlayer preloadSoundWithFilename:kSoundBasso extension:kJSQSystemSoundTypeAIF];
+    
+    XCTAssertTrue([self.sharedPlayer.sounds count] == 1, @"Player should have 1 sound after preloading");
+    XCTAssert([self.sharedPlayer soundIDForFilename:kSoundBasso], @"Player soundID for file should not be 0");
+}
+
 @end
