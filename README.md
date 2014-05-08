@@ -1,5 +1,5 @@
 # JSQSystemSoundPlayer 
-[![Build Status](https://secure.travis-ci.org/jessesquires/JSQSystemSoundPlayer.png)](http://travis-ci.org/jessesquires/JSQSystemSoundPlayer) [![Version Status](https://cocoapod-badges.herokuapp.com/v/JSQSystemSoundPlayer/badge.png)][docsLink] [![license MIT](http://b.repl.ca/v1/license-MIT-blue.png)][mitLink]
+[![Build Status](https://secure.travis-ci.org/jessesquires/JSQSystemSoundPlayer.svg)](http://travis-ci.org/jessesquires/JSQSystemSoundPlayer) [![Version Status](https://cocoapod-badges.herokuapp.com/v/JSQSystemSoundPlayer/badge.png)][docsLink] [![license MIT](http://b.repl.ca/v1/license-MIT-blue.png)][mitLink]
 
 A fancy Obj-C wrapper for iOS [System Sound Services](https://developer.apple.com/library/ios/documentation/AudioToolbox/Reference/SystemSoundServicesReference/Reference/reference.html).
 
@@ -36,18 +36,10 @@ See [AVAudioPlayer](https://developer.apple.com/library/ios/DOCUMENTATION/AVFoun
 
 ## Installation
 
-#### From [CocoaPods](http://www.cocoapods.org)
-
-`pod 'JSQSystemSoundPlayer'`
-
-#### From source
-
-* Drag the `JSQSystemSoundPlayer/` folder to your project
-* Add the `AudioToolbox.framework` to your project
-
-#### Too cool for [ARC](https://developer.apple.com/library/mac/releasenotes/ObjectiveC/RN-TransitioningToARC/Introduction/Introduction.html)?
-
-* Add the `-fobjc-arc` compiler flag to all source files in your project in Target Settings > Build Phases > Compile Sources.
+````
+pod 'JSQSystemSoundPlayer'
+````
+Otherwise, drag the `JSQSystemSoundPlayer/` folder to your project, and add `AudioToolbox.framework`.
 
 ## Getting Started
 
@@ -75,52 +67,50 @@ Need a setting in your app's preferences to toggle sound effects on/off? `JSQSys
 
 Also see the included demo project: `SoundPlayerDemo.xcodeproj`
 
+*For a good time*
+````objective-c
+while (1) {
+    [[JSQSystemSoundPlayer sharedPlayer] playVibrateSound];
+}
+````
+
 ## Documentation
 
-Documentation is [available here][docsLink] via [CocoaDocs](http://cocoadocs.org). Thanks [@CocoaDocs](https://twitter.com/CocoaDocs)!
+Read the fucking docs, [available here][docsLink] via [@CocoaDocs](https://twitter.com/CocoaDocs).
 
-## Donate
-
-Support the developement of this **free**, open-source control! via [Square Cash](https://square.com/cash).
-
-<h4><a href="mailto:jesse.squires.developer@gmail.com?cc=cash@square.com&subject=$1&body=Thanks for developing JSQSystemSoundPlayer!">Send $1</a> <em>Just saying thanks!</em></h4>
-<h4><a href="mailto:jesse.squires.developer@gmail.com?cc=cash@square.com&subject=$5&body=Thanks for developing JSQSystemSoundPlayer!">Send $5</a> <em>This control is great!</em></h4>
-<h4><a href="mailto:jesse.squires.developer@gmail.com?cc=cash@square.com&subject=$10&body=Thanks for developing JSQSystemSoundPlayer!">Send $10</a> <em>This totally saved me time!</em></h4>
-
-## How To Contribute
+## Contribute
 
 Please follow these sweet [contribution guidelines](https://github.com/jessesquires/HowToContribute).
 
+## Donate
+
+Support the development of this **free**, open-source library! 
+
+> *Donations made via [Square Cash](https://square.com/cash)*
+> <h4><a href="mailto:jesse.squires.developer@gmail.com?cc=cash@square.com&subject=$1&body=Thanks for developing JSQSystemSoundPlayer!">Send $1</a> <em>Just saying thanks!</em></h4>
+> <h4><a href="mailto:jesse.squires.developer@gmail.com?cc=cash@square.com&subject=$5&body=Thanks for developing JSQSystemSoundPlayer!">Send $5</a> <em>This control is great!</em></h4>
+><h4><a href="mailto:jesse.squires.developer@gmail.com?cc=cash@square.com&subject=$10&body=Thanks for developing JSQSystemSoundPlayer!">Send $10</a> <em>This totally saved me time!</em></h4>
+
 ## Credits
 
-Created by [@jesse_squires](https://twitter.com/jesse_squires), a [programming-motherfucker](http://programming-motherfucker.com).
+Created by [**@jesse_squires**](https://twitter.com/jesse_squires), a [programming-motherfucker](http://programming-motherfucker.com).
 
-Many thanks to [the contributors](https://github.com/jessesquires/JSQSystemSoundPlayer/graphs/contributors) of this project.
+Many thanks to [**the contributors**](https://github.com/jessesquires/JSQSystemSoundPlayer/graphs/contributors) of this project.
 
-## Apps Using This Control
+## Apps using this library
 
-[Hemoglobe](http://bit.ly/hemoglobeapp)
+* [Hemoglobe](http://bit.ly/hemoglobeapp)
+* [iPaint uPaint](http://bit.ly/ipupappstr)
+* [MUDRammer](https://itunes.apple.com/us/app/mudrammer-a-modern-mud-client/id597157072?mt=8)
 
-[iPaint uPaint](http://bit.ly/ipupappstr)
+## License
 
-[MUDRammer](https://itunes.apple.com/us/app/mudrammer-a-modern-mud-client/id597157072?mt=8)
+`JSQSystemSoundPlayer` is released under an [MIT License][mitLink]. See `LICENSE` for details.
 
-*[Contact me](mailto:jesse.squires.developer@gmail.com) to have your app listed here.*
+>**Copyright &copy; 2013 Jesse Squires.**
 
-## [MIT License][mitLink]
-
-You are free to use this as you please. **No attribution necessary, but much appreciated.**
-
-Copyright &copy; 2013 Jesse Squires
-
->Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
->The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
->THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*Please provide attribution, it is greatly appreciated.*
 
 [docsLink]:http://cocoadocs.org/docsets/JSQSystemSoundPlayer/1.4.0
 [mitLink]:http://opensource.org/licenses/MIT
 [imgLink]:https://raw.github.com/jessesquires/JSQSystemSoundPlayer/master/Screenshots/screenshot.png
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jessesquires/jsqsystemsoundplayer/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
