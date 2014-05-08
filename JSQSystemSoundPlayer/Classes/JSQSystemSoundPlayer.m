@@ -247,6 +247,13 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
     [_completionBlocks removeObjectForKey:data];
 }
 
+- (void)preloadSoundWithFilename:(NSString *)filename extension:(NSString *)extension
+{
+    if (![self.sounds objectForKey:filename]) {
+        [self addSoundIDForAudioFileWithName:filename extension:extension];
+    }
+}
+
 #pragma mark - Sound data
 
 - (NSData *)dataWithSoundID:(SystemSoundID)soundID
@@ -314,11 +321,11 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
     NSURL *fileURL = [[NSBundle mainBundle] URLForResource:filename
                                              withExtension:extension];
 
-    if([[NSFileManager defaultManager] fileExistsAtPath:[fileURL path]]) {
+    if ([[NSFileManager defaultManager] fileExistsAtPath:[fileURL path]]) {
         SystemSoundID soundID;
         OSStatus error = AudioServicesCreateSystemSoundID((__bridge CFURLRef)fileURL, &soundID);
 
-        if(error) {
+        if (error) {
             [self logError:error withMessage:@"Warning! SystemSoundID could not be created."];
             return 0;
         }
