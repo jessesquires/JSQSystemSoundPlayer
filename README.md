@@ -67,7 +67,7 @@ Need a setting in your app's preferences to toggle sound effects on/off? `JSQSys
 
 Also see the included demo project: `SoundPlayerDemo.xcodeproj`
 
-*For a good time*
+_**For a good time:**_
 ````objective-c
 while (1) {
     [[JSQSystemSoundPlayer sharedPlayer] playVibrateSound];
