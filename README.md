@@ -111,6 +111,6 @@ Many thanks to [**the contributors**](https://github.com/jessesquires/JSQSystemS
 
 *Please provide attribution, it is greatly appreciated.*
 
-[docsLink]:http://cocoadocs.org/docsets/JSQSystemSoundPlayer/1.5.0
+[docsLink]:http://cocoadocs.org/docsets/JSQSystemSoundPlayer
 [mitLink]:http://opensource.org/licenses/MIT
 [imgLink]:https://raw.github.com/jessesquires/JSQSystemSoundPlayer/master/Screenshots/screenshot.png
