@@ -9,6 +9,6 @@ Pod::Spec.new do |s|
 	s.source			= { :git => 'https://github.com/jessesquires/JSQSystemSoundPlayer.git', :tag => s.version.to_s }
 	s.platform			= :ios, '6.0'
 	s.source_files		= 'JSQSystemSoundPlayer/Classes/*'
-	s.frameworks		= 'AudioToolbox'
+	s.frameworks		= 'AudioToolbox', 'Foundation', 'UIKit'
 	s.requires_arc		= true
 end
