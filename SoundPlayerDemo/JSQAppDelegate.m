@@ -1,10 +1,10 @@
 //
 //  Created by Jesse Squires
-//  http://www.hexedbits.com
+//  http://www.jessesquires.com
 //
 //
 //  The MIT License
-//  Copyright (c) 2013 Jesse Squires
+//  Copyright (c) 2014 Jesse Squires
 //  http://opensource.org/licenses/MIT
 //
 

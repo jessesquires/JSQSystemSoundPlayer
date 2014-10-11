@@ -1,6 +1,6 @@
 //
 //  Created by Jesse Squires
-//  http://www.hexedbits.com
+//  http://www.jessesquires.com
 //
 //
 //  Documentation
@@ -12,7 +12,7 @@
 //
 //
 //  License
-//  Copyright (c) 2013 Jesse Squires
+//  Copyright (c) 2014 Jesse Squires
 //  Released under an MIT license: http://opensource.org/licenses/MIT
 //
 

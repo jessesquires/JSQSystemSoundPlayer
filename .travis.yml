@@ -2,7 +2,7 @@ language: objective-c
 
 before_install: 
 - brew update
-- brew upgrade xctool
+- if brew outdated | grep -qx xctool; then brew upgrade xctool; fi
 
 script: 
 - xctool clean build test -project SoundPlayerDemo.xcodeproj -scheme SoundPlayerDemo -sdk iphonesimulator7.0 ONLY_ACTIVE_ARCH=NO

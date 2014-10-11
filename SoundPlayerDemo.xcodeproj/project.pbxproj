@@ -16,7 +16,6 @@
 		881C49681834CB9A00FED604 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 881C49661834CB9A00FED604 /* Main.storyboard */; };
 		881C496B1834CB9A00FED604 /* JSQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 881C496A1834CB9A00FED604 /* JSQViewController.m */; };
 		881C496D1834CB9A00FED604 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 881C496C1834CB9A00FED604 /* Images.xcassets */; };
-		881C49741834CB9A00FED604 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 881C49731834CB9A00FED604 /* XCTest.framework */; };
 		881C49751834CB9A00FED604 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 881C49541834CB9900FED604 /* Foundation.framework */; };
 		881C49761834CB9A00FED604 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 881C49581834CB9900FED604 /* UIKit.framework */; };
 		881C497E1834CB9B00FED604 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 881C497C1834CB9B00FED604 /* InfoPlist.strings */; };
@@ -26,6 +25,7 @@
 		88484DE9183F350C00242F9E /* JSQSystemSoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 88484DE7183F350C00242F9E /* JSQSystemSoundPlayer.m */; };
 		888C81E6183F2B5400F326C2 /* Basso.aif in Resources */ = {isa = PBXBuildFile; fileRef = 888C81E5183F2B5400F326C2 /* Basso.aif */; };
 		888C81E7183F2B5400F326C2 /* Basso.aif in Resources */ = {isa = PBXBuildFile; fileRef = 888C81E5183F2B5400F326C2 /* Basso.aif */; };
+		88B1895719E9D6C2004230F2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B1895619E9D6C2004230F2 /* XCTest.framework */; };
 		88EEDE7D1842FB5C00A12E01 /* Funk.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 88EEDE7C1842FB5C00A12E01 /* Funk.aiff */; };
 		88FA61A318518FCB00BB4358 /* BalladPiano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 88FA61A218518FCB00BB4358 /* BalladPiano.caf */; };
 /* End PBXBuildFile section */
@@ -56,7 +56,6 @@
 		881C496A1834CB9A00FED604 /* JSQViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSQViewController.m; sourceTree = "<group>"; };
 		881C496C1834CB9A00FED604 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		881C49721834CB9A00FED604 /* SoundPlayerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundPlayerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		881C49731834CB9A00FED604 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		881C497B1834CB9B00FED604 /* SoundPlayerDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SoundPlayerDemoTests-Info.plist"; sourceTree = "<group>"; };
 		881C497D1834CB9B00FED604 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		881C497F1834CB9B00FED604 /* JSQSystemSoundPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSQSystemSoundPlayerTests.m; sourceTree = "<group>"; };
@@ -64,6 +63,7 @@
 		88484DE6183F350C00242F9E /* JSQSystemSoundPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSQSystemSoundPlayer.h; sourceTree = "<group>"; };
 		88484DE7183F350C00242F9E /* JSQSystemSoundPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSQSystemSoundPlayer.m; sourceTree = "<group>"; };
 		888C81E5183F2B5400F326C2 /* Basso.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = Basso.aif; sourceTree = "<group>"; };
+		88B1895619E9D6C2004230F2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = System/Library/Frameworks/XCTest.framework; sourceTree = SDKROOT; };
 		88EEDE7C1842FB5C00A12E01 /* Funk.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Funk.aiff; sourceTree = "<group>"; };
 		88FA61A218518FCB00BB4358 /* BalladPiano.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BalladPiano.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				881C49741834CB9A00FED604 /* XCTest.framework in Frameworks */,
+				88B1895719E9D6C2004230F2 /* XCTest.framework in Frameworks */,
 				881C49761834CB9A00FED604 /* UIKit.framework in Frameworks */,
 				881C49751834CB9A00FED604 /* Foundation.framework in Frameworks */,
 			);
@@ -116,11 +116,11 @@
 		881C49531834CB9900FED604 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				88B1895619E9D6C2004230F2 /* XCTest.framework */,
 				881C49921834CD1500FED604 /* AudioToolbox.framework */,
 				881C49541834CB9900FED604 /* Foundation.framework */,
 				881C49561834CB9900FED604 /* CoreGraphics.framework */,
 				881C49581834CB9900FED604 /* UIKit.framework */,
-				881C49731834CB9A00FED604 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -244,10 +244,8 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Hexed Bits";
 				TargetAttributes = {
-					881C49501834CB9900FED604 = {
-						DevelopmentTeam = 5VRJU68BZ5;
-					};
 					881C49711834CB9A00FED604 = {
+						DevelopmentTeam = 5VRJU68BZ5;
 						TestTargetID = 881C49501834CB9900FED604;
 					};
 				};
@@ -465,6 +463,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SoundPlayerDemo.app/SoundPlayerDemo";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -479,7 +479,7 @@
 				INFOPLIST_FILE = "SoundPlayerDemoTests/SoundPlayerDemoTests-Info.plist";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "33D9D386-8DC3-4040-BF92-DA1C5D32964B";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -489,6 +489,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SoundPlayerDemo.app/SoundPlayerDemo";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -499,7 +501,7 @@
 				INFOPLIST_FILE = "SoundPlayerDemoTests/SoundPlayerDemoTests-Info.plist";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "33D9D386-8DC3-4040-BF92-DA1C5D32964B";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};

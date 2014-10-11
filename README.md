@@ -107,7 +107,7 @@ Many thanks to [**the contributors**](https://github.com/jessesquires/JSQSystemS
 
 `JSQSystemSoundPlayer` is released under an [MIT License][mitLink]. See `LICENSE` for details.
 
->**Copyright &copy; 2013 Jesse Squires.**
+>**Copyright &copy; 2014 Jesse Squires.**
 
 *Please provide attribution, it is greatly appreciated.*
 
