@@ -28,6 +28,7 @@ See [AVAudioPlayer](https://developer.apple.com/library/ios/DOCUMENTATION/AVFoun
 * Integration with `NSUserDefaults` to globally toggle sound effects in your app
 * Sweet and efficient memory management
 * Caches sounds (`SystemSoundID` objects) and purges on memory warning
+* Works with Swift! (v2.0.0 and above)
 
 ## Requirements
 
@@ -44,11 +45,11 @@ Otherwise, drag the `JSQSystemSoundPlayer/` folder to your project, and add `Aud
 ## Getting Started
 
 ````objective-c
-[[JSQSystemSoundPlayer sharedPlayer] playSoundWithName:@"mySoundFile"
-                                             extension:kJSQSystemSoundTypeAIF
-                                            completion:^{
-                                                // completion block code
-                                            }];
+[[JSQSystemSoundPlayer sharedPlayer] playSoundWithFilename:@"mySoundFile"
+                                             fileExtension:kJSQSystemSoundTypeAIF
+                                                completion:^{
+                                                   // completion block code
+                                                }];
 ````
 
 And that's all! 
