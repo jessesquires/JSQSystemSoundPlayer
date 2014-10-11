@@ -9,8 +9,11 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import "JSQSystemSoundPlayer.h"
+
 
 #define kJSQSystemSoundPlayerUserDefaultsKey @"kJSQSystemSoundPlayerUserDefaultsKey"
 
