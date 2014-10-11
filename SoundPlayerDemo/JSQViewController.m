@@ -24,20 +24,20 @@
 {
     JSQSystemSoundPlayer *sharedPlayer = [JSQSystemSoundPlayer sharedPlayer];
     
-    [sharedPlayer playSoundWithName:@"Basso"
-                          extension:kJSQSystemSoundTypeAIF
-                         completion:^{
-                             NSLog(@"Sound finished playing. Executing completion block...");
-                             
-                             [sharedPlayer playAlertSoundWithName:@"Funk"
-                                                        extension:kJSQSystemSoundTypeAIFF];
-                         }];
+    [sharedPlayer playSoundWithFilename:@"Basso"
+                          fileExtension:kJSQSystemSoundTypeAIF
+                             completion:^{
+                                 NSLog(@"Sound finished playing. Executing completion block...");
+                                 
+                                 [sharedPlayer playAlertSoundWithFilename:@"Funk"
+                                                            fileExtension:kJSQSystemSoundTypeAIFF];
+                             }];
 }
 
 - (IBAction)playAlertSoundPressed:(UIButton *)sender
 {
-    [[JSQSystemSoundPlayer sharedPlayer] playAlertSoundWithName:@"Funk"
-                                                      extension:kJSQSystemSoundTypeAIFF];
+    [[JSQSystemSoundPlayer sharedPlayer] playAlertSoundWithFilename:@"Funk"
+                                                      fileExtension:kJSQSystemSoundTypeAIFF];
 }
 
 - (IBAction)playVibratePressed:(UIButton *)sender
@@ -48,11 +48,11 @@
 - (IBAction)playLongSoundPressed:(UIButton *)sender
 {
     NSLog(@"Playing long sound...");
-    [[JSQSystemSoundPlayer sharedPlayer] playSoundWithName:@"BalladPiano"
-                                                 extension:kJSQSystemSoundTypeCAF
-                                                completion:^{
-                                                    NSLog(@"Long sound complete!");
-                                                }];
+    [[JSQSystemSoundPlayer sharedPlayer] playSoundWithFilename:@"BalladPiano"
+                                                 fileExtension:kJSQSystemSoundTypeCAF
+                                                    completion:^{
+                                                        NSLog(@"Long sound complete!");
+                                                    }];
 }
 
 - (IBAction)stopPressed:(UIButton *)sender

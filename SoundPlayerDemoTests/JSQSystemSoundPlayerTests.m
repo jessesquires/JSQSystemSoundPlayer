@@ -127,7 +127,7 @@
 {
     SystemSoundID soundID = [self.sharedPlayer createSoundIDWithName:kSoundBasso extension:kJSQSystemSoundTypeAIF];
     XCTAssert(soundID, @"SoundID should not be nil");
- 
+    
     [self.sharedPlayer addSoundIDForAudioFileWithName:kSoundBasso extension:kJSQSystemSoundTypeAIF];
     SystemSoundID retrievedSoundID = [self.sharedPlayer soundIDForFilename:kSoundBasso];
     XCTAssert(retrievedSoundID, @"SoundID should not be nil");
@@ -148,32 +148,32 @@
 
 - (void)testPlayingSounds
 {
-    XCTAssertNoThrow([self.sharedPlayer playSoundWithName:kSoundBasso
-                                                extension:kJSQSystemSoundTypeAIF
-                                               completion:^{
-                                                   NSLog(@"Completion block...");
-                                               }],
+    XCTAssertNoThrow([self.sharedPlayer playSoundWithFilename:kSoundBasso
+                                                fileExtension:kJSQSystemSoundTypeAIF
+                                                   completion:^{
+                                                       NSLog(@"Completion block...");
+                                                   }],
                      @"Player should play sound and not throw");
     
-    XCTAssertNoThrow([self.sharedPlayer playSoundWithName:kSoundFunk
-                                                extension:kJSQSystemSoundTypeAIFF],
+    XCTAssertNoThrow([self.sharedPlayer playSoundWithFilename:kSoundFunk
+                                                fileExtension:kJSQSystemSoundTypeAIFF],
                      @"Player should play sound and not throw");
     
-    XCTAssertNoThrow([self.sharedPlayer playAlertSoundWithName:kSoundBasso
-                                                     extension:kJSQSystemSoundTypeAIF],
+    XCTAssertNoThrow([self.sharedPlayer playAlertSoundWithFilename:kSoundBasso
+                                                     fileExtension:kJSQSystemSoundTypeAIF],
                      @"Player should play alert and not throw");
     
-    XCTAssertNoThrow([self.sharedPlayer playAlertSoundWithName:kSoundFunk
-                                                     extension:kJSQSystemSoundTypeAIFF
-                                                    completion:nil],
+    XCTAssertNoThrow([self.sharedPlayer playAlertSoundWithFilename:kSoundFunk
+                                                     fileExtension:kJSQSystemSoundTypeAIFF
+                                                        completion:nil],
                      @"Player should play alert and not throw with nil block");
     
-    XCTAssertNoThrow([self.sharedPlayer playAlertSoundWithName:nil
-                                                     extension:nil],
+    XCTAssertNoThrow([self.sharedPlayer playAlertSoundWithFilename:nil
+                                                     fileExtension:nil],
                      @"Player should fail gracefully and not throw on nil params");
     
-    XCTAssertNoThrow([self.sharedPlayer playAlertSoundWithName:kSoundBalladPiano
-                                                     extension:kJSQSystemSoundTypeAIFF],
+    XCTAssertNoThrow([self.sharedPlayer playAlertSoundWithFilename:kSoundBalladPiano
+                                                     fileExtension:kJSQSystemSoundTypeAIFF],
                      @"Player should fail gracefully and not throw on incorrect extension");
     
     XCTAssertNoThrow([self.sharedPlayer playVibrateSound], @"Player should vibrate and not throw");
@@ -181,8 +181,8 @@
 
 - (void)testStoppingSounds
 {
-    [self.sharedPlayer playSoundWithName:kSoundBasso extension:kJSQSystemSoundTypeAIF];
-    [self.sharedPlayer playSoundWithName:kSoundBalladPiano extension:kJSQSystemSoundTypeCAF];
+    [self.sharedPlayer playSoundWithFilename:kSoundBasso fileExtension:kJSQSystemSoundTypeAIF];
+    [self.sharedPlayer playSoundWithFilename:kSoundBalladPiano fileExtension:kJSQSystemSoundTypeCAF];
     
     XCTAssertTrue([self.sharedPlayer.sounds count] == 2, @"Player should have 2 sounds cached");
     
@@ -192,11 +192,11 @@
 
 - (void)testSoundCompletionBlocks
 {
-    XCTAssertNoThrow([self.sharedPlayer playSoundWithName:kSoundBasso
-                                                extension:kJSQSystemSoundTypeAIF
-                                               completion:^{
-                                                   NSLog(@"Exectuing block...");
-                                               }],
+    XCTAssertNoThrow([self.sharedPlayer playSoundWithFilename:kSoundBasso
+                                                fileExtension:kJSQSystemSoundTypeAIF
+                                                   completion:^{
+                                                       NSLog(@"Exectuing block...");
+                                                   }],
                      @"Player should play and now throw");
     
     XCTAssertTrue([self.sharedPlayer.completionBlocks count] == 1, @"Completion blocks dictionary should contain 1 object");
@@ -204,16 +204,16 @@
 
 - (void)testMemoryWarning
 {
-    [self.sharedPlayer playSoundWithName:kSoundBasso
-                               extension:kJSQSystemSoundTypeAIF
-                              completion:^{
-                                  NSLog(@"Completion block...");
-                              }];
+    [self.sharedPlayer playSoundWithFilename:kSoundBasso
+                               fileExtension:kJSQSystemSoundTypeAIF
+                                  completion:^{
+                                      NSLog(@"Completion block...");
+                                  }];
     
     XCTAssertTrue([self.sharedPlayer.completionBlocks count] == 1, @"Completion blocks dictionary should contain 1 object");
     
-    [self.sharedPlayer playAlertSoundWithName:kSoundFunk
-                                    extension:kJSQSystemSoundTypeAIFF];
+    [self.sharedPlayer playAlertSoundWithFilename:kSoundFunk
+                                    fileExtension:kJSQSystemSoundTypeAIFF];
     
     XCTAssertTrue([self.sharedPlayer.sounds count] == 2, @"Sounds dictionary should contain 2 objects");
     
@@ -245,7 +245,7 @@
 {
     XCTAssertTrue([self.sharedPlayer.sounds count] == 0, @"Player should begin with no sounds");
     
-    [self.sharedPlayer preloadSoundWithFilename:kSoundBasso extension:kJSQSystemSoundTypeAIF];
+    [self.sharedPlayer preloadSoundWithFilename:kSoundBasso fileExtension:kJSQSystemSoundTypeAIF];
     
     XCTAssertTrue([self.sharedPlayer.sounds count] == 1, @"Player should have 1 sound after preloading");
     XCTAssert([self.sharedPlayer soundIDForFilename:kSoundBasso], @"Player soundID for file should not be 0");

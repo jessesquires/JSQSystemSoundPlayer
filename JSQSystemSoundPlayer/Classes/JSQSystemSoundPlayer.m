@@ -139,7 +139,7 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
     if (![self.sounds objectForKey:filename]) {
         [self addSoundIDForAudioFileWithName:filename extension:extension];
     }
-
+    
     SystemSoundID soundID = [self soundIDForFilename:filename];
     if (soundID) {
         if (completionBlock) {
@@ -193,16 +193,16 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
     }
 }
 
-- (void)playSoundWithName:(NSString *)filename extension:(NSString *)extension
+- (void)playSoundWithFilename:(NSString *)filename fileExtension:(NSString *)extension
 {
-    [self playSoundWithName:filename
-                  extension:extension
-                 completion:nil];
+    [self playSoundWithFilename:filename
+                  fileExtension:extension
+                     completion:nil];
 }
 
-- (void)playSoundWithName:(NSString *)filename
-                extension:(NSString *)extension
-               completion:(JSQSystemSoundPlayerCompletionBlock)completionBlock
+- (void)playSoundWithFilename:(NSString *)filename
+                fileExtension:(NSString *)extension
+                   completion:(JSQSystemSoundPlayerCompletionBlock)completionBlock
 {
     [self playSoundWithName:filename
                   extension:extension
@@ -210,9 +210,9 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
             completionBlock:completionBlock];
 }
 
-- (void)playAlertSoundWithName:(NSString *)filename
-                     extension:(NSString *)extension
-                    completion:(JSQSystemSoundPlayerCompletionBlock)completionBlock
+- (void)playAlertSoundWithFilename:(NSString *)filename
+                     fileExtension:(NSString *)extension
+                        completion:(JSQSystemSoundPlayerCompletionBlock)completionBlock
 {
     [self playSoundWithName:filename
                   extension:extension
@@ -220,11 +220,11 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
             completionBlock:completionBlock];
 }
 
-- (void)playAlertSoundWithName:(NSString *)filename extension:(NSString *)extension
+- (void)playAlertSoundWithFilename:(NSString *)filename fileExtension:(NSString *)extension
 {
-    [self playAlertSoundWithName:filename
-                       extension:extension
-                      completion:nil];
+    [self playAlertSoundWithFilename:filename
+                       fileExtension:extension
+                          completion:nil];
 }
 
 - (void)playVibrateSound
@@ -250,7 +250,7 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
     [_completionBlocks removeObjectForKey:data];
 }
 
-- (void)preloadSoundWithFilename:(NSString *)filename extension:(NSString *)extension
+- (void)preloadSoundWithFilename:(NSString *)filename fileExtension:(NSString *)extension
 {
     if (![self.sounds objectForKey:filename]) {
         [self addSoundIDForAudioFileWithName:filename extension:extension];
@@ -323,11 +323,11 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 {
     NSURL *fileURL = [[NSBundle mainBundle] URLForResource:filename
                                              withExtension:extension];
-
+    
     if ([[NSFileManager defaultManager] fileExistsAtPath:[fileURL path]]) {
         SystemSoundID soundID;
         OSStatus error = AudioServicesCreateSystemSoundID((__bridge CFURLRef)fileURL, &soundID);
-
+        
         if (error) {
             [self logError:error withMessage:@"Warning! SystemSoundID could not be created."];
             return 0;
@@ -336,7 +336,7 @@ void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
             return soundID;
         }
     }
-
+    
     NSLog(@"[%@] Error: audio file not found at URL: %@", [self class], fileURL);
     return 0;
 }
