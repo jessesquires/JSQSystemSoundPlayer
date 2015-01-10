@@ -12,7 +12,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface JSQViewController : UIViewController
+@interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UISwitch *soundSwitch;
 

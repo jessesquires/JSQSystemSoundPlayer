@@ -8,9 +8,9 @@
 //  http://opensource.org/licenses/MIT
 //
 
-#import "JSQAppDelegate.h"
+#import "AppDelegate.h"
 
-@implementation JSQAppDelegate
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

@@ -8,10 +8,12 @@
 //  http://opensource.org/licenses/MIT
 //
 
-#import "JSQViewController.h"
+#import "ViewController.h"
 #import "JSQSystemSoundPlayer.h"
 
-@implementation JSQViewController
+@implementation ViewController
+
+#pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
@@ -19,6 +21,8 @@
     
     self.soundSwitch.on = [JSQSystemSoundPlayer sharedPlayer].on;
 }
+
+#pragma mark - Actions
 
 - (IBAction)playSystemSoundPressed:(UIButton *)sender
 {
@@ -28,9 +32,6 @@
                           fileExtension:kJSQSystemSoundTypeAIF
                              completion:^{
                                  NSLog(@"Sound finished playing. Executing completion block...");
-                                 
-                                 [sharedPlayer playAlertSoundWithFilename:@"Funk"
-                                                            fileExtension:kJSQSystemSoundTypeAIFF];
                              }];
 }
 
