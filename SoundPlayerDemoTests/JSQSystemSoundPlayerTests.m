@@ -3,6 +3,14 @@
 //  http://www.jessesquires.com
 //
 //
+//  Documentation
+//  http://cocoadocs.org/docsets/JSQSystemSoundPlayer
+//
+//
+//  GitHub
+//  https://github.com/jessesquires/JSQSystemSoundPlayer
+//
+//
 //  License
 //  Copyright (c) 2014 Jesse Squires
 //  Released under an MIT license: http://opensource.org/licenses/MIT
@@ -15,11 +23,11 @@
 #import "JSQSystemSoundPlayer.h"
 
 
-#define kJSQSystemSoundPlayerUserDefaultsKey @"kJSQSystemSoundPlayerUserDefaultsKey"
+static NSString * const kJSQSystemSoundPlayerUserDefaultsKey = @"kJSQSystemSoundPlayerUserDefaultsKey";
 
-#define kSoundBasso @"Basso"
-#define kSoundFunk @"Funk"
-#define kSoundBalladPiano @"BalladPiano"
+static NSString * const kSoundBasso = @"Basso";
+static NSString * const kSoundFunk = @"Funk";
+static NSString * const kSoundBalladPiano = @"BalladPiano";
 
 
 // Declare private interface here in order to test private methods
@@ -79,6 +87,7 @@
 - (void)testInitAndSharedInstance
 {
     XCTAssertNotNil(self.sharedPlayer, @"Player should not be nil");
+    XCTAssertEqualObjects(self.sharedPlayer.bundle, [NSBundle mainBundle]);
     
     JSQSystemSoundPlayer *anotherPlayer = [JSQSystemSoundPlayer sharedPlayer];
     XCTAssertEqualObjects(self.sharedPlayer, anotherPlayer, @"Players returned from shared instance should be equal");
