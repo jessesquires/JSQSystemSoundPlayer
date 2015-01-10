@@ -27,7 +27,7 @@ See [AVAudioPlayer](https://developer.apple.com/library/ios/DOCUMENTATION/AVFoun
 * Block-based completion handlers
 * Integration with `NSUserDefaults` to globally toggle sound effects in your app
 * Sweet and efficient memory management
-* Caches sounds (`SystemSoundID` objects) and purges on memory warning
+* Caches sounds (`SystemSoundID` instances) and purges on memory warning
 * Works with Swift! (v2.0.0 and above)
 
 ## Requirements
@@ -99,6 +99,13 @@ Read the fucking docs, [available here][docsLink] via [@CocoaDocs](https://twitt
 ## Contribute
 
 Please follow these sweet [contribution guidelines](https://github.com/jessesquires/HowToContribute).
+
+## Design
+
+Why is this a [Singleton](http://en.wikipedia.org/wiki/Singleton_pattern)? Singletons are [garbage](https://twitter.com/jesse_squires/status/532800746656239616). I agree! But here's why this is a valid use case:
+
+1. This library manages the use of audio resources. Semantically, you only have 1 sound asset per sound effect. This is akin to `[NSFileManager defaultManager]`. You only have file system from which to read data. 
+2. The singleton allows the caching of `SystemSoundID` instances.
 
 ## Donate
 
