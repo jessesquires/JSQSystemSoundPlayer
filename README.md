@@ -44,6 +44,8 @@ Otherwise, drag the `JSQSystemSoundPlayer/` folder to your project, and add `Aud
 
 ## Getting Started
 
+#### Playing sounds
+
 ````objective-c
 [[JSQSystemSoundPlayer sharedPlayer] playSoundWithFilename:@"mySoundFile"
                                              fileExtension:kJSQSystemSoundTypeAIF
@@ -60,15 +62,30 @@ String constants for file extensions provided for you:
 * `kJSQSystemSoundTypeAIFF`
 * `kJSQSystemSoundTypeWAV`
 
+#### Toggle sounds effects settings on/off
+
 Need a setting in your app's preferences to toggle sound effects on/off? `JSQSystemSoundPlayer` can do that, too! There's no need to ever check the saved settings (`[JSQSystemSoundPlayer sharedPlayer].on`) before you play a sound effect. Just play a sound like in the example above. `JSQSystemSoundPlayer` respects whatever setting has been previously saved.
 
 ````objective-c
 [[JSQSystemSoundPlayer sharedPlayer] toggleSoundPlayerOn:YES];
 ````
 
+#### Specifying a bundle
+
+Need to load your audio resources from a specific bundle? `JSQSystemSoundPlayer` uses the main bundle by default, but you can specify another. 
+
+**NOTE:** for each sound that is played `JSQSystemSoundPlayer` will **always** search the **last specified bundle**. If you are playing sound effects from multiple bundles, you will need to specify the bundle before playing each sound.
+
+````objective-c
+[JSQSystemSoundPlayer sharedPlayer].bundle = [NSBundle mainBundle];
+````
+
+#### Demo
+
 Also see the included demo project: `SoundPlayerDemo.xcodeproj`
 
-_**For a good time:**_
+#### For a good time
+
 ````objective-c
 while (1) {
     [[JSQSystemSoundPlayer sharedPlayer] playVibrateSound];
@@ -95,8 +112,6 @@ Support the development of this **free**, open-source library!
 ## Credits
 
 Created by [**@jesse_squires**](https://twitter.com/jesse_squires), a [programming-motherfucker](http://programming-motherfucker.com).
-
-Many thanks to [**the contributors**](https://github.com/jessesquires/JSQSystemSoundPlayer/graphs/contributors) of this project.
 
 ## Apps using this library
 
