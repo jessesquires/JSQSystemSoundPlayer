@@ -104,7 +104,7 @@ Please follow these sweet [contribution guidelines](https://github.com/jessesqui
 
 Why is this a [Singleton](http://en.wikipedia.org/wiki/Singleton_pattern)? Singletons are [garbage](https://twitter.com/jesse_squires/status/532800746656239616). I agree! But here's why this is a valid use case:
 
-1. This library manages the use of audio resources. Semantically, you only have 1 sound asset per sound effect. This is akin to `[NSFileManager defaultManager]`. You only have file system from which to read data. 
+1. This library manages the use of audio resources. Semantically, you only have 1 sound asset per sound effect. This is akin to `[NSFileManager defaultManager]`. You only have one file system from which to read data. 
 2. The singleton allows the caching of `SystemSoundID` instances.
 
 ## Donate
