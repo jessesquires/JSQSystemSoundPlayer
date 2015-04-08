@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A28170E1AD56DD90044C234 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A28170D1AD56DD90044C234 /* AppDelegate.m */; };
+		0A2817101AD56DD90044C234 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A28170F1AD56DD90044C234 /* main.m */; };
+		0A2817151AD56DD90044C234 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A2817131AD56DD90044C234 /* MainMenu.xib */; };
+		0A2817291AD56E200044C234 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2817281AD56E200044C234 /* AudioToolbox.framework */; };
+		0A28172A1AD56E3B0044C234 /* JSQSystemSoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 88484DE7183F350C00242F9E /* JSQSystemSoundPlayer.m */; };
+		0A28172B1AD573950044C234 /* BalladPiano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 88FA61A218518FCB00BB4358 /* BalladPiano.caf */; };
+		0A28172C1AD573950044C234 /* Basso.aif in Resources */ = {isa = PBXBuildFile; fileRef = 888C81E5183F2B5400F326C2 /* Basso.aif */; };
+		0A28172D1AD573950044C234 /* Funk.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 88EEDE7C1842FB5C00A12E01 /* Funk.aiff */; };
 		881C49551834CB9900FED604 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 881C49541834CB9900FED604 /* Foundation.framework */; };
 		881C49571834CB9900FED604 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 881C49561834CB9900FED604 /* CoreGraphics.framework */; };
 		881C49591834CB9900FED604 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 881C49581834CB9900FED604 /* UIKit.framework */; };
@@ -41,6 +49,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A2817081AD56DD90044C234 /* SoundPlayerDemo-OSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SoundPlayerDemo-OSX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A28170B1AD56DD90044C234 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A28170C1AD56DD90044C234 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0A28170D1AD56DD90044C234 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0A28170F1AD56DD90044C234 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0A2817281AD56E200044C234 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		0A28172E1AD575E90044C234 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		881C49511834CB9900FED604 /* SoundPlayerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundPlayerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		881C49541834CB9900FED604 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		881C49561834CB9900FED604 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -68,6 +83,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0A2817051AD56DD90044C234 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A2817291AD56E200044C234 /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		881C494E1834CB9900FED604 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -92,11 +115,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A2817091AD56DD90044C234 /* SoundPlayerDemo-OSX */ = {
+			isa = PBXGroup;
+			children = (
+				0A28170C1AD56DD90044C234 /* AppDelegate.h */,
+				0A28170D1AD56DD90044C234 /* AppDelegate.m */,
+				0A2817131AD56DD90044C234 /* MainMenu.xib */,
+				0A28170A1AD56DD90044C234 /* Supporting Files */,
+			);
+			path = "SoundPlayerDemo-OSX";
+			sourceTree = SOURCE_ROOT;
+		};
+		0A28170A1AD56DD90044C234 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0A28170B1AD56DD90044C234 /* Info.plist */,
+				0A28170F1AD56DD90044C234 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		881C49481834CB9900FED604 = {
 			isa = PBXGroup;
 			children = (
 				88484DE4183F350C00242F9E /* JSQSystemSoundPlayer */,
 				881C495A1834CB9900FED604 /* SoundPlayerDemo */,
+				0A2817091AD56DD90044C234 /* SoundPlayerDemo-OSX */,
 				881C49791834CB9B00FED604 /* SoundPlayerDemoTests */,
 				881C49521834CB9900FED604 /* Products */,
 				881C49531834CB9900FED604 /* Frameworks */,
@@ -108,6 +152,7 @@
 			children = (
 				881C49511834CB9900FED604 /* SoundPlayerDemo.app */,
 				881C49721834CB9A00FED604 /* SoundPlayerDemoTests.xctest */,
+				0A2817081AD56DD90044C234 /* SoundPlayerDemo-OSX.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,6 +160,7 @@
 		881C49531834CB9900FED604 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A2817281AD56E200044C234 /* AudioToolbox.framework */,
 				88B1895619E9D6C2004230F2 /* XCTest.framework */,
 				881C49921834CD1500FED604 /* AudioToolbox.framework */,
 				881C49541834CB9900FED604 /* Foundation.framework */,
@@ -197,6 +243,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0A2817071AD56DD90044C234 /* SoundPlayerDemo-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A2817261AD56DD90044C234 /* Build configuration list for PBXNativeTarget "SoundPlayerDemo-OSX" */;
+			buildPhases = (
+				0A2817041AD56DD90044C234 /* Sources */,
+				0A2817051AD56DD90044C234 /* Frameworks */,
+				0A2817061AD56DD90044C234 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SoundPlayerDemo-OSX";
+			productName = "SoundPlayerDemo-OSX";
+			productReference = 0A2817081AD56DD90044C234 /* SoundPlayerDemo-OSX.app */;
+			productType = "com.apple.product-type.application";
+		};
 		881C49501834CB9900FED604 /* SoundPlayerDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 881C49831834CB9B00FED604 /* Build configuration list for PBXNativeTarget "SoundPlayerDemo" */;
@@ -242,6 +305,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Hexed Bits";
 				TargetAttributes = {
+					0A2817071AD56DD90044C234 = {
+						CreatedOnToolsVersion = 6.3;
+					};
 					881C49711834CB9A00FED604 = {
 						DevelopmentTeam = 5VRJU68BZ5;
 						TestTargetID = 881C49501834CB9900FED604;
@@ -263,11 +329,23 @@
 			targets = (
 				881C49501834CB9900FED604 /* SoundPlayerDemo */,
 				881C49711834CB9A00FED604 /* SoundPlayerDemoTests */,
+				0A2817071AD56DD90044C234 /* SoundPlayerDemo-OSX */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0A2817061AD56DD90044C234 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A28172B1AD573950044C234 /* BalladPiano.caf in Resources */,
+				0A28172C1AD573950044C234 /* Basso.aif in Resources */,
+				0A28172D1AD573950044C234 /* Funk.aiff in Resources */,
+				0A2817151AD56DD90044C234 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		881C494F1834CB9900FED604 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -293,6 +371,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0A2817041AD56DD90044C234 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A28172A1AD56E3B0044C234 /* JSQSystemSoundPlayer.m in Sources */,
+				0A2817101AD56DD90044C234 /* main.m in Sources */,
+				0A28170E1AD56DD90044C234 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		881C494D1834CB9900FED604 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -324,6 +412,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0A2817131AD56DD90044C234 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A28172E1AD575E90044C234 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
 		881C495D1834CB9900FED604 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -351,6 +447,49 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0A2817221AD56DD90044C234 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "SoundPlayerDemo-OSX/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0A2817231AD56DD90044C234 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "SoundPlayerDemo-OSX/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		881C49811834CB9B00FED604 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -508,6 +647,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0A2817261AD56DD90044C234 /* Build configuration list for PBXNativeTarget "SoundPlayerDemo-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A2817221AD56DD90044C234 /* Debug */,
+				0A2817231AD56DD90044C234 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		881C494C1834CB9900FED604 /* Build configuration list for PBXProject "SoundPlayerDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
