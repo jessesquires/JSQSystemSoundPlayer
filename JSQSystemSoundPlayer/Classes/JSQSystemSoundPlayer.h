@@ -158,7 +158,9 @@ typedef void(^JSQSystemSoundPlayerCompletionBlock)(void);
  *  On some iOS devices, you can call this method to invoke vibration.
  *  On other iOS devices this functionaly is not available, and calling this method does nothing.
  */
+#if TARGET_OS_IPHONE
 - (void)playVibrateSound;
+#endif
 
 /**
  *  Stops playing all sounds immediately.

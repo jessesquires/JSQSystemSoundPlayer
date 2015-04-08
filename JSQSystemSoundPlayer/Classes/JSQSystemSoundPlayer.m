@@ -234,14 +234,14 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
                           completion:nil];
 }
 
+#if TARGET_OS_IPHONE
 - (void)playVibrateSound
 {
-#if TARGET_OS_IPHONE
     if (self.on) {
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     }
-#endif
 }
+#endif
 
 - (void)stopAllSounds
 {
