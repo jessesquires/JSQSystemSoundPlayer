@@ -19,7 +19,9 @@
 #import "JSQSystemSoundPlayer.h"
 
 #import <AudioToolbox/AudioToolbox.h>
+#if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
+#endif
 
 
 static NSString * const kJSQSystemSoundPlayerUserDefaultsKey = @"kJSQSystemSoundPlayerUserDefaultsKey";
@@ -104,10 +106,12 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
         _on = [self readSoundPlayerOnFromUserDefaults];
         _sounds = [[NSMutableDictionary alloc] init];
         _completionBlocks = [[NSMutableDictionary alloc] init];
+#if TARGET_OS_IPHONE
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(didReceiveMemoryWarningNotification:)
                                                      name:UIApplicationDidReceiveMemoryWarningNotification
                                                    object:nil];
+#endif
     }
     return self;
 }
@@ -117,9 +121,11 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
     [self unloadSoundIDs];
     _sounds = nil;
     _completionBlocks = nil;
+#if TARGET_OS_IPHONE
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:UIApplicationDidReceiveMemoryWarningNotification
                                                   object:nil];
+#endif
 }
 
 #pragma mark - Playing sounds

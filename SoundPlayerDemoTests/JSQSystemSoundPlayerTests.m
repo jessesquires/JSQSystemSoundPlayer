@@ -18,7 +18,9 @@
 
 #import <XCTest/XCTest.h>
 #import <Foundation/Foundation.h>
+#if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
+#endif
 #import <AudioToolbox/AudioToolbox.h>
 #import "JSQSystemSoundPlayer.h"
 
@@ -211,6 +213,7 @@ static NSString * const kSoundBalladPiano = @"BalladPiano";
     XCTAssertTrue([self.sharedPlayer.completionBlocks count] == 1, @"Completion blocks dictionary should contain 1 object");
 }
 
+#if TARGET_OS_IPHONE
 - (void)testMemoryWarning
 {
     [self.sharedPlayer playSoundWithFilename:kSoundBasso
@@ -232,6 +235,7 @@ static NSString * const kSoundBalladPiano = @"BalladPiano";
     XCTAssertTrue([self.sharedPlayer.sounds count] == 0, @"Sounds should have been purged on memory warning");
     XCTAssertTrue([self.sharedPlayer.completionBlocks count] == 0, @"Completion blocks should have been purged on memory warning");
 }
+#endif
 
 - (void)testUserDefaultsSettings
 {
