@@ -28,7 +28,7 @@ See [AVAudioPlayer](https://developer.apple.com/library/ios/DOCUMENTATION/AVFoun
 * Integration with `NSUserDefaults` to globally toggle sound effects in your app
 * Sweet and efficient memory management
 * Caches sounds (`SystemSoundID` instances) and purges on memory warning
-* Works with Swift! (v2.0.0+)
+* Works with Swift! (v2.0+)
 
 ## Requirements
 
