@@ -3,9 +3,17 @@
 //  http://www.jessesquires.com
 //
 //
-//  The MIT License
-//  Copyright (c) 2014 Jesse Squires
-//  http://opensource.org/licenses/MIT
+//  Documentation
+//  http://cocoadocs.org/docsets/JSQSystemSoundPlayer
+//
+//
+//  GitHub
+//  https://github.com/jessesquires/JSQSystemSoundPlayer
+//
+//
+//  License
+//  Copyright (c) 2015 Jesse Squires
+//  Released under an MIT license: http://opensource.org/licenses/MIT
 //
 
 #import "ViewController.h"

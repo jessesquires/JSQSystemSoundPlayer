@@ -33,7 +33,7 @@ See [AVAudioPlayer](https://developer.apple.com/library/ios/DOCUMENTATION/AVFoun
 ## Requirements
 
 * iOS 6.0+ 
-* OS X 10.6+
+* OS X 10.7+
 * ARC
 
 ## Installation

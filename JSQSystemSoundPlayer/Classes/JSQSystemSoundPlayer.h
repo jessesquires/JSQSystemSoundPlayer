@@ -12,7 +12,7 @@
 //
 //
 //  License
-//  Copyright (c) 2014 Jesse Squires
+//  Copyright (c) 2015 Jesse Squires
 //  Released under an MIT license: http://opensource.org/licenses/MIT
 //
 
@@ -155,8 +155,8 @@ typedef void(^JSQSystemSoundPlayerCompletionBlock)(void);
                         completion:(JSQSystemSoundPlayerCompletionBlock)completionBlock;
 
 /**
- *  On some iOS devices, you can call this method to invoke vibration.
- *  On other iOS devices this functionaly is not available, and calling this method does nothing.
+ *  Available on iOS only. On some iOS devices, you can call this method to invoke vibration.
+ *  If this functionaly is not available, then calling this method does nothing.
  */
 #if TARGET_OS_IPHONE
 - (void)playVibrateSound;

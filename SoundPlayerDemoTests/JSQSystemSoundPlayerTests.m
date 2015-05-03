@@ -12,15 +12,17 @@
 //
 //
 //  License
-//  Copyright (c) 2014 Jesse Squires
+//  Copyright (c) 2015 Jesse Squires
 //  Released under an MIT license: http://opensource.org/licenses/MIT
 //
 
 #import <XCTest/XCTest.h>
 #import <Foundation/Foundation.h>
+
 #if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
 #endif
+
 #import <AudioToolbox/AudioToolbox.h>
 #import "JSQSystemSoundPlayer.h"
 
