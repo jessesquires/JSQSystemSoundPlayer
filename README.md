@@ -112,7 +112,14 @@ while (1) {
 
 ## Documentation
 
-Read the fucking docs, [available here][docsLink] via [@CocoaDocs](https://twitter.com/CocoaDocs).
+Read the fucking [docs][docsLink]. Generated with [appledoc](https://github.com/tomaz/appledoc). Hosted by [GitHub Pages](https://pages.github.com).
+
+````bash
+# regenerate documentation
+$ cd /path/to/JSQSystemSoundPlayer/
+$ ./build_docs.sh
+$ open _docs/
+````
 
 ## Contribute
 
@@ -137,7 +144,7 @@ Created and maintained by [**@jesse_squires**](https://twitter.com/jesse_squires
 
 *Please provide attribution, it is greatly appreciated.*
 
-[docsLink]:http://cocoadocs.org/docsets/JSQSystemSoundPlayer
+[docsLink]:http://www.jessesquires.com/JSQSystemSoundPlayer
 [mitLink]:http://opensource.org/licenses/MIT
 [imgLinkiOS]:https://raw.githubusercontent.com/jessesquires/JSQSystemSoundPlayer/develop/screenshot-ios.png
 [imgLinkOSX]:https://raw.githubusercontent.com/jessesquires/JSQSystemSoundPlayer/develop/screenshot-osx.png
