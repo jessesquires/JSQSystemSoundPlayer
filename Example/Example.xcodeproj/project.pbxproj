@@ -97,7 +97,7 @@
 		8842B1D91AF6ECBD000FFC99 = {
 			isa = PBXGroup;
 			children = (
-				8842B1E41AF6ECBD000FFC99 /* Example */,
+				8842B1E41AF6ECBD000FFC99 /* Example-iOS */,
 				8842B1E31AF6ECBD000FFC99 /* Products */,
 				8872202D1AF6EDF6005EB2C3 /* JSQSystemSoundPlayer.xcodeproj */,
 			);
@@ -111,7 +111,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8842B1E41AF6ECBD000FFC99 /* Example */ = {
+		8842B1E41AF6ECBD000FFC99 /* Example-iOS */ = {
 			isa = PBXGroup;
 			children = (
 				8842B1E91AF6ECBD000FFC99 /* AppDelegate.h */,
@@ -124,6 +124,7 @@
 				8842B1EC1AF6ECBD000FFC99 /* ViewController.h */,
 				8842B1ED1AF6ECBD000FFC99 /* ViewController.m */,
 			);
+			name = "Example-iOS";
 			path = Example;
 			sourceTree = "<group>";
 		};
