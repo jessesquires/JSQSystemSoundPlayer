@@ -18,7 +18,7 @@ Or, read the tl;dr version:
 If this does not fit your needs, then this control is not for you! 
 See [AVAudioPlayer](https://developer.apple.com/library/ios/DOCUMENTATION/AVFoundation/Reference/AVAudioPlayerClassReference/Reference/Reference.html), instead.
 
-![screenshot][imgLink] 
+![screenshot ios][imgLinkiOS] &nbsp;&nbsp;&nbsp; ![screenshot osx][imgLinkOSX]
 
 ## Features
 
@@ -139,4 +139,6 @@ Created and maintained by [**@jesse_squires**](https://twitter.com/jesse_squires
 
 [docsLink]:http://cocoadocs.org/docsets/JSQSystemSoundPlayer
 [mitLink]:http://opensource.org/licenses/MIT
-[imgLink]:https://raw.githubusercontent.com/jessesquires/JSQSystemSoundPlayer/develop/screenshot.png
+[imgLinkiOS]:https://raw.githubusercontent.com/jessesquires/JSQSystemSoundPlayer/develop/screenshot-ios.png
+[imgLinkOSX]:https://raw.githubusercontent.com/jessesquires/JSQSystemSoundPlayer/develop/screenshot-osx.png
+
