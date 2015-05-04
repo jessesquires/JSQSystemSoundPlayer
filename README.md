@@ -1,5 +1,5 @@
 # JSQSystemSoundPlayer 
-[![Build Status](https://secure.travis-ci.org/jessesquires/JSQSystemSoundPlayer.svg)](http://travis-ci.org/jessesquires/JSQSystemSoundPlayer) [![Version Status](http://img.shields.io/cocoapods/v/JSQSystemSoundPlayer.png)][docsLink] [![license MIT](http://img.shields.io/badge/license-MIT-orange.png)][mitLink]
+[![Build Status](https://secure.travis-ci.org/jessesquires/JSQSystemSoundPlayer.svg)](http://travis-ci.org/jessesquires/JSQSystemSoundPlayer) [![Version Status](http://img.shields.io/cocoapods/v/JSQSystemSoundPlayer.png)][docsLink] [![license MIT](http://img.shields.io/badge/license-MIT-orange.png)][mitLink] [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 A fancy Obj-C wrapper for Cocoa [System Sound Services](https://developer.apple.com/library/ios/documentation/AudioToolbox/Reference/SystemSoundServicesReference/Reference/reference.html), for iOS and OS X.
 
@@ -43,6 +43,12 @@ See [AVAudioPlayer](https://developer.apple.com/library/ios/DOCUMENTATION/AVFoun
 pod 'JSQSystemSoundPlayer'
 ````
 
+### [Carthage](https://github.com/Carthage/Carthage)
+
+````bash
+github "jessesquires/JSQSystemSoundPlayer"
+````
+
 ### Manually
 
 1. Add the `JSQSystemSoundPlayer/` folder to your project
@@ -52,6 +58,8 @@ pod 'JSQSystemSoundPlayer'
 
 ````objective-c
 #import <JSQSystemSoundPlayer/JSQSystemSoundPlayer.h>
+// or
+@import JSQSystemSoundPlayer;
 ````
 
 #### Playing sounds
@@ -90,9 +98,9 @@ Need to load your audio resources from a specific bundle? `JSQSystemSoundPlayer`
 [JSQSystemSoundPlayer sharedPlayer].bundle = [NSBundle mainBundle];
 ````
 
-#### Demo
+#### Demo project
 
-Also see the included demo project: `SoundPlayerDemo.xcodeproj`
+The included example app, `Example.xcodeproj`, exercises all functionality of this framework. There are applications for iOS as well as OS X. 
 
 #### For a good time
 
@@ -131,4 +139,4 @@ Created and maintained by [**@jesse_squires**](https://twitter.com/jesse_squires
 
 [docsLink]:http://cocoadocs.org/docsets/JSQSystemSoundPlayer
 [mitLink]:http://opensource.org/licenses/MIT
-[imgLink]:https://raw.githubusercontent.com/jessesquires/JSQSystemSoundPlayer/develop/Screenshots/screenshot.png
+[imgLink]:https://raw.githubusercontent.com/jessesquires/JSQSystemSoundPlayer/develop/screenshot.png
