@@ -13,6 +13,15 @@
 		8842B1F11AF6ECBD000FFC99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8842B1EF1AF6ECBD000FFC99 /* Main.storyboard */; };
 		8842B1F31AF6ECBD000FFC99 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8842B1F21AF6ECBD000FFC99 /* Images.xcassets */; };
 		8842B1F61AF6ECBD000FFC99 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8842B1F41AF6ECBD000FFC99 /* LaunchScreen.xib */; };
+		884ED38A1AF6F412009CE403 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 884ED3891AF6F412009CE403 /* AppDelegate.m */; };
+		884ED38C1AF6F412009CE403 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 884ED38B1AF6F412009CE403 /* main.m */; };
+		884ED38E1AF6F412009CE403 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 884ED38D1AF6F412009CE403 /* Images.xcassets */; };
+		884ED3911AF6F412009CE403 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 884ED38F1AF6F412009CE403 /* MainMenu.xib */; };
+		884ED3A41AF6F504009CE403 /* JSQSystemSoundPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887220381AF6EDF6005EB2C3 /* JSQSystemSoundPlayer.framework */; };
+		884ED3A51AF6F504009CE403 /* JSQSystemSoundPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 887220381AF6EDF6005EB2C3 /* JSQSystemSoundPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		884ED3AD1AF6F56B009CE403 /* BalladPiano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 884ED3AA1AF6F56B009CE403 /* BalladPiano.caf */; };
+		884ED3AE1AF6F56B009CE403 /* Basso.aif in Resources */ = {isa = PBXBuildFile; fileRef = 884ED3AB1AF6F56B009CE403 /* Basso.aif */; };
+		884ED3AF1AF6F56B009CE403 /* Funk.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 884ED3AC1AF6F56B009CE403 /* Funk.aiff */; };
 		8872203A1AF6EE3F005EB2C3 /* JSQSystemSoundPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887220341AF6EDF6005EB2C3 /* JSQSystemSoundPlayer.framework */; };
 		8872203B1AF6EE3F005EB2C3 /* JSQSystemSoundPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 887220341AF6EDF6005EB2C3 /* JSQSystemSoundPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		887220451AF6EEAE005EB2C3 /* BalladPiano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 887220421AF6EEAE005EB2C3 /* BalladPiano.caf */; };
@@ -21,6 +30,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		884ED3A61AF6F504009CE403 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8872202D1AF6EDF6005EB2C3 /* JSQSystemSoundPlayer.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 884DF6621AF6E96700D97D16;
+			remoteInfo = "JSQSystemSoundPlayer-OSX";
+		};
 		887220331AF6EDF6005EB2C3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8872202D1AF6EDF6005EB2C3 /* JSQSystemSoundPlayer.xcodeproj */;
@@ -52,6 +68,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		884ED3A81AF6F504009CE403 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				884ED3A51AF6F504009CE403 /* JSQSystemSoundPlayer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8872203E1AF6EE3F005EB2C3 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -76,6 +103,16 @@
 		8842B1F01AF6ECBD000FFC99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8842B1F21AF6ECBD000FFC99 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8842B1F51AF6ECBD000FFC99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		884ED3841AF6F412009CE403 /* Example-OSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-OSX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		884ED3871AF6F412009CE403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		884ED3881AF6F412009CE403 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		884ED3891AF6F412009CE403 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		884ED38B1AF6F412009CE403 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		884ED38D1AF6F412009CE403 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		884ED3901AF6F412009CE403 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		884ED3AA1AF6F56B009CE403 /* BalladPiano.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BalladPiano.caf; sourceTree = "<group>"; };
+		884ED3AB1AF6F56B009CE403 /* Basso.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = Basso.aif; sourceTree = "<group>"; };
+		884ED3AC1AF6F56B009CE403 /* Funk.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Funk.aiff; sourceTree = "<group>"; };
 		8872202D1AF6EDF6005EB2C3 /* JSQSystemSoundPlayer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSQSystemSoundPlayer.xcodeproj; path = ../JSQSystemSoundPlayer/JSQSystemSoundPlayer.xcodeproj; sourceTree = "<group>"; };
 		887220421AF6EEAE005EB2C3 /* BalladPiano.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BalladPiano.caf; sourceTree = "<group>"; };
 		887220431AF6EEAE005EB2C3 /* Basso.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = Basso.aif; sourceTree = "<group>"; };
@@ -91,6 +128,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		884ED3811AF6F412009CE403 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				884ED3A41AF6F504009CE403 /* JSQSystemSoundPlayer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -98,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				8842B1E41AF6ECBD000FFC99 /* Example-iOS */,
+				884ED3851AF6F412009CE403 /* Example-OSX */,
 				8842B1E31AF6ECBD000FFC99 /* Products */,
 				8872202D1AF6EDF6005EB2C3 /* JSQSystemSoundPlayer.xcodeproj */,
 			);
@@ -107,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				8842B1E21AF6ECBD000FFC99 /* SoundPlayer.app */,
+				884ED3841AF6F412009CE403 /* Example-OSX.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,6 +182,39 @@
 				8842B1E71AF6ECBD000FFC99 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		884ED3851AF6F412009CE403 /* Example-OSX */ = {
+			isa = PBXGroup;
+			children = (
+				884ED3881AF6F412009CE403 /* AppDelegate.h */,
+				884ED3891AF6F412009CE403 /* AppDelegate.m */,
+				884ED38D1AF6F412009CE403 /* Images.xcassets */,
+				884ED38F1AF6F412009CE403 /* MainMenu.xib */,
+				884ED3A91AF6F56B009CE403 /* Sample sounds */,
+				884ED3861AF6F412009CE403 /* Supporting Files */,
+			);
+			path = "Example-OSX";
+			sourceTree = "<group>";
+		};
+		884ED3861AF6F412009CE403 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				884ED3871AF6F412009CE403 /* Info.plist */,
+				884ED38B1AF6F412009CE403 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		884ED3A91AF6F56B009CE403 /* Sample sounds */ = {
+			isa = PBXGroup;
+			children = (
+				884ED3AA1AF6F56B009CE403 /* BalladPiano.caf */,
+				884ED3AB1AF6F56B009CE403 /* Basso.aif */,
+				884ED3AC1AF6F56B009CE403 /* Funk.aiff */,
+			);
+			name = "Sample sounds";
+			path = "../../JSQSystemSoundPlayer/JSQSystemSoundPlayerTests/Sample sounds";
 			sourceTree = "<group>";
 		};
 		8872202E1AF6EDF6005EB2C3 /* Products */ = {
@@ -180,6 +260,25 @@
 			productReference = 8842B1E21AF6ECBD000FFC99 /* SoundPlayer.app */;
 			productType = "com.apple.product-type.application";
 		};
+		884ED3831AF6F412009CE403 /* Example-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 884ED39E1AF6F412009CE403 /* Build configuration list for PBXNativeTarget "Example-OSX" */;
+			buildPhases = (
+				884ED3801AF6F412009CE403 /* Sources */,
+				884ED3811AF6F412009CE403 /* Frameworks */,
+				884ED3821AF6F412009CE403 /* Resources */,
+				884ED3A81AF6F504009CE403 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				884ED3A71AF6F504009CE403 /* PBXTargetDependency */,
+			);
+			name = "Example-OSX";
+			productName = "Example-OSX";
+			productReference = 884ED3841AF6F412009CE403 /* Example-OSX.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -190,6 +289,9 @@
 				ORGANIZATIONNAME = "Hexed Bits";
 				TargetAttributes = {
 					8842B1E11AF6ECBD000FFC99 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					884ED3831AF6F412009CE403 = {
 						CreatedOnToolsVersion = 6.3.1;
 					};
 				};
@@ -214,6 +316,7 @@
 			projectRoot = "";
 			targets = (
 				8842B1E11AF6ECBD000FFC99 /* Example-iOS */,
+				884ED3831AF6F412009CE403 /* Example-OSX */,
 			);
 		};
 /* End PBXProject section */
@@ -256,6 +359,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		884ED3821AF6F412009CE403 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				884ED3AD1AF6F56B009CE403 /* BalladPiano.caf in Resources */,
+				884ED38E1AF6F412009CE403 /* Images.xcassets in Resources */,
+				884ED3911AF6F412009CE403 /* MainMenu.xib in Resources */,
+				884ED3AE1AF6F56B009CE403 /* Basso.aif in Resources */,
+				884ED3AF1AF6F56B009CE403 /* Funk.aiff in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -269,9 +384,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		884ED3801AF6F412009CE403 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				884ED38C1AF6F412009CE403 /* main.m in Sources */,
+				884ED38A1AF6F412009CE403 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		884ED3A71AF6F504009CE403 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "JSQSystemSoundPlayer-OSX";
+			targetProxy = 884ED3A61AF6F504009CE403 /* PBXContainerItemProxy */;
+		};
 		8872203D1AF6EE3F005EB2C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "JSQSystemSoundPlayer-iOS";
@@ -294,6 +423,14 @@
 				8842B1F51AF6ECBD000FFC99 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		884ED38F1AF6F412009CE403 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				884ED3901AF6F412009CE403 /* Base */,
+			);
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -401,6 +538,39 @@
 			};
 			name = Release;
 		};
+		884ED39F1AF6F412009CE403 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Example-OSX/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		884ED3A01AF6F412009CE403 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Example-OSX/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -421,6 +591,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		884ED39E1AF6F412009CE403 /* Build configuration list for PBXNativeTarget "Example-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				884ED39F1AF6F412009CE403 /* Debug */,
+				884ED3A01AF6F412009CE403 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
