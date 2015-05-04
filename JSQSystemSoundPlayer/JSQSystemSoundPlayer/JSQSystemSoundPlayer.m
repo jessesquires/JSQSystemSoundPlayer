@@ -108,12 +108,12 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
         _sounds = [[NSMutableDictionary alloc] init];
         _completionBlocks = [[NSMutableDictionary alloc] init];
 
-#if TARGET_OS_IPHONE
+        #if TARGET_OS_IPHONE
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(didReceiveMemoryWarningNotification:)
                                                      name:UIApplicationDidReceiveMemoryWarningNotification
                                                    object:nil];
-#endif
+        #endif
     }
     return self;
 }
@@ -123,12 +123,21 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
     [self unloadSoundIDs];
     _sounds = nil;
     _completionBlocks = nil;
+    _bundle = nil;
 
-#if TARGET_OS_IPHONE
+    #if TARGET_OS_IPHONE
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:UIApplicationDidReceiveMemoryWarningNotification
                                                   object:nil];
-#endif
+    #endif
+}
+
+#pragma mark - Setters
+
+- (void)setBundle:(NSBundle *)bundle
+{
+    NSParameterAssert(bundle != nil);
+    _bundle = bundle;
 }
 
 #pragma mark - Playing sounds
@@ -138,11 +147,10 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
                   isAlert:(BOOL)isAlert
           completionBlock:(JSQSystemSoundPlayerCompletionBlock)completionBlock
 {
+    NSParameterAssert(filename != nil);
+    NSParameterAssert(extension != nil);
+    
     if (!self.on) {
-        return;
-    }
-
-    if (!filename || !extension) {
         return;
     }
 
@@ -253,6 +261,8 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 
 - (void)stopSoundWithFilename:(NSString *)filename
 {
+    NSParameterAssert(filename != nil);
+
     SystemSoundID soundID = [self soundIDForFilename:filename];
     NSData *data = [self dataWithSoundID:soundID];
 
