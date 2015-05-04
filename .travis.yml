@@ -5,4 +5,7 @@ before_install:
 - if brew outdated | grep -qx xctool; then brew upgrade xctool; fi
 
 script: 
-- xctool clean build test -project SoundPlayerDemo.xcodeproj -scheme SoundPlayerDemo -sdk iphonesimulator7.0 ONLY_ACTIVE_ARCH=NO
+- xctool clean build -project Example/Example.xcodeproj -scheme Example-iOS -sdk iphonesimulator8.1 ONLY_ACTIVE_ARCH=NO
+- xctool clean build -project Example/Example.xcodeproj -scheme Example-OSX ONLY_ACTIVE_ARCH=NO
+- xcodebuild clean build -project JSQSystemSoundPlayer/JSQSystemSoundPlayer.xcodeproj -scheme JSQSystemSoundPlayer-OSX -sdk iphonesimulator8.1 ONLY_ACTIVE_ARCH=NO
+- xcodebuild clean build test -project JSQSystemSoundPlayer/JSQSystemSoundPlayer.xcodeproj -scheme JSQSystemSoundPlayer-iOS -sdk iphonesimulator8.1 ONLY_ACTIVE_ARCH=NO
