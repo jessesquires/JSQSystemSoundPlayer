@@ -172,7 +172,7 @@ typedef void(^JSQSystemSoundPlayerCompletionBlock)(void);
  *  Stops playing all sounds immediately.
  *
  *  @warning Any completion blocks attached to any currently playing sound will *not* be executed.
- *  Also, calling this method will purge all `SystemSoundID` objects from cache, regardless of whether or not they were currently playing.
+ *  Calling this method will purge all `SystemSoundID` objects from cache, regardless of whether or not they were currently playing.
  */
 - (void)stopAllSounds;
 
@@ -182,7 +182,7 @@ typedef void(^JSQSystemSoundPlayerCompletionBlock)(void);
  *  @param filename The filename of the sound to stop playing.
  *
  *  @warning If a completion block is attached to the given sound, it will *not* be executed.
- *  Also, calling this method will purge the `SystemSoundID` object for this file from cache, regardless of whether or not it was currently playing.
+ *  Calling this method will purge the `SystemSoundID` object for this file from cache, regardless of whether or not it was currently playing.
  */
 - (void)stopSoundWithFilename:(NSString *)filename;
 
