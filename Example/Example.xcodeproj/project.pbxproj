@@ -603,6 +603,7 @@
 				884ED3A01AF6F412009CE403 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

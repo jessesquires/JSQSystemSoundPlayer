@@ -4,7 +4,7 @@
 //
 //
 //  Documentation
-//  http://cocoadocs.org/docsets/JSQSystemSoundPlayer
+//  http://www.jessesquires.com/JSQSystemSoundPlayer
 //
 //
 //  GitHub
