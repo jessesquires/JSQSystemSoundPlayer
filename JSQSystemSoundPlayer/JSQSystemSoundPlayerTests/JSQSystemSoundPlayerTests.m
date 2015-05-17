@@ -165,11 +165,13 @@ static NSString * const kSoundBalladPiano = @"BalladPiano";
                      @"Player should play sound and not throw");
 
     XCTAssertNoThrow([self.sharedPlayer playSoundWithFilename:kSoundFunk
-                                                fileExtension:kJSQSystemSoundTypeAIFF],
+                                                fileExtension:kJSQSystemSoundTypeAIFF
+                                                   completion:nil],
                      @"Player should play sound and not throw");
 
     XCTAssertNoThrow([self.sharedPlayer playAlertSoundWithFilename:kSoundBasso
-                                                     fileExtension:kJSQSystemSoundTypeAIF],
+                                                     fileExtension:kJSQSystemSoundTypeAIF
+                                                        completion:nil],
                      @"Player should play alert and not throw");
 
     XCTAssertNoThrow([self.sharedPlayer playAlertSoundWithFilename:kSoundFunk
@@ -178,11 +180,13 @@ static NSString * const kSoundBalladPiano = @"BalladPiano";
                      @"Player should play alert and not throw with nil block");
 
     XCTAssertThrows([self.sharedPlayer playAlertSoundWithFilename:nil
-                                                     fileExtension:nil],
-                     @"Player should throw on nil params");
+                                                    fileExtension:nil
+                                                       completion:nil],
+                    @"Player should throw on nil params");
 
     XCTAssertNoThrow([self.sharedPlayer playAlertSoundWithFilename:kSoundBalladPiano
-                                                     fileExtension:kJSQSystemSoundTypeAIFF],
+                                                     fileExtension:kJSQSystemSoundTypeAIFF
+                                                        completion:nil],
                      @"Player should fail gracefully and not throw on incorrect extension");
 
     XCTAssertNoThrow([self.sharedPlayer playVibrateSound], @"Player should vibrate and not throw");
@@ -190,8 +194,8 @@ static NSString * const kSoundBalladPiano = @"BalladPiano";
 
 - (void)testStoppingSounds
 {
-    [self.sharedPlayer playSoundWithFilename:kSoundBasso fileExtension:kJSQSystemSoundTypeAIF];
-    [self.sharedPlayer playSoundWithFilename:kSoundBalladPiano fileExtension:kJSQSystemSoundTypeCAF];
+    [self.sharedPlayer playSoundWithFilename:kSoundBasso fileExtension:kJSQSystemSoundTypeAIF completion:nil];
+    [self.sharedPlayer playSoundWithFilename:kSoundBalladPiano fileExtension:kJSQSystemSoundTypeCAF completion:nil];
 
     XCTAssertTrue([self.sharedPlayer.sounds count] == 2, @"Player should have 2 sounds cached");
 
@@ -222,7 +226,8 @@ static NSString * const kSoundBalladPiano = @"BalladPiano";
     XCTAssertTrue([self.sharedPlayer.completionBlocks count] == 1, @"Completion blocks dictionary should contain 1 object");
 
     [self.sharedPlayer playAlertSoundWithFilename:kSoundFunk
-                                    fileExtension:kJSQSystemSoundTypeAIFF];
+                                    fileExtension:kJSQSystemSoundTypeAIFF
+                                       completion:nil];
 
     XCTAssertTrue([self.sharedPlayer.sounds count] == 2, @"Sounds dictionary should contain 2 objects");
 

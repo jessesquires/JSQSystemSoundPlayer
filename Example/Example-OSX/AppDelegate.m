@@ -47,7 +47,8 @@
 - (IBAction)playAlertSoundPressed:(NSButton *)sender
 {
     [[JSQSystemSoundPlayer sharedPlayer] playAlertSoundWithFilename:@"Funk"
-                                                      fileExtension:kJSQSystemSoundTypeAIFF];
+                                                      fileExtension:kJSQSystemSoundTypeAIFF
+                                                         completion:nil];
 }
 
 - (IBAction)playLongSoundPressed:(NSButton *)sender

@@ -28,7 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     self.soundSwitch.on = [JSQSystemSoundPlayer sharedPlayer].on;
 }
 
@@ -37,7 +37,7 @@
 - (IBAction)playSystemSoundPressed:(UIButton *)sender
 {
     JSQSystemSoundPlayer *sharedPlayer = [JSQSystemSoundPlayer sharedPlayer];
-    
+
     [sharedPlayer playSoundWithFilename:@"Basso"
                           fileExtension:kJSQSystemSoundTypeAIF
                              completion:^{
@@ -48,7 +48,8 @@
 - (IBAction)playAlertSoundPressed:(UIButton *)sender
 {
     [[JSQSystemSoundPlayer sharedPlayer] playAlertSoundWithFilename:@"Funk"
-                                                      fileExtension:kJSQSystemSoundTypeAIFF];
+                                                      fileExtension:kJSQSystemSoundTypeAIFF
+                                                         completion:nil];
 }
 
 - (IBAction)playVibratePressed:(UIButton *)sender
@@ -69,7 +70,7 @@
 - (IBAction)stopPressed:(UIButton *)sender
 {
     [[JSQSystemSoundPlayer sharedPlayer] stopAllSounds];
-    
+
     // Stop playing specific sound
     // [[JSQSystemSoundPlayer sharedPlayer] stopSoundWithFilename:@"BalladPiano"];
 }
