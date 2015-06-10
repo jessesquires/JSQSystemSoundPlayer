@@ -154,7 +154,7 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
         return;
     }
 
-    if (![self.sounds objectForKey:filename]) {
+    if (!self.sounds[filename]) {
         [self addSoundIDForAudioFileWithName:filename extension:extension];
     }
 
@@ -203,7 +203,7 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
     _on = on;
 
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setObject:[NSNumber numberWithBool:on] forKey:kJSQSystemSoundPlayerUserDefaultsKey];
+    [userDefaults setObject:@(on) forKey:kJSQSystemSoundPlayerUserDefaultsKey];
     [userDefaults synchronize];
 
     if (!on) {
@@ -260,7 +260,7 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 
 - (void)preloadSoundWithFilename:(NSString *)filename fileExtension:(NSString *)extension
 {
-    if (![self.sounds objectForKey:filename]) {
+    if (!self.sounds[filename]) {
         [self addSoundIDForAudioFileWithName:filename extension:extension];
     }
 }
@@ -287,7 +287,7 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 
 - (SystemSoundID)soundIDForFilename:(NSString *)filenameKey
 {
-    NSData *soundData = [self.sounds objectForKey:filenameKey];
+    NSData *soundData = self.sounds[filenameKey];
     return [self soundIDFromData:soundData];
 }
 
@@ -298,7 +298,7 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
                                               extension:extension];
     if (soundID) {
         NSData *data = [self dataWithSoundID:soundID];
-        [self.sounds setObject:data forKey:filename];
+        self.sounds[filename] = data;
     }
 }
 
@@ -307,14 +307,14 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 - (JSQSystemSoundPlayerCompletionBlock)completionBlockForSoundID:(SystemSoundID)soundID
 {
     NSData *data = [self dataWithSoundID:soundID];
-    return [self.completionBlocks objectForKey:data];
+    return self.completionBlocks[data];
 }
 
 - (void)addCompletionBlock:(JSQSystemSoundPlayerCompletionBlock)block
                  toSoundID:(SystemSoundID)soundID
 {
     NSData *data = [self dataWithSoundID:soundID];
-    [self.completionBlocks setObject:block forKey:data];
+    self.completionBlocks[data] = block;
 }
 
 - (void)removeCompletionBlockForSoundID:(SystemSoundID)soundID
