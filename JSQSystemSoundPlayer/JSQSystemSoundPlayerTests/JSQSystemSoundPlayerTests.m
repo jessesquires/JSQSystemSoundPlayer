@@ -76,6 +76,7 @@ static NSString * const kSoundBalladPiano = @"BalladPiano";
     [super setUp];
     _sharedPlayer = [JSQSystemSoundPlayer sharedPlayer];
     _sharedPlayer.bundle = [NSBundle bundleForClass:[self class]];
+    [_sharedPlayer toggleSoundPlayerOn:YES];
 }
 
 - (void)tearDown
@@ -110,6 +111,12 @@ static NSString * const kSoundBalladPiano = @"BalladPiano";
 
     [self.sharedPlayer addSoundIDForAudioFileWithName:kSoundBasso extension:kJSQSystemSoundTypeAIF];
     XCTAssertTrue([self.sharedPlayer.sounds count] == 1, @"Player should still contain 1 only cached sound");
+}
+
+- (void)testAddingSoundsError
+{
+    [self.sharedPlayer addSoundIDForAudioFileWithName:@"does not exist" extension:kJSQSystemSoundTypeAIF];
+    XCTAssertTrue([self.sharedPlayer.sounds count] == 0, @"Player should not contain any cached sounds");
 }
 
 - (void)testCompletionBlocks
@@ -200,14 +207,22 @@ static NSString * const kSoundBalladPiano = @"BalladPiano";
 
 - (void)testSoundCompletionBlocks
 {
+    [self.sharedPlayer toggleSoundPlayerOn:YES];
+    
+    XCTestExpectation *expectation = [self expectationWithDescription:[NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__]];
     XCTAssertNoThrow([self.sharedPlayer playSoundWithFilename:kSoundBasso
                                                 fileExtension:kJSQSystemSoundTypeAIF
                                                    completion:^{
                                                        NSLog(@"Exectuing block...");
+                                                       [expectation fulfill];
                                                    }],
                      @"Player should play and now throw");
 
     XCTAssertTrue([self.sharedPlayer.completionBlocks count] == 1, @"Completion blocks dictionary should contain 1 object");
+
+    [self waitForExpectationsWithTimeout:10 handler:^(NSError * _Nullable error) {
+        XCTAssertNil(error, @"Expectation should not error");
+    }];
 }
 
 - (void)testMemoryWarning
@@ -258,6 +273,23 @@ static NSString * const kSoundBalladPiano = @"BalladPiano";
 
     XCTAssertTrue([self.sharedPlayer.sounds count] == 1, @"Player should have 1 sound after preloading");
     XCTAssert([self.sharedPlayer soundIDForFilename:kSoundBasso], @"Player soundID for file should not be 0");
+}
+
+- (void)testPlayingInvalidSoundfileError
+{
+    XCTAssertNoThrow([self.sharedPlayer playSoundWithFilename:@"Does not exist"
+                                                fileExtension:kJSQSystemSoundTypeAIFF
+                                                   completion:nil],
+                     @"Player should play sound and not throw");
+}
+
+- (void)testPlayingSoundWhenPlayerIsOff
+{
+    [self.sharedPlayer toggleSoundPlayerOn:NO];
+    XCTAssertNoThrow([self.sharedPlayer playSoundWithFilename:kSoundFunk
+                                                fileExtension:kJSQSystemSoundTypeAIFF
+                                                   completion:nil],
+                     @"Player should ignore playing sound and not throw");
 }
 
 @end

@@ -120,16 +120,11 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 
 - (void)dealloc
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self unloadSoundIDs];
     _sounds = nil;
     _completionBlocks = nil;
     _bundle = nil;
-
-    #if TARGET_OS_IPHONE
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:UIApplicationDidReceiveMemoryWarningNotification
-                                                  object:nil];
-    #endif
 }
 
 #pragma mark - Setters
