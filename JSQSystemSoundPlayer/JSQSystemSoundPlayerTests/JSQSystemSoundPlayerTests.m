@@ -220,7 +220,7 @@ static NSString * const kSoundBalladPiano = @"BalladPiano";
 
     XCTAssertTrue([self.sharedPlayer.completionBlocks count] == 1, @"Completion blocks dictionary should contain 1 object");
 
-    [self waitForExpectationsWithTimeout:10 handler:^(NSError * _Nullable error) {
+    [self waitForExpectationsWithTimeout:10 handler:^(NSError * __nullable error) {
         XCTAssertNil(error, @"Expectation should not error");
     }];
 }
