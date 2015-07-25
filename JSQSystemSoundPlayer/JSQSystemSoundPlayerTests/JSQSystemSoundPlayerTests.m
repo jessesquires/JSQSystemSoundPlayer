@@ -179,11 +179,6 @@ static NSString * const kSoundBalladPiano = @"BalladPiano";
                                                         completion:nil],
                      @"Player should play alert and not throw with nil block");
 
-    XCTAssertThrows([self.sharedPlayer playAlertSoundWithFilename:nil
-                                                    fileExtension:nil
-                                                       completion:nil],
-                    @"Player should throw on nil params");
-
     XCTAssertNoThrow([self.sharedPlayer playAlertSoundWithFilename:kSoundBalladPiano
                                                      fileExtension:kJSQSystemSoundTypeAIFF
                                                         completion:nil],

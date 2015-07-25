@@ -18,6 +18,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 //! Project version number for JSQSystemSoundPlayer.
 FOUNDATION_EXPORT double JSQSystemSoundPlayerVersionNumber;
 
@@ -107,7 +109,7 @@ typedef void(^JSQSystemSoundPlayerCompletionBlock)(void);
  */
 - (void)playSoundWithFilename:(NSString *)filename
                 fileExtension:(NSString *)fileExtension
-                   completion:(JSQSystemSoundPlayerCompletionBlock)completionBlock;
+                   completion:(nullable JSQSystemSoundPlayerCompletionBlock)completionBlock;
 
 /**
  *  Plays a system sound object *as an alert* corresponding to an audio file with the given filename and extension,
@@ -129,7 +131,7 @@ typedef void(^JSQSystemSoundPlayerCompletionBlock)(void);
  */
 - (void)playAlertSoundWithFilename:(NSString *)filename
                      fileExtension:(NSString *)fileExtension
-                        completion:(JSQSystemSoundPlayerCompletionBlock)completionBlock;
+                        completion:(nullable JSQSystemSoundPlayerCompletionBlock)completionBlock;
 
 /**
  *  Available on iOS only. On some iOS devices, you can call this method to invoke vibration.
@@ -169,3 +171,5 @@ typedef void(^JSQSystemSoundPlayerCompletionBlock)(void);
 - (void)preloadSoundWithFilename:(NSString *)filename fileExtension:(NSString *)fileExtension;
 
 @end
+
+NS_ASSUME_NONNULL_END

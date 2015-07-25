@@ -212,21 +212,21 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 }
 
 - (void)playSoundWithFilename:(NSString *)filename
-                fileExtension:(NSString *)extension
+                fileExtension:(NSString *)fileExtension
                    completion:(JSQSystemSoundPlayerCompletionBlock)completionBlock
 {
     [self playSoundWithName:filename
-                  extension:extension
+                  extension:fileExtension
                     isAlert:NO
             completionBlock:completionBlock];
 }
 
 - (void)playAlertSoundWithFilename:(NSString *)filename
-                     fileExtension:(NSString *)extension
+                     fileExtension:(NSString *)fileExtension
                         completion:(JSQSystemSoundPlayerCompletionBlock)completionBlock
 {
     [self playSoundWithName:filename
-                  extension:extension
+                  extension:fileExtension
                     isAlert:YES
             completionBlock:completionBlock];
 }
@@ -258,10 +258,13 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
     [_completionBlocks removeObjectForKey:data];
 }
 
-- (void)preloadSoundWithFilename:(NSString *)filename fileExtension:(NSString *)extension
+- (void)preloadSoundWithFilename:(NSString *)filename fileExtension:(NSString *)fileExtension
 {
+    NSParameterAssert(filename != nil);
+    NSParameterAssert(fileExtension != nil);
+
     if (![self.sounds objectForKey:filename]) {
-        [self addSoundIDForAudioFileWithName:filename extension:extension];
+        [self addSoundIDForAudioFileWithName:filename extension:fileExtension];
     }
 }
 
