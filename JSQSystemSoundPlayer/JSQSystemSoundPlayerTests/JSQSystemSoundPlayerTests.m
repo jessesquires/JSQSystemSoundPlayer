@@ -208,19 +208,16 @@ static NSString * const kSoundBalladPiano = @"BalladPiano";
 - (void)testSoundCompletionBlocks
 {
     [self.sharedPlayer toggleSoundPlayerOn:YES];
-    
+
     XCTestExpectation *expectation = [self expectationWithDescription:[NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__]];
-    XCTAssertNoThrow([self.sharedPlayer playSoundWithFilename:kSoundBasso
-                                                fileExtension:kJSQSystemSoundTypeAIF
-                                                   completion:^{
-                                                       NSLog(@"Exectuing block...");
-                                                       [expectation fulfill];
-                                                   }],
-                     @"Player should play and now throw");
 
-    XCTAssertTrue([self.sharedPlayer.completionBlocks count] == 1, @"Completion blocks dictionary should contain 1 object");
+    [self.sharedPlayer playSoundWithFilename:kSoundBasso
+                               fileExtension:kJSQSystemSoundTypeAIF
+                                  completion:^{
+                                      [expectation fulfill];
+                                  }];
 
-    [self waitForExpectationsWithTimeout:15 handler:^(NSError * __nullable error) {
+    [self waitForExpectationsWithTimeout:10 handler:^(NSError * __nullable error) {
         XCTAssertNil(error, @"Expectation should not error");
     }];
 }
