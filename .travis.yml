@@ -18,7 +18,7 @@ script:
    -scheme Example-OSX \
    ONLY_ACTIVE_ARCH=NO
 
-- xctool clean build
+- xctool clean build \
    -project JSQSystemSoundPlayer/JSQSystemSoundPlayer.xcodeproj \
    -scheme JSQSystemSoundPlayer-OSX \
    -sdk iphonesimulator \
