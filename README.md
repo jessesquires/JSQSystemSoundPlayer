@@ -15,7 +15,7 @@ Or, read the tl;dr version:
 >* In linear PCM or IMA4 (IMA/ADPCM) format
 >* Packaged in a `.caf`, `.aif`, or `.wav` file
 
-If this does not fit your needs, then this control is not for you! 
+If this does not fit your needs, then this library is not for you! 
 See [AVAudioPlayer](https://developer.apple.com/library/ios/DOCUMENTATION/AVFoundation/Reference/AVAudioPlayerClassReference/Reference/Reference.html), instead.
 
 ![screenshot ios][imgLinkiOS] &nbsp;&nbsp;&nbsp; ![screenshot osx][imgLinkOSX]
@@ -26,7 +26,7 @@ See [AVAudioPlayer](https://developer.apple.com/library/ios/DOCUMENTATION/AVFoun
 * "Play" vibration (if available on device)
 * Block-based completion handlers
 * Integration with `NSUserDefaults` to globally toggle sound effects in your app
-* Sweet and efficient memory management
+* Efficient memory management
 * Caches sounds (`SystemSoundID` instances) and purges on memory warning
 * Works with Swift! (v2.0+)
 
