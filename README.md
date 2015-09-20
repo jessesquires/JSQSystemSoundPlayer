@@ -114,7 +114,7 @@ while (1) {
 
 Read the fucking [docs][docsLink]. Generated with [cocoadocs](http://cocoadocs.org). Hosted by [GitHub Pages](https://pages.github.com).
 
-More information on the [gh-pages](https://github.com/jessesquires/JSQSystemSoundPlayer/tree/gh-pages) branch.
+More information on the [`gh-pages`](https://github.com/jessesquires/JSQSystemSoundPlayer/tree/gh-pages) branch.
 
 ## Contribute
 
