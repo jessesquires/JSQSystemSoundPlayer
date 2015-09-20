@@ -1,5 +1,5 @@
 # JSQSystemSoundPlayer 
-[![Build Status](https://secure.travis-ci.org/jessesquires/JSQSystemSoundPlayer.svg)](http://travis-ci.org/jessesquires/JSQSystemSoundPlayer) [![Version Status](http://img.shields.io/cocoapods/v/JSQSystemSoundPlayer.png)][docsLink] [![license MIT](http://img.shields.io/badge/license-MIT-orange.png)][mitLink] [![codecov.io](https://img.shields.io/codecov/c/github/jessesquires/JSQSystemSoundPlayer.svg)](http://codecov.io/github/jessesquires/JSQSystemSoundPlayer) ![Platform](https://cocoapod-badges.herokuapp.com/p/JSQSystemSoundPlayer/badge.png) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Build Status](https://secure.travis-ci.org/jessesquires/JSQSystemSoundPlayer.svg)](http://travis-ci.org/jessesquires/JSQSystemSoundPlayer) [![Version Status](http://img.shields.io/cocoapods/v/JSQSystemSoundPlayer.png)][podLink] [![license MIT](http://img.shields.io/badge/license-MIT-orange.png)][mitLink] [![codecov.io](https://img.shields.io/codecov/c/github/jessesquires/JSQSystemSoundPlayer.svg)](http://codecov.io/github/jessesquires/JSQSystemSoundPlayer) [![Platform](https://cocoapod-badges.herokuapp.com/p/JSQSystemSoundPlayer/badge.png)][docsLink] [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 A fancy Obj-C wrapper for Cocoa [System Sound Services](https://developer.apple.com/library/ios/documentation/AudioToolbox/Reference/SystemSoundServicesReference/Reference/reference.html), for iOS and OS X.
 
@@ -140,7 +140,7 @@ Created and maintained by [**@jesse_squires**](https://twitter.com/jesse_squires
 *Please provide attribution, it is greatly appreciated.*
 
 [docsLink]:http://www.jessesquires.com/JSQSystemSoundPlayer
+[podLink]:http://cocoapods.org/pods/JSQSystemSoundPlayer
 [mitLink]:http://opensource.org/licenses/MIT
 [imgLinkiOS]:https://raw.githubusercontent.com/jessesquires/JSQSystemSoundPlayer/develop/screenshot-ios.png
 [imgLinkOSX]:https://raw.githubusercontent.com/jessesquires/JSQSystemSoundPlayer/develop/screenshot-osx.png
-
