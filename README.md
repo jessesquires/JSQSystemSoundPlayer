@@ -28,7 +28,7 @@ See [AVAudioPlayer](https://developer.apple.com/library/ios/DOCUMENTATION/AVFoun
 * Integration with `NSUserDefaults` to globally toggle sound effects in your app
 * Efficient memory management
 * Caches sounds (`SystemSoundID` instances) and purges on memory warning
-* Works with Swift! (v2.0+)
+* Works with Swift!
 
 ## Requirements
 
@@ -112,7 +112,7 @@ while (1) {
 
 ## Documentation
 
-Read the fucking [docs][docsLink]. Generated with [appledoc](https://github.com/tomaz/appledoc). Hosted by [GitHub Pages](https://pages.github.com).
+Read the fucking [docs][docsLink]. Generated with [cocoadocs](http://cocoadocs.org). Hosted by [GitHub Pages](https://pages.github.com).
 
 More information on the [gh-pages](https://github.com/jessesquires/JSQSystemSoundPlayer/tree/gh-pages) branch.
 
@@ -122,14 +122,7 @@ Please follow these sweet [contribution guidelines](https://github.com/jessesqui
 
 ## Credits
 
-Created and maintained by [**@jesse_squires**](https://twitter.com/jesse_squires)
-
-## Apps using this library
-
-* [Hemoglobe](http://bit.ly/hemoglobeapp)
-* [iPaint uPaint](http://bit.ly/ipupappstr)
-* [MUDRammer](https://itunes.apple.com/us/app/mudrammer-a-modern-mud-client/id597157072?mt=8)
-* *Your app here*
+Created and maintained by [**@jesse_squires**](https://twitter.com/jesse_squires).
 
 ## License
 
