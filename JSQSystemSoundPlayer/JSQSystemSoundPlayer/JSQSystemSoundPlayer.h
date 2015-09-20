@@ -76,9 +76,25 @@ typedef void(^JSQSystemSoundPlayerCompletionBlock)(void);
 /**
  *  Returns the shared `JSQSystemSoundPlayer` object. This method always returns the same sound system player object.
  *
- *  @return An initialized `JSQSystemSoundPlayer` object if successful, `nil` otherwise.
+ *  @return A shared instance of`JSQSystemSoundPlayer`.
  */
 + (JSQSystemSoundPlayer *)sharedPlayer;
+
+/**
+ *  Returns a new `JSQSystemSoundPlayer` instance with the specified bundle.
+ *
+ *  @param bundle The bundle in which the sound player uses to search for sound file resources.
+ *
+ *  @return  An initialized `JSQSystemSoundPlayer` object.
+ */
+- (instancetype)initWithBundle:(NSBundle *)bundle;
+
+/**
+ *  Returns a new `JSQSystemSoundPlayer` instance using the main bundle.
+ *
+ *  @return An initialized `JSQSystemSoundPlayer` object.
+ */
+- (instancetype)init;
 
 /**
  *  Toggles the sound player on or off by setting the `kJSQSystemSoundPlayerUserDefaultsKey` key in `NSUserDefaults` to the given value.

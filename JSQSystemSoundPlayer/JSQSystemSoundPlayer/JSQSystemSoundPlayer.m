@@ -99,11 +99,13 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
     return sharedPlayer;
 }
 
-- (instancetype)init
+- (instancetype)initWithBundle:(NSBundle *)bundle
 {
+    NSParameterAssert(bundle != nil);
+
     self = [super init];
     if (self) {
-        _bundle = [NSBundle mainBundle];
+        _bundle = bundle;
         _on = [self readSoundPlayerOnFromUserDefaults];
         _sounds = [[NSMutableDictionary alloc] init];
         _completionBlocks = [[NSMutableDictionary alloc] init];
@@ -116,6 +118,11 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
         #endif
     }
     return self;
+}
+
+- (instancetype)init
+{
+    return [self initWithBundle:[NSBundle mainBundle]];
 }
 
 - (void)dealloc
