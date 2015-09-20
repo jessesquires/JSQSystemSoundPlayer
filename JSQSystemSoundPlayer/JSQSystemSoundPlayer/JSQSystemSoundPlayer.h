@@ -184,7 +184,8 @@ typedef void(^JSQSystemSoundPlayerCompletionBlock)(void);
  *  This parameter must be one of `kJSQSystemSoundTypeCAF`, `kJSQSystemSoundTypeAIF`, `kJSQSystemSoundTypeAIFF`, or `kJSQSystemSoundTypeWAV`.
  *
  */
-- (void)preloadSoundWithFilename:(NSString *)filename fileExtension:(NSString *)fileExtension;
+- (void)preloadSoundWithFilename:(NSString *)filename
+                   fileExtension:(NSString *)fileExtension;
 
 @end
 
