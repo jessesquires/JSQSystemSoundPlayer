@@ -1,7 +1,7 @@
 # JSQSystemSoundPlayer 
 [![Build Status](https://secure.travis-ci.org/jessesquires/JSQSystemSoundPlayer.svg)](http://travis-ci.org/jessesquires/JSQSystemSoundPlayer) [![Version Status](https://img.shields.io/cocoapods/v/JSQSystemSoundPlayer.png)][podLink] [![license MIT](https://img.shields.io/cocoapods/l/JSQSystemSoundPlayer.png)][mitLink] [![codecov.io](https://img.shields.io/codecov/c/github/jessesquires/JSQSystemSoundPlayer.svg)](http://codecov.io/github/jessesquires/JSQSystemSoundPlayer) [![Platform](https://img.shields.io/cocoapods/p/JSQSystemSoundPlayer.png)][docsLink] [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-A fancy Obj-C wrapper for Cocoa [System Sound Services](https://developer.apple.com/library/ios/documentation/AudioToolbox/Reference/SystemSoundServicesReference/Reference/reference.html), for iOS and OS X.
+*A fancy Obj-C wrapper for Cocoa [System Sound Services](https://developer.apple.com/library/ios/documentation/AudioToolbox/Reference/SystemSoundServicesReference/Reference/reference.html), for iOS and OS X.*
 
 This class is a light-weight, drop-in component to play sound effects, or other short sounds in your iOS app. 
 To determine your audio needs, see [Best Practices for iOS Audio](https://developer.apple.com/library/ios/DOCUMENTATION/AudioVideo/Conceptual/MultimediaPG/UsingAudio/UsingAudio.html#//apple_ref/doc/uid/TP40009767-CH2-SW10).
