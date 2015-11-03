@@ -3,10 +3,10 @@
 
 *A fancy Obj-C wrapper for Cocoa [System Sound Services](https://developer.apple.com/library/ios/documentation/AudioToolbox/Reference/SystemSoundServicesReference/Reference/reference.html), for iOS and OS X.*
 
-This class is a light-weight, drop-in component to play sound effects, or other short sounds in your iOS app. 
+This library is a light-weight component to play sound effects in your app. 
 To determine your audio needs, see [Best Practices for iOS Audio](https://developer.apple.com/library/ios/DOCUMENTATION/AudioVideo/Conceptual/MultimediaPG/UsingAudio/UsingAudio.html#//apple_ref/doc/uid/TP40009767-CH2-SW10).
-Or, read the tl;dr version:
 
+**tl;dr**
 >*When your sole audio need is to play alerts and user-interface sound effects, use Core Audio’s System Sound Services.*
 >
 >Your sound files must be:
@@ -71,8 +71,6 @@ github "jessesquires/JSQSystemSoundPlayer"
                                                    // completion block code
                                                 }];
 ````
-
-And that's all! 
 
 String constants for file extensions provided for you: 
 * `kJSQSystemSoundTypeCAF`
