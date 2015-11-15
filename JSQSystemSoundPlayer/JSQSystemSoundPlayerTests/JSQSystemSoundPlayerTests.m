@@ -22,9 +22,6 @@
 
 #import <JSQSystemSoundPlayer/JSQSystemSoundPlayer.h>
 
-
-static NSString * const kJSQSystemSoundPlayerUserDefaultsKey = @"kJSQSystemSoundPlayerUserDefaultsKey";
-
 static NSString * const kSoundBasso = @"Basso";
 static NSString * const kSoundFunk = @"Funk";
 static NSString * const kSoundBalladPiano = @"BalladPiano";
