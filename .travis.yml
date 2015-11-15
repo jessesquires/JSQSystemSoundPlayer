@@ -6,20 +6,12 @@ env:
    global:
    - LANG=en_US.UTF-8
 
-   matrix:
-   - DESTINATION="OS=8.1,name=iPhone 4s" SDK=iphonesimulator9.1
-   - DESTINATION="OS=8.2,name=iPhone 5" SDK=iphonesimulator9.1
-   - DESTINATION="OS=8.3,name=iPhone 5s" SDK=iphonesimulator9.1
-   - DESTINATION="OS=8.4,name=iPhone 6" SDK=iphonesimulator9.1
-   - DESTINATION="OS=9.1,name=iPhone 6 Plus" SDK=iphonesimulator9.1
-
 # before_install:
 # - brew update
 # - brew outdated xctool || brew upgrade xctool
 
 script:
 - pod lib lint
-- xctool clean build test -project JSQSystemSoundPlayer/JSQSystemSoundPlayer.xcodeproj -scheme JSQSystemSoundPlayer-iOS -sdk "$SDK" -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO
 - ./build.sh
 
 after_success:
