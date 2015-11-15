@@ -25,7 +25,7 @@
 #endif
 
 
-static NSString * const kJSQSystemSoundPlayerUserDefaultsKey = @"kJSQSystemSoundPlayerUserDefaultsKey";
+NSString * const kJSQSystemSoundPlayerUserDefaultsKey = @"kJSQSystemSoundPlayerUserDefaultsKey";
 
 NSString * const kJSQSystemSoundTypeCAF = @"caf";
 NSString * const kJSQSystemSoundTypeAIF = @"aif";

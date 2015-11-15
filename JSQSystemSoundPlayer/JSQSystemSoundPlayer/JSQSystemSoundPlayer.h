@@ -31,22 +31,27 @@ FOUNDATION_EXPORT double JSQSystemSoundPlayerVersionNumber;
 FOUNDATION_EXPORT const unsigned char JSQSystemSoundPlayerVersionString[];
 
 /**
- String constant for .caf audio file extension.
+ The user defaults key to toggle and persist the `on` setting.
+ */
+FOUNDATION_EXPORT NSString * const kJSQSystemSoundPlayerUserDefaultsKey;
+
+/**
+ String constant for `.caf` audio file extension.
  */
 FOUNDATION_EXPORT NSString * const kJSQSystemSoundTypeCAF;
 
 /**
- String constant for .aif audio file extension.
+ String constant for `.aif` audio file extension.
  */
 FOUNDATION_EXPORT NSString * const kJSQSystemSoundTypeAIF;
 
 /**
- String constant for .aiff audio file extension.
+ String constant for `.aiff` audio file extension.
  */
 FOUNDATION_EXPORT NSString * const kJSQSystemSoundTypeAIFF;
 
 /**
- String constant for .wav audio file extension.
+ String constant for `.wav` audio file extension.
  */
 FOUNDATION_EXPORT NSString * const kJSQSystemSoundTypeWAV;
 
