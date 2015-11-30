@@ -11,6 +11,7 @@ env:
 # - brew outdated xctool || brew upgrade xctool
 
 script:
+- pod spec lint
 - pod lib lint
 - ./build.sh
 
