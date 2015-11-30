@@ -14,10 +14,10 @@ Pod::Spec.new do |s|
    s.source_files = 'JSQSystemSoundPlayer/JSQSystemSoundPlayer/*.{h,m}'
 
    s.ios.deployment_target = '6.0'
-   s.ios.frameworks = 'AudioToolbox', 'Foundation', 'UIKit'
-
    s.osx.deployment_target = '10.7'
-   s.osx.frameworks = 'AudioToolbox', 'Foundation'
+   s.tvos.deployment_target = '9.0'
+
+   s.frameworks = 'AudioToolbox'
 
    s.requires_arc = true
 end

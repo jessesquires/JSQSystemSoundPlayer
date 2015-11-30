@@ -82,17 +82,9 @@
 		884DF6641AF6E96700D97D16 /* JSQSystemSoundPlayer-OSX */ = {
 			isa = PBXGroup;
 			children = (
-				884DF6651AF6E96700D97D16 /* Supporting Files */,
-			);
-			path = "JSQSystemSoundPlayer-OSX";
-			sourceTree = "<group>";
-		};
-		884DF6651AF6E96700D97D16 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
 				884DF6661AF6E96700D97D16 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "JSQSystemSoundPlayer-OSX";
 			sourceTree = "<group>";
 		};
 		8892FA941AF6E4DA00F2D347 = {
@@ -120,35 +112,19 @@
 			children = (
 				8892FAA31AF6E4DA00F2D347 /* JSQSystemSoundPlayer.h */,
 				8892FABA1AF6E4F500F2D347 /* JSQSystemSoundPlayer.m */,
-				8892FAA11AF6E4DA00F2D347 /* Supporting Files */,
-			);
-			path = JSQSystemSoundPlayer;
-			sourceTree = "<group>";
-		};
-		8892FAA11AF6E4DA00F2D347 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
 				8892FAA21AF6E4DA00F2D347 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = JSQSystemSoundPlayer;
 			sourceTree = "<group>";
 		};
 		8892FAAD1AF6E4DA00F2D347 /* JSQSystemSoundPlayerTests */ = {
 			isa = PBXGroup;
 			children = (
 				8892FAB01AF6E4DA00F2D347 /* JSQSystemSoundPlayerTests.m */,
+				8892FAAF1AF6E4DA00F2D347 /* Info.plist */,
 				884DF6571AF6E88100D97D16 /* Sample sounds */,
-				8892FAAE1AF6E4DA00F2D347 /* Supporting Files */,
 			);
 			path = JSQSystemSoundPlayerTests;
-			sourceTree = "<group>";
-		};
-		8892FAAE1AF6E4DA00F2D347 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8892FAAF1AF6E4DA00F2D347 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,8 +209,9 @@
 		8892FA951AF6E4DA00F2D347 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JSQ;
 				LastUpgradeCheck = 0700;
-				ORGANIZATIONNAME = "Hexed Bits";
+				ORGANIZATIONNAME = "Jesse Squires";
 				TargetAttributes = {
 					884DF6621AF6E96700D97D16 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -412,7 +389,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -454,7 +431,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
