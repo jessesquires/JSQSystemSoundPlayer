@@ -1,11 +1,11 @@
-# JSQSystemSoundPlayer 
+# JSQSystemSoundPlayer
 [![Build Status](https://secure.travis-ci.org/jessesquires/JSQSystemSoundPlayer.svg)](http://travis-ci.org/jessesquires/JSQSystemSoundPlayer) [![Version Status](https://img.shields.io/cocoapods/v/JSQSystemSoundPlayer.png)][podLink] [![license MIT](https://img.shields.io/cocoapods/l/JSQSystemSoundPlayer.png)][mitLink] [![codecov.io](https://img.shields.io/codecov/c/github/jessesquires/JSQSystemSoundPlayer.svg)](http://codecov.io/github/jessesquires/JSQSystemSoundPlayer) [![Platform](https://img.shields.io/cocoapods/p/JSQSystemSoundPlayer.png)][docsLink] [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 *A fancy Obj-C wrapper for Cocoa [System Sound Services](https://developer.apple.com/library/ios/documentation/AudioToolbox/Reference/SystemSoundServicesReference/Reference/reference.html), for iOS and OS X.*
 
 ## About
 
-This library is a light-weight component to play sound effects in your app. 
+This library is a light-weight component to play sound effects in your app.
 To determine your audio needs, see [Best Practices for iOS Audio](https://developer.apple.com/library/ios/DOCUMENTATION/AudioVideo/Conceptual/MultimediaPG/UsingAudio/UsingAudio.html#//apple_ref/doc/uid/TP40009767-CH2-SW10).
 
 **tl;dr**
@@ -17,7 +17,7 @@ To determine your audio needs, see [Best Practices for iOS Audio](https://develo
 >* In linear PCM or IMA4 (IMA/ADPCM) format
 >* Packaged in a `.caf`, `.aif`, or `.wav` file
 
-If this does not fit your needs, then this library is not for you! 
+If this does not fit your needs, then this library is not for you!
 See [AVAudioPlayer](https://developer.apple.com/library/ios/DOCUMENTATION/AVFoundation/Reference/AVAudioPlayerClassReference/Reference/Reference.html), instead.
 
 ![screenshot ios][imgLinkiOS] &nbsp;&nbsp;&nbsp; ![screenshot osx][imgLinkOSX]
@@ -34,8 +34,9 @@ See [AVAudioPlayer](https://developer.apple.com/library/ios/DOCUMENTATION/AVFoun
 
 ## Requirements
 
-* iOS 6.0+ 
+* iOS 6.0+
 * OS X 10.7+
+* tvOS 9.0+
 * ARC
 
 ## Installation
@@ -58,9 +59,7 @@ github "jessesquires/JSQSystemSoundPlayer"
 
 ## Getting Started
 
-````objective-c
-#import <JSQSystemSoundPlayer/JSQSystemSoundPlayer.h>
-// or
+````swift
 @import JSQSystemSoundPlayer;
 ````
 
@@ -74,7 +73,7 @@ github "jessesquires/JSQSystemSoundPlayer"
                                                 }];
 ````
 
-String constants for file extensions provided for you: 
+String constants for file extensions provided for you:
 * `kJSQSystemSoundTypeCAF`
 * `kJSQSystemSoundTypeAIF`
 * `kJSQSystemSoundTypeAIFF`
@@ -90,7 +89,7 @@ Need a setting in your app's preferences to toggle sound effects on/off? `JSQSys
 
 #### Specifying a bundle
 
-Need to load your audio resources from a specific bundle? `JSQSystemSoundPlayer` uses the main bundle by default, but you can specify another. 
+Need to load your audio resources from a specific bundle? `JSQSystemSoundPlayer` uses the main bundle by default, but you can specify another.
 
 **NOTE:** for each sound that is played `JSQSystemSoundPlayer` will **always** search the **last specified bundle**. If you are playing sound effects from multiple bundles, you will need to specify the bundle before playing each sound.
 
@@ -100,7 +99,7 @@ Need to load your audio resources from a specific bundle? `JSQSystemSoundPlayer`
 
 #### Demo project
 
-The included example app, `Example.xcodeproj`, exercises all functionality of this framework. There are applications for iOS as well as OS X. 
+The included example app, `Example.xcodeproj`, exercises all functionality of this framework. There are applications for iOS as well as OS X.
 
 #### For a good time
 
@@ -112,7 +111,7 @@ while (1) {
 
 ## Documentation
 
-Read the fucking [docs][docsLink]. Generated with [cocoadocs](http://cocoadocs.org). Hosted by [GitHub Pages](https://pages.github.com).
+Read the fucking [docs][docsLink]. Generated with [jazzy](https://github.com/realm/jazzy). Hosted by [GitHub Pages](https://pages.github.com).
 
 More information on the [`gh-pages`](https://github.com/jessesquires/JSQSystemSoundPlayer/tree/gh-pages) branch.
 

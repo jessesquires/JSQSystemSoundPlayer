@@ -16,6 +16,8 @@
 		8892FAAA1AF6E4DA00F2D347 /* JSQSystemSoundPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8892FA9E1AF6E4DA00F2D347 /* JSQSystemSoundPlayer.framework */; };
 		8892FAB11AF6E4DA00F2D347 /* JSQSystemSoundPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8892FAB01AF6E4DA00F2D347 /* JSQSystemSoundPlayerTests.m */; };
 		8892FABB1AF6E4F500F2D347 /* JSQSystemSoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8892FABA1AF6E4F500F2D347 /* JSQSystemSoundPlayer.m */; };
+		88F469371C0BE3A2001F70F4 /* JSQSystemSoundPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8892FAA31AF6E4DA00F2D347 /* JSQSystemSoundPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		88F469381C0BE3A2001F70F4 /* JSQSystemSoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8892FABA1AF6E4F500F2D347 /* JSQSystemSoundPlayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,8 @@
 		8892FAAF1AF6E4DA00F2D347 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8892FAB01AF6E4DA00F2D347 /* JSQSystemSoundPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSQSystemSoundPlayerTests.m; sourceTree = "<group>"; };
 		8892FABA1AF6E4F500F2D347 /* JSQSystemSoundPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSQSystemSoundPlayer.m; sourceTree = "<group>"; };
+		88F4692F1C0BE399001F70F4 /* JSQSystemSoundPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSQSystemSoundPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88F469331C0BE399001F70F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8892FAAA1AF6E4DA00F2D347 /* JSQSystemSoundPlayer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88F4692B1C0BE399001F70F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +104,7 @@
 				8892FAA01AF6E4DA00F2D347 /* JSQSystemSoundPlayer */,
 				8892FAAD1AF6E4DA00F2D347 /* JSQSystemSoundPlayerTests */,
 				884DF6641AF6E96700D97D16 /* JSQSystemSoundPlayer-OSX */,
+				88F469301C0BE399001F70F4 /* JSQSystemSoundPlayer-tvOS */,
 				8892FA9F1AF6E4DA00F2D347 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +115,7 @@
 				8892FA9E1AF6E4DA00F2D347 /* JSQSystemSoundPlayer.framework */,
 				8892FAA91AF6E4DA00F2D347 /* JSQSystemSoundPlayerTests.xctest */,
 				884DF6631AF6E96700D97D16 /* JSQSystemSoundPlayer.framework */,
+				88F4692F1C0BE399001F70F4 /* JSQSystemSoundPlayer.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +140,14 @@
 			path = JSQSystemSoundPlayerTests;
 			sourceTree = "<group>";
 		};
+		88F469301C0BE399001F70F4 /* JSQSystemSoundPlayer-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				88F469331C0BE399001F70F4 /* Info.plist */,
+			);
+			path = "JSQSystemSoundPlayer-tvOS";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -143,6 +164,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8892FAA41AF6E4DA00F2D347 /* JSQSystemSoundPlayer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88F4692C1C0BE399001F70F4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88F469371C0BE3A2001F70F4 /* JSQSystemSoundPlayer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +232,24 @@
 			productReference = 8892FAA91AF6E4DA00F2D347 /* JSQSystemSoundPlayerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		88F4692E1C0BE399001F70F4 /* JSQSystemSoundPlayer-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88F469341C0BE399001F70F4 /* Build configuration list for PBXNativeTarget "JSQSystemSoundPlayer-tvOS" */;
+			buildPhases = (
+				88F4692A1C0BE399001F70F4 /* Sources */,
+				88F4692B1C0BE399001F70F4 /* Frameworks */,
+				88F4692C1C0BE399001F70F4 /* Headers */,
+				88F4692D1C0BE399001F70F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "JSQSystemSoundPlayer-tvOS";
+			productName = "JSQSystemSoundPlayer-tvOS";
+			productReference = 88F4692F1C0BE399001F70F4 /* JSQSystemSoundPlayer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -222,6 +269,9 @@
 					8892FAA81AF6E4DA00F2D347 = {
 						CreatedOnToolsVersion = 6.3.1;
 					};
+					88F4692E1C0BE399001F70F4 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
 				};
 			};
 			buildConfigurationList = 8892FA981AF6E4DA00F2D347 /* Build configuration list for PBXProject "JSQSystemSoundPlayer" */;
@@ -239,6 +289,7 @@
 				8892FA9D1AF6E4DA00F2D347 /* JSQSystemSoundPlayer-iOS */,
 				8892FAA81AF6E4DA00F2D347 /* JSQSystemSoundPlayerTests */,
 				884DF6621AF6E96700D97D16 /* JSQSystemSoundPlayer-OSX */,
+				88F4692E1C0BE399001F70F4 /* JSQSystemSoundPlayer-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -268,6 +319,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		88F4692D1C0BE399001F70F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -292,6 +350,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8892FAB11AF6E4DA00F2D347 /* JSQSystemSoundPlayerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88F4692A1C0BE399001F70F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88F469381C0BE3A2001F70F4 /* JSQSystemSoundPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,7 +455,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -431,7 +497,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -451,6 +517,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = JSQSystemSoundPlayer/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hexedbits.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = JSQSystemSoundPlayer;
@@ -467,6 +534,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = JSQSystemSoundPlayer/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hexedbits.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = JSQSystemSoundPlayer;
@@ -497,6 +565,46 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hexedbits.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		88F469351C0BE399001F70F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "JSQSystemSoundPlayer-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hexedbits.JSQSystemSoundPlayer-tvOS";
+				PRODUCT_NAME = JSQSystemSoundPlayer;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		88F469361C0BE399001F70F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "JSQSystemSoundPlayer-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hexedbits.JSQSystemSoundPlayer-tvOS";
+				PRODUCT_NAME = JSQSystemSoundPlayer;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -538,6 +646,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		88F469341C0BE399001F70F4 /* Build configuration list for PBXNativeTarget "JSQSystemSoundPlayer-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88F469351C0BE399001F70F4 /* Debug */,
+				88F469361C0BE399001F70F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

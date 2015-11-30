@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
    s.name = 'JSQSystemSoundPlayer'
-   s.version = '4.2.0'
+   s.version = '4.3.0'
    s.license = 'MIT'
 
    s.summary = 'A fancy Obj-C wrapper for Cocoa System Sound Services'
