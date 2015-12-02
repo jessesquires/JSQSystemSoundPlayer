@@ -121,6 +121,18 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 
 
 #pragma mark - Playing sounds
+- (void)playSoundWithName:(NSString *)filename
+                extension:(NSString *)extension
+{
+    [self playSoundWithName:filename extension:extension isAlert:NO completionBlock:nil];
+}
+
+- (void)playSoundWithName:(NSString *)filename
+                extension:(NSString *)extension
+                  isAlert:(BOOL)isAlert
+{
+    [self playSoundWithName:filename extension:extension isAlert:isAlert completionBlock:nil];
+}
 
 - (void)playSoundWithName:(NSString *)filename
                 extension:(NSString *)extension
