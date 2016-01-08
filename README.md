@@ -41,7 +41,7 @@ See [AVAudioPlayer](https://developer.apple.com/library/ios/DOCUMENTATION/AVFoun
 
 ## Installation
 
-### [CocoaPods](https://cocoapods.org)
+### [CocoaPods](https://cocoapods.org) (recommended)
 ````ruby
 pod 'JSQSystemSoundPlayer'
 ````
@@ -51,11 +51,6 @@ pod 'JSQSystemSoundPlayer'
 ````bash
 github "jessesquires/JSQSystemSoundPlayer"
 ````
-
-### Manually
-
-1. Add the `JSQSystemSoundPlayer/` folder to your project
-2. Add `AudioToolbox.framework`
 
 ## Getting Started
 
