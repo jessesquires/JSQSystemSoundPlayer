@@ -96,17 +96,9 @@ Need to load your audio resources from a specific bundle? `JSQSystemSoundPlayer`
 
 The included example app, `Example.xcodeproj`, exercises all functionality of this framework. There are applications for iOS as well as OS X.
 
-#### For a good time
-
-````objective-c
-while (1) {
-    [[JSQSystemSoundPlayer sharedPlayer] playVibrateSound];
-}
-````
-
 ## Documentation
 
-Read the fucking [docs][docsLink]. Generated with [jazzy](https://github.com/realm/jazzy). Hosted by [GitHub Pages](https://pages.github.com).
+Read the [docs][docsLink]. Generated with [jazzy](https://github.com/realm/jazzy). Hosted by [GitHub Pages](https://pages.github.com).
 
 More information on the [`gh-pages`](https://github.com/jessesquires/JSQSystemSoundPlayer/tree/gh-pages) branch.
 
