@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
    s.author = { 'Jesse Squires' => 'jesse.squires.developer@gmail.com' }
 
    s.source = { :git => 'https://github.com/jessesquires/JSQSystemSoundPlayer.git', :tag => s.version }
-   s.source_files = 'JSQSystemSoundPlayer/JSQSystemSoundPlayer/*.{h,m}'
+   s.source_files = 'Source/*.{h,m}'
 
    s.ios.deployment_target = '6.0'
    s.osx.deployment_target = '10.7'

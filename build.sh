@@ -14,21 +14,21 @@ xctool \
    clean build
 
 xctool \
-   -project JSQSystemSoundPlayer/JSQSystemSoundPlayer.xcodeproj \
+   -project JSQSystemSoundPlayer.xcodeproj \
    -scheme JSQSystemSoundPlayer-OSX \
    -sdk iphonesimulator \
    ONLY_ACTIVE_ARCH=NO \
    clean build
 
 xctool \
-   -project JSQSystemSoundPlayer/JSQSystemSoundPlayer.xcodeproj \
+   -project JSQSystemSoundPlayer.xcodeproj \
    -scheme JSQSystemSoundPlayer-tvOS \
    -sdk iphonesimulator \
    ONLY_ACTIVE_ARCH=NO \
    clean build
 
 xcodebuild \
-   -project JSQSystemSoundPlayer/JSQSystemSoundPlayer.xcodeproj \
+   -project JSQSystemSoundPlayer.xcodeproj \
    -scheme JSQSystemSoundPlayer-iOS \
    -sdk iphonesimulator \
    ONLY_ACTIVE_ARCH=NO \

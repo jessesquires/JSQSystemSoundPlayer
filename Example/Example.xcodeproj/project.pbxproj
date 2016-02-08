@@ -17,53 +17,60 @@
 		884ED38C1AF6F412009CE403 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 884ED38B1AF6F412009CE403 /* main.m */; };
 		884ED38E1AF6F412009CE403 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 884ED38D1AF6F412009CE403 /* Images.xcassets */; };
 		884ED3911AF6F412009CE403 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 884ED38F1AF6F412009CE403 /* MainMenu.xib */; };
-		884ED3A41AF6F504009CE403 /* JSQSystemSoundPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887220381AF6EDF6005EB2C3 /* JSQSystemSoundPlayer.framework */; };
-		884ED3A51AF6F504009CE403 /* JSQSystemSoundPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 887220381AF6EDF6005EB2C3 /* JSQSystemSoundPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		884ED3AD1AF6F56B009CE403 /* BalladPiano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 884ED3AA1AF6F56B009CE403 /* BalladPiano.caf */; };
-		884ED3AE1AF6F56B009CE403 /* Basso.aif in Resources */ = {isa = PBXBuildFile; fileRef = 884ED3AB1AF6F56B009CE403 /* Basso.aif */; };
-		884ED3AF1AF6F56B009CE403 /* Funk.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 884ED3AC1AF6F56B009CE403 /* Funk.aiff */; };
-		8872203A1AF6EE3F005EB2C3 /* JSQSystemSoundPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887220341AF6EDF6005EB2C3 /* JSQSystemSoundPlayer.framework */; };
-		8872203B1AF6EE3F005EB2C3 /* JSQSystemSoundPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 887220341AF6EDF6005EB2C3 /* JSQSystemSoundPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		887220451AF6EEAE005EB2C3 /* BalladPiano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 887220421AF6EEAE005EB2C3 /* BalladPiano.caf */; };
-		887220461AF6EEAE005EB2C3 /* Basso.aif in Resources */ = {isa = PBXBuildFile; fileRef = 887220431AF6EEAE005EB2C3 /* Basso.aif */; };
-		887220471AF6EEAE005EB2C3 /* Funk.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 887220441AF6EEAE005EB2C3 /* Funk.aiff */; };
+		88785D371C68726C00E34EDA /* BalladPiano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 88785D341C68726C00E34EDA /* BalladPiano.caf */; };
+		88785D381C68726C00E34EDA /* BalladPiano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 88785D341C68726C00E34EDA /* BalladPiano.caf */; };
+		88785D391C68726C00E34EDA /* Basso.aif in Resources */ = {isa = PBXBuildFile; fileRef = 88785D351C68726C00E34EDA /* Basso.aif */; };
+		88785D3A1C68726C00E34EDA /* Basso.aif in Resources */ = {isa = PBXBuildFile; fileRef = 88785D351C68726C00E34EDA /* Basso.aif */; };
+		88785D3B1C68726C00E34EDA /* Funk.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 88785D361C68726C00E34EDA /* Funk.aiff */; };
+		88785D3C1C68726C00E34EDA /* Funk.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 88785D361C68726C00E34EDA /* Funk.aiff */; };
+		88785D3D1C68729B00E34EDA /* JSQSystemSoundPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88785D2B1C6871C600E34EDA /* JSQSystemSoundPlayer.framework */; };
+		88785D3E1C68729B00E34EDA /* JSQSystemSoundPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 88785D2B1C6871C600E34EDA /* JSQSystemSoundPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		88785D411C6872A300E34EDA /* JSQSystemSoundPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88785D2F1C6871C600E34EDA /* JSQSystemSoundPlayer.framework */; };
+		88785D421C6872A300E34EDA /* JSQSystemSoundPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 88785D2F1C6871C600E34EDA /* JSQSystemSoundPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		884ED3A61AF6F504009CE403 /* PBXContainerItemProxy */ = {
+		88785D2A1C6871C600E34EDA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8872202D1AF6EDF6005EB2C3 /* JSQSystemSoundPlayer.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 884DF6621AF6E96700D97D16;
-			remoteInfo = "JSQSystemSoundPlayer-OSX";
-		};
-		887220331AF6EDF6005EB2C3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8872202D1AF6EDF6005EB2C3 /* JSQSystemSoundPlayer.xcodeproj */;
+			containerPortal = 88785D231C6871C600E34EDA /* JSQSystemSoundPlayer.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 8892FA9E1AF6E4DA00F2D347;
 			remoteInfo = "JSQSystemSoundPlayer-iOS";
 		};
-		887220351AF6EDF6005EB2C3 /* PBXContainerItemProxy */ = {
+		88785D2C1C6871C600E34EDA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8872202D1AF6EDF6005EB2C3 /* JSQSystemSoundPlayer.xcodeproj */;
+			containerPortal = 88785D231C6871C600E34EDA /* JSQSystemSoundPlayer.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 8892FAA91AF6E4DA00F2D347;
 			remoteInfo = JSQSystemSoundPlayerTests;
 		};
-		887220371AF6EDF6005EB2C3 /* PBXContainerItemProxy */ = {
+		88785D2E1C6871C600E34EDA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8872202D1AF6EDF6005EB2C3 /* JSQSystemSoundPlayer.xcodeproj */;
+			containerPortal = 88785D231C6871C600E34EDA /* JSQSystemSoundPlayer.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 884DF6631AF6E96700D97D16;
 			remoteInfo = "JSQSystemSoundPlayer-OSX";
 		};
-		8872203C1AF6EE3F005EB2C3 /* PBXContainerItemProxy */ = {
+		88785D301C6871C600E34EDA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8872202D1AF6EDF6005EB2C3 /* JSQSystemSoundPlayer.xcodeproj */;
+			containerPortal = 88785D231C6871C600E34EDA /* JSQSystemSoundPlayer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 88F4692F1C0BE399001F70F4;
+			remoteInfo = "JSQSystemSoundPlayer-tvOS";
+		};
+		88785D3F1C68729B00E34EDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88785D231C6871C600E34EDA /* JSQSystemSoundPlayer.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 8892FA9D1AF6E4DA00F2D347;
 			remoteInfo = "JSQSystemSoundPlayer-iOS";
+		};
+		88785D431C6872A300E34EDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88785D231C6871C600E34EDA /* JSQSystemSoundPlayer.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 884DF6621AF6E96700D97D16;
+			remoteInfo = "JSQSystemSoundPlayer-OSX";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -74,7 +81,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				884ED3A51AF6F504009CE403 /* JSQSystemSoundPlayer.framework in Embed Frameworks */,
+				88785D421C6872A300E34EDA /* JSQSystemSoundPlayer.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,7 +92,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8872203B1AF6EE3F005EB2C3 /* JSQSystemSoundPlayer.framework in Embed Frameworks */,
+				88785D3E1C68729B00E34EDA /* JSQSystemSoundPlayer.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,13 +117,10 @@
 		884ED38B1AF6F412009CE403 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		884ED38D1AF6F412009CE403 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		884ED3901AF6F412009CE403 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		884ED3AA1AF6F56B009CE403 /* BalladPiano.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BalladPiano.caf; sourceTree = "<group>"; };
-		884ED3AB1AF6F56B009CE403 /* Basso.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = Basso.aif; sourceTree = "<group>"; };
-		884ED3AC1AF6F56B009CE403 /* Funk.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Funk.aiff; sourceTree = "<group>"; };
-		8872202D1AF6EDF6005EB2C3 /* JSQSystemSoundPlayer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSQSystemSoundPlayer.xcodeproj; path = ../JSQSystemSoundPlayer/JSQSystemSoundPlayer.xcodeproj; sourceTree = "<group>"; };
-		887220421AF6EEAE005EB2C3 /* BalladPiano.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BalladPiano.caf; sourceTree = "<group>"; };
-		887220431AF6EEAE005EB2C3 /* Basso.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = Basso.aif; sourceTree = "<group>"; };
-		887220441AF6EEAE005EB2C3 /* Funk.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Funk.aiff; sourceTree = "<group>"; };
+		88785D231C6871C600E34EDA /* JSQSystemSoundPlayer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSQSystemSoundPlayer.xcodeproj; path = ../JSQSystemSoundPlayer.xcodeproj; sourceTree = "<group>"; };
+		88785D341C68726C00E34EDA /* BalladPiano.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BalladPiano.caf; sourceTree = "<group>"; };
+		88785D351C68726C00E34EDA /* Basso.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = Basso.aif; sourceTree = "<group>"; };
+		88785D361C68726C00E34EDA /* Funk.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Funk.aiff; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8872203A1AF6EE3F005EB2C3 /* JSQSystemSoundPlayer.framework in Frameworks */,
+				88785D3D1C68729B00E34EDA /* JSQSystemSoundPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				884ED3A41AF6F504009CE403 /* JSQSystemSoundPlayer.framework in Frameworks */,
+				88785D411C6872A300E34EDA /* JSQSystemSoundPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,10 +146,11 @@
 		8842B1D91AF6ECBD000FFC99 = {
 			isa = PBXGroup;
 			children = (
+				88785D231C6871C600E34EDA /* JSQSystemSoundPlayer.xcodeproj */,
 				8842B1E41AF6ECBD000FFC99 /* Example-iOS */,
 				884ED3851AF6F412009CE403 /* Example-OSX */,
+				88785D331C68726C00E34EDA /* Sample sounds */,
 				8842B1E31AF6ECBD000FFC99 /* Products */,
-				8872202D1AF6EDF6005EB2C3 /* JSQSystemSoundPlayer.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,22 +171,13 @@
 				8842B1F21AF6ECBD000FFC99 /* Images.xcassets */,
 				8842B1F41AF6ECBD000FFC99 /* LaunchScreen.xib */,
 				8842B1EF1AF6ECBD000FFC99 /* Main.storyboard */,
-				887220411AF6EEAE005EB2C3 /* Sample sounds */,
-				8842B1E51AF6ECBD000FFC99 /* Supporting Files */,
+				8842B1E61AF6ECBD000FFC99 /* Info.plist */,
+				8842B1E71AF6ECBD000FFC99 /* main.m */,
 				8842B1EC1AF6ECBD000FFC99 /* ViewController.h */,
 				8842B1ED1AF6ECBD000FFC99 /* ViewController.m */,
 			);
 			name = "Example-iOS";
 			path = Example;
-			sourceTree = "<group>";
-		};
-		8842B1E51AF6ECBD000FFC99 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8842B1E61AF6ECBD000FFC99 /* Info.plist */,
-				8842B1E71AF6ECBD000FFC99 /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		884ED3851AF6F412009CE403 /* Example-OSX */ = {
@@ -191,51 +187,32 @@
 				884ED3891AF6F412009CE403 /* AppDelegate.m */,
 				884ED38D1AF6F412009CE403 /* Images.xcassets */,
 				884ED38F1AF6F412009CE403 /* MainMenu.xib */,
-				884ED3A91AF6F56B009CE403 /* Sample sounds */,
-				884ED3861AF6F412009CE403 /* Supporting Files */,
+				884ED3871AF6F412009CE403 /* Info.plist */,
+				884ED38B1AF6F412009CE403 /* main.m */,
 			);
 			path = "Example-OSX";
 			sourceTree = "<group>";
 		};
-		884ED3861AF6F412009CE403 /* Supporting Files */ = {
+		88785D241C6871C600E34EDA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				884ED3871AF6F412009CE403 /* Info.plist */,
-				884ED38B1AF6F412009CE403 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		884ED3A91AF6F56B009CE403 /* Sample sounds */ = {
-			isa = PBXGroup;
-			children = (
-				884ED3AA1AF6F56B009CE403 /* BalladPiano.caf */,
-				884ED3AB1AF6F56B009CE403 /* Basso.aif */,
-				884ED3AC1AF6F56B009CE403 /* Funk.aiff */,
-			);
-			name = "Sample sounds";
-			path = "../../JSQSystemSoundPlayer/JSQSystemSoundPlayerTests/Sample sounds";
-			sourceTree = "<group>";
-		};
-		8872202E1AF6EDF6005EB2C3 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				887220341AF6EDF6005EB2C3 /* JSQSystemSoundPlayer.framework */,
-				887220361AF6EDF6005EB2C3 /* JSQSystemSoundPlayerTests.xctest */,
-				887220381AF6EDF6005EB2C3 /* JSQSystemSoundPlayer.framework */,
+				88785D2B1C6871C600E34EDA /* JSQSystemSoundPlayer.framework */,
+				88785D2D1C6871C600E34EDA /* JSQSystemSoundPlayerTests.xctest */,
+				88785D2F1C6871C600E34EDA /* JSQSystemSoundPlayer.framework */,
+				88785D311C6871C600E34EDA /* JSQSystemSoundPlayer.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		887220411AF6EEAE005EB2C3 /* Sample sounds */ = {
+		88785D331C68726C00E34EDA /* Sample sounds */ = {
 			isa = PBXGroup;
 			children = (
-				887220421AF6EEAE005EB2C3 /* BalladPiano.caf */,
-				887220431AF6EEAE005EB2C3 /* Basso.aif */,
-				887220441AF6EEAE005EB2C3 /* Funk.aiff */,
+				88785D341C68726C00E34EDA /* BalladPiano.caf */,
+				88785D351C68726C00E34EDA /* Basso.aif */,
+				88785D361C68726C00E34EDA /* Funk.aiff */,
 			);
 			name = "Sample sounds";
-			path = "../../JSQSystemSoundPlayer/JSQSystemSoundPlayerTests/Sample sounds";
+			path = "../Sample sounds";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,7 +230,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				8872203D1AF6EE3F005EB2C3 /* PBXTargetDependency */,
+				88785D401C68729B00E34EDA /* PBXTargetDependency */,
 			);
 			name = "Example-iOS";
 			productName = Example;
@@ -272,7 +249,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				884ED3A71AF6F504009CE403 /* PBXTargetDependency */,
+				88785D441C6872A300E34EDA /* PBXTargetDependency */,
 			);
 			name = "Example-OSX";
 			productName = "Example-OSX";
@@ -309,8 +286,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 8872202E1AF6EDF6005EB2C3 /* Products */;
-					ProjectRef = 8872202D1AF6EDF6005EB2C3 /* JSQSystemSoundPlayer.xcodeproj */;
+					ProductGroup = 88785D241C6871C600E34EDA /* Products */;
+					ProjectRef = 88785D231C6871C600E34EDA /* JSQSystemSoundPlayer.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -322,25 +299,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		887220341AF6EDF6005EB2C3 /* JSQSystemSoundPlayer.framework */ = {
+		88785D2B1C6871C600E34EDA /* JSQSystemSoundPlayer.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = JSQSystemSoundPlayer.framework;
-			remoteRef = 887220331AF6EDF6005EB2C3 /* PBXContainerItemProxy */;
+			remoteRef = 88785D2A1C6871C600E34EDA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		887220361AF6EDF6005EB2C3 /* JSQSystemSoundPlayerTests.xctest */ = {
+		88785D2D1C6871C600E34EDA /* JSQSystemSoundPlayerTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = JSQSystemSoundPlayerTests.xctest;
-			remoteRef = 887220351AF6EDF6005EB2C3 /* PBXContainerItemProxy */;
+			remoteRef = 88785D2C1C6871C600E34EDA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		887220381AF6EDF6005EB2C3 /* JSQSystemSoundPlayer.framework */ = {
+		88785D2F1C6871C600E34EDA /* JSQSystemSoundPlayer.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = JSQSystemSoundPlayer.framework;
-			remoteRef = 887220371AF6EDF6005EB2C3 /* PBXContainerItemProxy */;
+			remoteRef = 88785D2E1C6871C600E34EDA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		88785D311C6871C600E34EDA /* JSQSystemSoundPlayer.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JSQSystemSoundPlayer.framework;
+			remoteRef = 88785D301C6871C600E34EDA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -351,10 +335,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8842B1F11AF6ECBD000FFC99 /* Main.storyboard in Resources */,
-				887220461AF6EEAE005EB2C3 /* Basso.aif in Resources */,
+				88785D391C68726C00E34EDA /* Basso.aif in Resources */,
 				8842B1F61AF6ECBD000FFC99 /* LaunchScreen.xib in Resources */,
-				887220471AF6EEAE005EB2C3 /* Funk.aiff in Resources */,
-				887220451AF6EEAE005EB2C3 /* BalladPiano.caf in Resources */,
+				88785D3B1C68726C00E34EDA /* Funk.aiff in Resources */,
+				88785D371C68726C00E34EDA /* BalladPiano.caf in Resources */,
 				8842B1F31AF6ECBD000FFC99 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,11 +347,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				884ED3AD1AF6F56B009CE403 /* BalladPiano.caf in Resources */,
+				88785D381C68726C00E34EDA /* BalladPiano.caf in Resources */,
 				884ED38E1AF6F412009CE403 /* Images.xcassets in Resources */,
 				884ED3911AF6F412009CE403 /* MainMenu.xib in Resources */,
-				884ED3AE1AF6F56B009CE403 /* Basso.aif in Resources */,
-				884ED3AF1AF6F56B009CE403 /* Funk.aiff in Resources */,
+				88785D3A1C68726C00E34EDA /* Basso.aif in Resources */,
+				88785D3C1C68726C00E34EDA /* Funk.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,15 +380,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		884ED3A71AF6F504009CE403 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "JSQSystemSoundPlayer-OSX";
-			targetProxy = 884ED3A61AF6F504009CE403 /* PBXContainerItemProxy */;
-		};
-		8872203D1AF6EE3F005EB2C3 /* PBXTargetDependency */ = {
+		88785D401C68729B00E34EDA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "JSQSystemSoundPlayer-iOS";
-			targetProxy = 8872203C1AF6EE3F005EB2C3 /* PBXContainerItemProxy */;
+			targetProxy = 88785D3F1C68729B00E34EDA /* PBXContainerItemProxy */;
+		};
+		88785D441C6872A300E34EDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "JSQSystemSoundPlayer-OSX";
+			targetProxy = 88785D431C6872A300E34EDA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
