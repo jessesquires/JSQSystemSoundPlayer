@@ -121,5 +121,5 @@ Created and maintained by [**@jesse_squires**](https://twitter.com/jesse_squires
 [docsLink]:http://www.jessesquires.com/JSQSystemSoundPlayer
 [podLink]:http://cocoapods.org/pods/JSQSystemSoundPlayer
 [mitLink]:http://opensource.org/licenses/MIT
-[imgLinkiOS]:https://raw.githubusercontent.com/jessesquires/JSQSystemSoundPlayer/develop/screenshot-ios.png
-[imgLinkOSX]:https://raw.githubusercontent.com/jessesquires/JSQSystemSoundPlayer/develop/screenshot-osx.png
+[imgLinkiOS]:https://raw.githubusercontent.com/jessesquires/JSQSystemSoundPlayer/develop/Screenshots/ios.png
+[imgLinkOSX]:https://raw.githubusercontent.com/jessesquires/JSQSystemSoundPlayer/develop/Screenshots/osx.png
