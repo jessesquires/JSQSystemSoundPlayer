@@ -1,19 +1,63 @@
-osx_image: xcode7.1
-
 language: objective-c
+osx_image: xcode7.2
 
 env:
    global:
    - LANG=en_US.UTF-8
+   - PROJECT="JSQSystemSoundPlayer.xcodeproj"
+   - IOS_SCHEME="JSQSystemSoundPlayer-iOS"
+   - OSX_SCHEME="JSQSystemSoundPlayer-OSX"
+   - TVOS_SCHEME="JSQSystemSoundPlayer-tvOS"
+   - IOS_SDK=iphonesimulator9.2
+   - OSX_SDK=macosx10.11
+   - TVOS_SDK=appletvsimulator9.1
 
-# before_install:
-# - brew update
-# - brew outdated xctool || brew upgrade xctool
+   matrix:
+   - DESTINATION="OS=8.1,name=iPhone 4s"     SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"   BUILD_EXAMPLE="YES"  POD_LINT="YES"
+   - DESTINATION="OS=8.2,name=iPhone 5"      SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"   BUILD_EXAMPLE="NO"   POD_LINT="NO"
+   - DESTINATION="OS=8.3,name=iPhone 5s"     SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"   BUILD_EXAMPLE="NO"   POD_LINT="NO"
+   - DESTINATION="OS=8.4,name=iPhone 6"      SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"   BUILD_EXAMPLE="NO"   POD_LINT="NO"
+   - DESTINATION="OS=9.0,name=iPhone 6s"     SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"   BUILD_EXAMPLE="YES"  POD_LINT="NO"
+   - DESTINATION="OS=9.1,name=iPhone 6 Plus" SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"   BUILD_EXAMPLE="NO"   POD_LINT="NO"
+   - DESTINATION="OS=9.2,name=iPhone 6 Plus" SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"   BUILD_EXAMPLE="NO"   POD_LINT="NO"
+
+   - DESTINATION="OS=8.1,name=iPad 2"        SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"   BUILD_EXAMPLE="YES"  POD_LINT="NO"
+   - DESTINATION="OS=8.4,name=iPad Retina"   SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"   BUILD_EXAMPLE="NO"   POD_LINT="NO"
+   - DESTINATION="OS=9.0,name=iPad Air"      SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES"   BUILD_EXAMPLE="YES"  POD_LINT="NO"
+
+   - DESTINATION="arch=x86_64"                SDK="$OSX_SDK"  SCHEME="$OSX_FRAMEWORK_SCHEME"  RUN_TESTS="NO" BUILD_EXAMPLE="YES"  POD_LINT="NO"
+   - DESTINATION="OS=9.1,name=Apple TV 1080p" SDK="$TVOS_SDK" SCHEME="$TVOS_SCHEME"           RUN_TESTS="NO" BUILD_EXAMPLE="NO"   POD_LINT="NO"
+
 
 script:
-- pod spec lint
-- pod lib lint
-- ./build.sh
+
+- if [ $POD_LINT == "YES" ]; then
+   pod spec lint;
+   pod lib lint;
+  fi
+
+
+- if [[ $BUILD_EXAMPLE == "YES" && $SDK == $IOS_SDK ]]; then
+      xcodebuild clean build -project Example/Example.xcodeproj -scheme Example-iOS -sdk "$SDK" -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO | xcpretty -c;
+  fi
+
+
+- if [[ $BUILD_EXAMPLE == "YES" && $SDK == $OSX_SDK ]]; then
+      xcodebuild clean build -project Example/Example.xcodeproj -scheme Example-OSX -sdk "$SDK" -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO | xcpretty -c;
+  fi
+
+
+- if [ $RUN_TESTS == "YES" ]; then
+      xcodebuild test -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO | xcpretty -c;
+  else
+      xcodebuild clean build -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO | xcpretty -c;
+  fi
+
+
+# Build for reporting test coverage
+- if [ $RUN_TESTS == "YES" ]; then
+      xcodebuild test -project JSQSystemSoundPlayer.xcodeproj -scheme "JSQSystemSoundPlayer-iOS" -sdk iphonesimulator -destination 'name=iPhone 6s';
+  fi
 
 after_success:
 - bash <(curl -s https://codecov.io/bash)
