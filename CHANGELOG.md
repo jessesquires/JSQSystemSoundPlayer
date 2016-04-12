@@ -4,10 +4,17 @@ The changelog for `JSQSystemSoundPlayer`. Also see the [releases](https://github
 
 --------------------------------------
 
+4.3.1
+-----
+
+This release closes the [4.3.1 milestone](https://github.com/jessesquires/JSQSystemSoundPlayer/issues?utf8=✓&q=+milestone%3A4.3.1+).
+
+- No new features, just clean up and organization.
+
 4.3.0
 -----
 
-Added tvOS support :tada: 
+Added tvOS support :tada:
 
 4.2.0
 -----

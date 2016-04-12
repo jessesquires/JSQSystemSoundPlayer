@@ -267,9 +267,9 @@
 			projectRoot = "";
 			targets = (
 				8892FA9D1AF6E4DA00F2D347 /* JSQSystemSoundPlayer-iOS */,
-				8892FAA81AF6E4DA00F2D347 /* JSQSystemSoundPlayerTests */,
 				884DF6621AF6E96700D97D16 /* JSQSystemSoundPlayer-OSX */,
 				88F4692E1C0BE399001F70F4 /* JSQSystemSoundPlayer-tvOS */,
+				8892FAA81AF6E4DA00F2D347 /* JSQSystemSoundPlayerTests */,
 			);
 		};
 /* End PBXProject section */
