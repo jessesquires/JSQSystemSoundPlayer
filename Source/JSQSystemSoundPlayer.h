@@ -17,6 +17,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -159,6 +160,14 @@ typedef void(^JSQSystemSoundPlayerCompletionBlock)(void);
 - (void)playAlertSoundWithFilename:(NSString *)filename
                      fileExtension:(NSString *)fileExtension
                         completion:(nullable JSQSystemSoundPlayerCompletionBlock)completionBlock;
+/**
+ *  play predefined system sound
+ *
+ *  @param soundID         refer http://iphonedevwiki.net/index.php/AudioServices
+ *  @param completionBlock A block called after the sound has stopped playing.
+ */
+- (void)playPredefinedSystemSoundWithSoundID:(SystemSoundID)soundID
+                             completionBlock:(nullable JSQSystemSoundPlayerCompletionBlock)completionBlock;
 
 /**
  On some iOS devices, you can call this method to invoke vibration.

@@ -18,8 +18,6 @@
 
 #import "JSQSystemSoundPlayer.h"
 
-#import <AudioToolbox/AudioToolbox.h>
-
 #if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
 #endif
@@ -122,6 +120,46 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 
 #pragma mark - Playing sounds
 
+- (void)playSoundWithSoundID:(SystemSoundID)soundID
+                     isAlert:(BOOL)isAlert
+             completionBlock:(JSQSystemSoundPlayerCompletionBlock)completionBlock
+{
+    if (!self.on) {
+        return;
+    }
+
+    if (soundID) {
+        if (completionBlock) {
+            OSStatus error = AudioServicesAddSystemSoundCompletion(soundID,
+                                                                   NULL,
+                                                                   NULL,
+                                                                   systemServicesSoundCompletion,
+                                                                   NULL);
+            
+            if (error) {
+                [self logError:error withMessage:@"Warning! Completion block could not be added to SystemSoundID."];
+            }
+            else {
+                [self addCompletionBlock:completionBlock toSoundID:soundID];
+            }
+        }
+        
+        if (isAlert) {
+            AudioServicesPlayAlertSound(soundID);
+        }
+        else {
+            AudioServicesPlaySystemSound(soundID);
+        }
+    }
+}
+
+- (void)playPredefinedSystemSoundWithSoundID:(SystemSoundID)soundID
+                             completionBlock:(JSQSystemSoundPlayerCompletionBlock)completionBlock {
+    [self playSoundWithSoundID:soundID
+                       isAlert:NO
+               completionBlock:completionBlock];
+}
+
 - (void)playSoundWithName:(NSString *)filename
                 extension:(NSString *)extension
                   isAlert:(BOOL)isAlert
@@ -139,29 +177,9 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
     }
 
     SystemSoundID soundID = [self soundIDForFilename:filename];
-    if (soundID) {
-        if (completionBlock) {
-            OSStatus error = AudioServicesAddSystemSoundCompletion(soundID,
-                                                                   NULL,
-                                                                   NULL,
-                                                                   systemServicesSoundCompletion,
-                                                                   NULL);
-
-            if (error) {
-                [self logError:error withMessage:@"Warning! Completion block could not be added to SystemSoundID."];
-            }
-            else {
-                [self addCompletionBlock:completionBlock toSoundID:soundID];
-            }
-        }
-
-        if (isAlert) {
-            AudioServicesPlayAlertSound(soundID);
-        }
-        else {
-            AudioServicesPlaySystemSound(soundID);
-        }
-    }
+    [self playSoundWithSoundID:soundID
+                       isAlert:isAlert
+               completionBlock:completionBlock];
 }
 
 - (BOOL)readSoundPlayerOnFromUserDefaults
