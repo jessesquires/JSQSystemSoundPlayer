@@ -54,7 +54,7 @@
 
 - (IBAction)playVibratePressed:(UIButton *)sender
 {
-    [[JSQSystemSoundPlayer sharedPlayer] playSoundWithsoundID:1000 isAlert:NO completionBlock:nil];
+    [[JSQSystemSoundPlayer sharedPlayer] playVibrateSound];
 }
 
 - (IBAction)playLongSoundPressed:(UIButton *)sender
