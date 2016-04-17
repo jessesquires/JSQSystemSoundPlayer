@@ -160,14 +160,25 @@ typedef void(^JSQSystemSoundPlayerCompletionBlock)(void);
 - (void)playAlertSoundWithFilename:(NSString *)filename
                      fileExtension:(NSString *)fileExtension
                         completion:(nullable JSQSystemSoundPlayerCompletionBlock)completionBlock;
+
 /**
- *  play predefined system sound
+ *  Plays the sound that corresponds to the specified `SystemSoundID`.
  *
- *  @param soundID         refer http://iphonedevwiki.net/index.php/AudioServices
+ *  @param soundID         The SystemSoundID to play.
  *  @param completionBlock A block called after the sound has stopped playing.
  */
-- (void)playPredefinedSystemSoundWithSoundID:(SystemSoundID)soundID
-                             completionBlock:(nullable JSQSystemSoundPlayerCompletionBlock)completionBlock;
+- (void)playSoundWithSoundID:(SystemSoundID)soundID
+                  completion:(nullable JSQSystemSoundPlayerCompletionBlock)completionBlock;
+
+/**
+ *  Plays the sound *as an alert* that corresponds to the specified `SystemSoundID`.
+ *
+ *  @param soundID         The SystemSoundID to play.
+ *  @param completionBlock A block called after the sound has stopped playing.
+ */
+- (void)playAlertSoundWithSoundID:(SystemSoundID)soundID
+                       completion:(nullable JSQSystemSoundPlayerCompletionBlock)completionBlock;
+
 
 /**
  On some iOS devices, you can call this method to invoke vibration.

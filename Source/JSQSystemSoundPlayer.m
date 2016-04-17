@@ -120,14 +120,33 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 
 #pragma mark - Playing sounds
 
+- (void)playSoundWithName:(NSString *)filename
+                extension:(NSString *)extension
+                  isAlert:(BOOL)isAlert
+          completionBlock:(JSQSystemSoundPlayerCompletionBlock)completionBlock
+{
+    NSParameterAssert(filename != nil);
+    NSParameterAssert(extension != nil);
+
+    if (![self.sounds objectForKey:filename]) {
+        [self addSoundIDForAudioFileWithName:filename extension:extension];
+    }
+
+    SystemSoundID soundID = [self soundIDForFilename:filename];
+    
+    if (soundID) {
+        [self playSoundWithSoundID:soundID isAlert:isAlert completion:completionBlock];
+    }
+}
+
 - (void)playSoundWithSoundID:(SystemSoundID)soundID
                      isAlert:(BOOL)isAlert
-             completionBlock:(JSQSystemSoundPlayerCompletionBlock)completionBlock
+                  completion:(nullable JSQSystemSoundPlayerCompletionBlock)completionBlock
 {
     if (!self.on) {
         return;
     }
-
+    
     if (soundID) {
         if (completionBlock) {
             OSStatus error = AudioServicesAddSystemSoundCompletion(soundID,
@@ -151,35 +170,6 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
             AudioServicesPlaySystemSound(soundID);
         }
     }
-}
-
-- (void)playPredefinedSystemSoundWithSoundID:(SystemSoundID)soundID
-                             completionBlock:(JSQSystemSoundPlayerCompletionBlock)completionBlock {
-    [self playSoundWithSoundID:soundID
-                       isAlert:NO
-               completionBlock:completionBlock];
-}
-
-- (void)playSoundWithName:(NSString *)filename
-                extension:(NSString *)extension
-                  isAlert:(BOOL)isAlert
-          completionBlock:(JSQSystemSoundPlayerCompletionBlock)completionBlock
-{
-    NSParameterAssert(filename != nil);
-    NSParameterAssert(extension != nil);
-
-    if (!self.on) {
-        return;
-    }
-
-    if (![self.sounds objectForKey:filename]) {
-        [self addSoundIDForAudioFileWithName:filename extension:extension];
-    }
-
-    SystemSoundID soundID = [self soundIDForFilename:filename];
-    [self playSoundWithSoundID:soundID
-                       isAlert:isAlert
-               completionBlock:completionBlock];
 }
 
 - (BOOL)readSoundPlayerOnFromUserDefaults
@@ -228,6 +218,24 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
                   extension:fileExtension
                     isAlert:YES
             completionBlock:completionBlock];
+}
+
+
+- (void)playSoundWithSoundID:(SystemSoundID)soundID
+                  completion:(nullable JSQSystemSoundPlayerCompletionBlock)completionBlock
+{
+    [self playSoundWithSoundID:soundID
+                       isAlert:NO
+                    completion:completionBlock];
+}
+
+
+- (void)playAlertSoundWithSoundID:(SystemSoundID)soundID
+                       completion:(nullable JSQSystemSoundPlayerCompletionBlock)completionBlock
+{
+    [self playSoundWithSoundID:soundID
+                       isAlert:YES
+                    completion:completionBlock];
 }
 
 #if TARGET_OS_IPHONE
