@@ -127,17 +127,17 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 {
     NSParameterAssert(filename != nil);
     NSParameterAssert(extension != nil);
-
-    if (![self.sounds objectForKey:filename]) {
-        [self addSoundIDForAudioFileWithName:filename extension:extension];
-    }
-
-    SystemSoundID soundID = [self soundIDForFilename:filename];
     
     if (!self.on) {
         return;
     }
     
+    if (![self.sounds objectForKey:filename]) {
+        [self addSoundIDForAudioFileWithName:filename extension:extension];
+    }
+
+    SystemSoundID soundID = [self soundIDForFilename:filename];
+
     if (soundID) {
         [self playSoundWithSoundID:soundID isAlert:isAlert completion:completionBlock];
     }
