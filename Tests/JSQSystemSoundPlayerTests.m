@@ -25,6 +25,7 @@
 static NSString * const kSoundBasso = @"Basso";
 static NSString * const kSoundFunk = @"Funk";
 static NSString * const kSoundBalladPiano = @"BalladPiano";
+static SystemSoundID const kSoundNewMail = 1000;
 
 
 // Declare private interface here in order to test private methods
@@ -163,6 +164,18 @@ static NSString * const kSoundBalladPiano = @"BalladPiano";
 
 - (void)testPlayingSounds
 {
+    XCTAssertNoThrow([self.soundPlayer playSoundWithSoundID:kSoundNewMail
+                                                 completion:^{
+                                                     NSLog(@"Completion block...");
+                                                 }],
+                     @"Player should play sound and not throw");
+    
+    XCTAssertNoThrow([self.soundPlayer playAlertSoundWithSoundID:kSoundNewMail
+                                                      completion:^{
+                                                     NSLog(@"Completion block...");
+                                                 }],
+                     @"Player should play sound and not throw");
+    
     XCTAssertNoThrow([self.soundPlayer playSoundWithFilename:kSoundBasso
                                                fileExtension:kJSQSystemSoundTypeAIF
                                                   completion:^{

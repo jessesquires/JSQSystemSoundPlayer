@@ -34,6 +34,16 @@
 
 #pragma mark - Actions
 
+- (IBAction)playPredefinedSoundPressed:(UIButton *)sender
+{
+    JSQSystemSoundPlayer *sharedPlayer = [JSQSystemSoundPlayer sharedPlayer];
+    
+    [sharedPlayer playSoundWithSoundID:1000
+                            completion:^{
+                                 NSLog(@"Sound finished playing. Executing completion block...");
+                             }];
+}
+
 - (IBAction)playSystemSoundPressed:(UIButton *)sender
 {
     JSQSystemSoundPlayer *sharedPlayer = [JSQSystemSoundPlayer sharedPlayer];

@@ -18,8 +18,6 @@
 
 #import "JSQSystemSoundPlayer.h"
 
-#import <AudioToolbox/AudioToolbox.h>
-
 #if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
 #endif
@@ -129,16 +127,30 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 {
     NSParameterAssert(filename != nil);
     NSParameterAssert(extension != nil);
-
+    
     if (!self.on) {
         return;
     }
-
+    
     if (![self.sounds objectForKey:filename]) {
         [self addSoundIDForAudioFileWithName:filename extension:extension];
     }
 
     SystemSoundID soundID = [self soundIDForFilename:filename];
+
+    if (soundID) {
+        [self playSoundWithSoundID:soundID isAlert:isAlert completion:completionBlock];
+    }
+}
+
+- (void)playSoundWithSoundID:(SystemSoundID)soundID
+                     isAlert:(BOOL)isAlert
+                  completion:(nullable JSQSystemSoundPlayerCompletionBlock)completionBlock
+{
+    if (!self.on) {
+        return;
+    }
+    
     if (soundID) {
         if (completionBlock) {
             OSStatus error = AudioServicesAddSystemSoundCompletion(soundID,
@@ -146,7 +158,7 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
                                                                    NULL,
                                                                    systemServicesSoundCompletion,
                                                                    NULL);
-
+            
             if (error) {
                 [self logError:error withMessage:@"Warning! Completion block could not be added to SystemSoundID."];
             }
@@ -154,7 +166,7 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
                 [self addCompletionBlock:completionBlock toSoundID:soundID];
             }
         }
-
+        
         if (isAlert) {
             AudioServicesPlayAlertSound(soundID);
         }
@@ -210,6 +222,24 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
                   extension:fileExtension
                     isAlert:YES
             completionBlock:completionBlock];
+}
+
+
+- (void)playSoundWithSoundID:(SystemSoundID)soundID
+                  completion:(nullable JSQSystemSoundPlayerCompletionBlock)completionBlock
+{
+    [self playSoundWithSoundID:soundID
+                       isAlert:NO
+                    completion:completionBlock];
+}
+
+
+- (void)playAlertSoundWithSoundID:(SystemSoundID)soundID
+                       completion:(nullable JSQSystemSoundPlayerCompletionBlock)completionBlock
+{
+    [self playSoundWithSoundID:soundID
+                       isAlert:YES
+                    completion:completionBlock];
 }
 
 #if TARGET_OS_IPHONE
