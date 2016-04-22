@@ -134,6 +134,10 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 
     SystemSoundID soundID = [self soundIDForFilename:filename];
     
+    if (!self.on) {
+        return;
+    }
+    
     if (soundID) {
         [self playSoundWithSoundID:soundID isAlert:isAlert completion:completionBlock];
     }
