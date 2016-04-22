@@ -127,7 +127,7 @@ typedef void(^JSQSystemSoundPlayerCompletionBlock)(void);
  @param filename        A string containing the base name of the audio file to play.
  @param fileExtension   A string containing the extension of the audio file to play.
  @param completionBlock A block called after the sound has stopped playing.
- This block is retained by `JSQSystemSoundPlayer`, temporarily cached, and released after its execution. This value may be `nil`.
+ This block is retained by `JSQSystemSoundPlayer`, temporarily cached, and released after its execution.
 
  @note The fileExtension parameter must be one of `kJSQSystemSoundTypeCAF`, `kJSQSystemSoundTypeAIF`,
  `kJSQSystemSoundTypeAIFF`, or `kJSQSystemSoundTypeWAV`.
@@ -147,8 +147,8 @@ typedef void(^JSQSystemSoundPlayerCompletionBlock)(void);
  @param filename        A string containing the base name of the audio file to play.
  @param fileExtension   A string containing the extension of the audio file to play.
  @param completionBlock A block called after the sound has stopped playing.
- This block is retained by `JSQSystemSoundPlayer`, temporarily cached, and released after its execution. This value may be `nil`.
- 
+ This block is retained by `JSQSystemSoundPlayer`, temporarily cached, and released after its execution.
+
  @note The fileExtension parameter must be one of `kJSQSystemSoundTypeCAF`, `kJSQSystemSoundTypeAIF`,
  `kJSQSystemSoundTypeAIFF`, or `kJSQSystemSoundTypeWAV`.
 
@@ -162,23 +162,16 @@ typedef void(^JSQSystemSoundPlayerCompletionBlock)(void);
                         completion:(nullable JSQSystemSoundPlayerCompletionBlock)completionBlock;
 
 /**
- *  Plays the sound that corresponds to the specified `SystemSoundID`.
+ *  Plays the sound that corresponds to the specified `SystemSoundID`, optionally as an alert.
  *
  *  @param soundID         The SystemSoundID to play.
+ *  @param asAlert         Specifies whether or not the sound should be played as an alert.
  *  @param completionBlock A block called after the sound has stopped playing.
+ *  This block is retained by `JSQSystemSoundPlayer`, temporarily cached, and released after its execution.
  */
 - (void)playSoundWithSoundID:(SystemSoundID)soundID
+                     asAlert:(BOOL)asAlert
                   completion:(nullable JSQSystemSoundPlayerCompletionBlock)completionBlock;
-
-/**
- *  Plays the sound *as an alert* that corresponds to the specified `SystemSoundID`.
- *
- *  @param soundID         The SystemSoundID to play.
- *  @param completionBlock A block called after the sound has stopped playing.
- */
-- (void)playAlertSoundWithSoundID:(SystemSoundID)soundID
-                       completion:(nullable JSQSystemSoundPlayerCompletionBlock)completionBlock;
-
 
 /**
  On some iOS devices, you can call this method to invoke vibration.
@@ -214,8 +207,8 @@ typedef void(^JSQSystemSoundPlayerCompletionBlock)(void);
 
  @param filename      A string containing the base name of the audio file to play.
  @param fileExtension A string containing the extension of the audio file to play.
- 
- @note The fileExtension parameter must be one of `kJSQSystemSoundTypeCAF`, `kJSQSystemSoundTypeAIF`, 
+
+ @note The fileExtension parameter must be one of `kJSQSystemSoundTypeCAF`, `kJSQSystemSoundTypeAIF`,
  `kJSQSystemSoundTypeAIFF`, or `kJSQSystemSoundTypeWAV`.
  */
 - (void)preloadSoundWithFilename:(NSString *)filename

@@ -44,10 +44,8 @@ NSString * const kJSQSystemSoundTypeWAV = @"wav";
 
 
 
-static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
-{
+static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data) {
     JSQSystemSoundPlayer *player = [JSQSystemSoundPlayer sharedPlayer];
-
     JSQSystemSoundPlayerCompletionBlock block = [player completionBlockForSoundID:soundID];
     if (block) {
         block();
@@ -64,7 +62,6 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 + (JSQSystemSoundPlayer *)sharedPlayer
 {
     static JSQSystemSoundPlayer *sharedPlayer;
-
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedPlayer = [[JSQSystemSoundPlayer alloc] init];
@@ -137,14 +134,13 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
     }
 
     SystemSoundID soundID = [self soundIDForFilename:filename];
-
     if (soundID) {
-        [self playSoundWithSoundID:soundID isAlert:isAlert completion:completionBlock];
+        [self playSoundWithSoundID:soundID asAlert:isAlert completion:completionBlock];
     }
 }
 
 - (void)playSoundWithSoundID:(SystemSoundID)soundID
-                     isAlert:(BOOL)isAlert
+                     asAlert:(BOOL)asAlert
                   completion:(nullable JSQSystemSoundPlayerCompletionBlock)completionBlock
 {
     if (!self.on) {
@@ -167,7 +163,7 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
             }
         }
         
-        if (isAlert) {
+        if (asAlert) {
             AudioServicesPlayAlertSound(soundID);
         }
         else {
@@ -197,7 +193,6 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
 
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setObject:[NSNumber numberWithBool:on] forKey:kJSQSystemSoundPlayerUserDefaultsKey];
-    [userDefaults synchronize];
 
     if (!on) {
         [self stopAllSounds];
@@ -222,24 +217,6 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data)
                   extension:fileExtension
                     isAlert:YES
             completionBlock:completionBlock];
-}
-
-
-- (void)playSoundWithSoundID:(SystemSoundID)soundID
-                  completion:(nullable JSQSystemSoundPlayerCompletionBlock)completionBlock
-{
-    [self playSoundWithSoundID:soundID
-                       isAlert:NO
-                    completion:completionBlock];
-}
-
-
-- (void)playAlertSoundWithSoundID:(SystemSoundID)soundID
-                       completion:(nullable JSQSystemSoundPlayerCompletionBlock)completionBlock
-{
-    [self playSoundWithSoundID:soundID
-                       isAlert:YES
-                    completion:completionBlock];
 }
 
 #if TARGET_OS_IPHONE

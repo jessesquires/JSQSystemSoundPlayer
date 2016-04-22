@@ -37,11 +37,12 @@
 - (IBAction)playPredefinedSoundPressed:(UIButton *)sender
 {
     JSQSystemSoundPlayer *sharedPlayer = [JSQSystemSoundPlayer sharedPlayer];
-    
+
     [sharedPlayer playSoundWithSoundID:1000
+                               asAlert:NO
                             completion:^{
-                                 NSLog(@"Sound finished playing. Executing completion block...");
-                             }];
+                                NSLog(@"Sound finished playing. Executing completion block...");
+                            }];
 }
 
 - (IBAction)playSystemSoundPressed:(UIButton *)sender

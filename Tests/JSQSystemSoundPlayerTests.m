@@ -165,17 +165,15 @@ static SystemSoundID const kSoundNewMail = 1000;
 - (void)testPlayingSounds
 {
     XCTAssertNoThrow([self.soundPlayer playSoundWithSoundID:kSoundNewMail
-                                                 completion:^{
-                                                     NSLog(@"Completion block...");
-                                                 }],
+                                                    asAlert:NO
+                                                 completion:nil],
                      @"Player should play sound and not throw");
-    
-    XCTAssertNoThrow([self.soundPlayer playAlertSoundWithSoundID:kSoundNewMail
-                                                      completion:^{
-                                                     NSLog(@"Completion block...");
-                                                 }],
+
+    XCTAssertNoThrow([self.soundPlayer playSoundWithSoundID:kSoundNewMail
+                                                    asAlert:YES
+                                                 completion:nil],
                      @"Player should play sound and not throw");
-    
+
     XCTAssertNoThrow([self.soundPlayer playSoundWithFilename:kSoundBasso
                                                fileExtension:kJSQSystemSoundTypeAIF
                                                   completion:^{
