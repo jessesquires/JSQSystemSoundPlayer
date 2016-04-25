@@ -229,7 +229,7 @@ static SystemSoundID const kSoundNewMail = 1000;
                            [expectation fulfill];
                        }];
 
-    [self waitForExpectationsWithTimeout:10 handler:^(NSError * __nullable error) {
+    [self waitForExpectationsWithTimeout:30 handler:^(NSError * __nullable error) {
         XCTAssertNil(error, @"Expectation should not error");
     }];
 }
