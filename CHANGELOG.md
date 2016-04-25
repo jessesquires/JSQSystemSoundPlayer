@@ -4,6 +4,16 @@ The changelog for `JSQSystemSoundPlayer`. Also see the [releases](https://github
 
 --------------------------------------
 
+4.4.0
+-----
+
+This release closes the [4.4.0 milestone](https://github.com/jessesquires/JSQSystemSoundPlayer/issues?utf8=✓&q=milestone%3A4.4.0+).
+
+### New
+
+- You can now play `SystemSoundID`s directly. (#31 — thanks @lastObject! 😄)
+
+
 4.3.1
 -----
 
