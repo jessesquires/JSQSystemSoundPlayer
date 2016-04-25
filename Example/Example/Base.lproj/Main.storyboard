@@ -92,7 +92,6 @@
                                 </state>
                                 <connections>
                                     <action selector="playPredefinedSoundPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JHg-hc-w83"/>
-                                    <action selector="playSystemSoundPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rLr-7e-KbX"/>
                                 </connections>
                             </button>
                         </subviews>

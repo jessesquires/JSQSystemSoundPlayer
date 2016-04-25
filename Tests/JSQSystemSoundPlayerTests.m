@@ -215,18 +215,19 @@ static SystemSoundID const kSoundNewMail = 1000;
     XCTAssertTrue([self.soundPlayer.sounds count] == 1, @"Player should have 1 sound cached");
 }
 
-// Disabled because Travis-ci is derpy :(
-- (void)DISABLED_testSoundCompletionBlocks
+- (void)testSoundCompletionBlocks
 {
-    [self.soundPlayer toggleSoundPlayerOn:YES];
+    JSQSystemSoundPlayer *player = [JSQSystemSoundPlayer sharedPlayer];
+    player.bundle = [NSBundle bundleForClass:[self class]];
+    [player toggleSoundPlayerOn:YES];
 
     XCTestExpectation *expectation = [self expectationWithDescription:[NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__]];
 
-    [self.soundPlayer playSoundWithFilename:kSoundBasso
-                              fileExtension:kJSQSystemSoundTypeAIF
-                                 completion:^{
-                                     [expectation fulfill];
-                                 }];
+    [player playSoundWithFilename:kSoundBasso
+                    fileExtension:kJSQSystemSoundTypeAIF
+                       completion:^{
+                           [expectation fulfill];
+                       }];
 
     [self waitForExpectationsWithTimeout:10 handler:^(NSError * __nullable error) {
         XCTAssertNil(error, @"Expectation should not error");

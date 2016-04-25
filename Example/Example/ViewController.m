@@ -38,8 +38,8 @@
 {
     JSQSystemSoundPlayer *sharedPlayer = [JSQSystemSoundPlayer sharedPlayer];
 
-    [sharedPlayer playSoundWithSoundID:1000
-                               asAlert:NO
+    [sharedPlayer playSoundWithSoundID:1000 // new mail sound
+                               asAlert:YES
                             completion:^{
                                 NSLog(@"Sound finished playing. Executing completion block...");
                             }];
