@@ -95,7 +95,9 @@ typedef void(^JSQSystemSoundPlayerCompletionBlock)(void);
 
  @param bundle The bundle in which the sound player uses to search for sound file resources.
 
- @return  An initialized `JSQSystemSoundPlayer` object.
+ @return An initialized `JSQSystemSoundPlayer` object.
+
+ @warning Completion blocks are only called for sounds played with the shared player.
  */
 - (instancetype)initWithBundle:(NSBundle *)bundle;
 
@@ -103,6 +105,8 @@ typedef void(^JSQSystemSoundPlayerCompletionBlock)(void);
  Returns a new `JSQSystemSoundPlayer` instance using the main bundle.
 
  @return An initialized `JSQSystemSoundPlayer` object.
+
+ @warning Completion blocks are only called for sounds played with the shared player.
  */
 - (instancetype)init;
 
