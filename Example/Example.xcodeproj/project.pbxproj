@@ -197,9 +197,9 @@
 			isa = PBXGroup;
 			children = (
 				88785D2B1C6871C600E34EDA /* JSQSystemSoundPlayer.framework */,
-				88785D2D1C6871C600E34EDA /* JSQSystemSoundPlayerTests.xctest */,
 				88785D2F1C6871C600E34EDA /* JSQSystemSoundPlayer.framework */,
 				88785D311C6871C600E34EDA /* JSQSystemSoundPlayer.framework */,
+				88785D2D1C6871C600E34EDA /* JSQSystemSoundPlayerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -262,7 +262,7 @@
 		8842B1DA1AF6ECBD000FFC99 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Hexed Bits";
 				TargetAttributes = {
 					8842B1E11AF6ECBD000FFC99 = {
@@ -433,8 +433,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -479,8 +481,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
