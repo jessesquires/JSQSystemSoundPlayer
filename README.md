@@ -98,7 +98,19 @@ The included example app, `Example.xcodeproj`, exercises all functionality of th
 
 ## Documentation
 
-Read the [docs][docsLink]. Generated with [jazzy](https://github.com/realm/jazzy). Hosted by [GitHub Pages](https://pages.github.com). More information on the [`gh-pages`](https://github.com/jessesquires/JSQSystemSoundPlayer/tree/gh-pages) branch.
+Read the [docs][docsLink]. Generated with [jazzy](https://github.com/realm/jazzy). Hosted by [GitHub Pages](https://pages.github.com).
+
+#### Generate
+
+````bash
+$ ./build_docs.sh
+````
+
+#### Preview
+
+````bash
+$ open index.html -a Safari
+````
 
 ## Contribute
 
