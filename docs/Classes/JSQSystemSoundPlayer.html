@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JSQSystemSoundPlayer Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/JSQSystemSoundPlayer" class="dashAnchor"></a>
+    <a title="JSQSystemSoundPlayer Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">JSQSystemSoundPlayer Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/jessesquires/JSQSystemSoundPlayer"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">JSQSystemSoundPlayer Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        JSQSystemSoundPlayer Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/JSQSystemSoundPlayer.html">JSQSystemSoundPlayer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@JSQSystemSoundPlayerVersionNumber">JSQSystemSoundPlayerVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@JSQSystemSoundPlayerVersionString">JSQSystemSoundPlayerVersionString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@kJSQSystemSoundPlayerUserDefaultsKey">kJSQSystemSoundPlayerUserDefaultsKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@kJSQSystemSoundTypeAIF">kJSQSystemSoundTypeAIF</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@kJSQSystemSoundTypeAIFF">kJSQSystemSoundTypeAIFF</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@kJSQSystemSoundTypeCAF">kJSQSystemSoundTypeCAF</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@kJSQSystemSoundTypeWAV">kJSQSystemSoundTypeWAV</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:JSQSystemSoundPlayer.h@T@JSQSystemSoundPlayerCompletionBlock">JSQSystemSoundPlayerCompletionBlock</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>JSQSystemSoundPlayer</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">JSQSystemSoundPlayer</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>The <code>JSQSystemSoundPlayer</code> class enables you to play sound effects, alert sounds, or other short sounds.
+It lazily loads and caches all <code>SystemSoundID</code> objects and purges them upon
+receiving the <code>UIApplicationDidReceiveMemoryWarningNotification</code> notification.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)JSQSystemSoundPlayer(py)on"></a>
+                    <a name="//apple_ref/objc/Property/on" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)JSQSystemSoundPlayer(py)on">on</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns whether or not the sound player is on.
+That is, whether the sound player is enabled or disabled.
+If disabled, it will not play sounds.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <code>toggleSoundPlayerOn:</code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">on</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">on</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)JSQSystemSoundPlayer(py)bundle"></a>
+                    <a name="//apple_ref/objc/Property/bundle" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)JSQSystemSoundPlayer(py)bundle">bundle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The bundle in which the sound player uses to search for sound file resources. You may change this property as needed.
+The default value is the main bundle. This value must not be <code>nil</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSBundle</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">bundle</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">bundle</span><span class="p">:</span> <span class="kt">NSBundle</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)JSQSystemSoundPlayer(cm)sharedPlayer"></a>
+                    <a name="//apple_ref/objc/Method/+sharedPlayer" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)JSQSystemSoundPlayer(cm)sharedPlayer">+sharedPlayer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the shared <code>JSQSystemSoundPlayer</code> object. This method always returns the same sound system player object.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">JSQSystemSoundPlayer</span> <span class="o">*</span><span class="p">)</span><span class="n">sharedPlayer</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">sharedPlayer</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">JSQSystemSoundPlayer</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A shared instance of <code>JSQSystemSoundPlayer</code>.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)JSQSystemSoundPlayer(im)initWithBundle:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithBundle:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)JSQSystemSoundPlayer(im)initWithBundle:">-initWithBundle:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a new <code>JSQSystemSoundPlayer</code> instance with the specified bundle.</p>
+
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>Completion blocks are only called for sounds played with the shared player.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithBundle</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSBundle</span> <span class="o">*</span><span class="p">)</span><span class="nv">bundle</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">bundle</span><span class="p">:</span> <span class="kt">NSBundle</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>bundle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The bundle in which the sound player uses to search for sound file resources.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An initialized <code>JSQSystemSoundPlayer</code> object.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)JSQSystemSoundPlayer(im)init"></a>
+                    <a name="//apple_ref/objc/Method/-init" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)JSQSystemSoundPlayer(im)init">-init</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a new <code>JSQSystemSoundPlayer</code> instance using the main bundle.</p>
+
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>Completion blocks are only called for sounds played with the shared player.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">init</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An initialized <code>JSQSystemSoundPlayer</code> object.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)JSQSystemSoundPlayer(im)toggleSoundPlayerOn:"></a>
+                    <a name="//apple_ref/objc/Method/-toggleSoundPlayerOn:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)JSQSystemSoundPlayer(im)toggleSoundPlayerOn:">-toggleSoundPlayerOn:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Toggles the sound player on or off by setting the <code><a href="../Constants.html#/c:@kJSQSystemSoundPlayerUserDefaultsKey">kJSQSystemSoundPlayerUserDefaultsKey</a></code> key in <code>NSUserDefaults</code> to the given value.
+This will enable or disable the playing of sounds via <code>JSQSystemSoundPlayer</code> globally.
+This setting is persisted across application launches.</p>
+
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>Disabling the sound player (passing a value of <code>NO</code>) will invoke the <code>stopAllSounds</code> method.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">toggleSoundPlayerOn</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">on</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">toggleSoundPlayerOn</span><span class="p">(</span><span class="nv">on</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>on</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A boolean indicating whether or not to enable or disable the sound player settings.
+Pass <code>YES</code> to turn sounds on, and <code>NO</code> to turn sounds off.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)JSQSystemSoundPlayer(im)playSoundWithFilename:fileExtension:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-playSoundWithFilename:fileExtension:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)JSQSystemSoundPlayer(im)playSoundWithFilename:fileExtension:completion:">-playSoundWithFilename:fileExtension:completion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Plays a system sound object corresponding to an audio file with the given filename and extension,
+and excutes <code>completionBlock</code> when the sound has stopped playing.
+The system sound player will lazily initialize and load the file before playing it, and then cache its corresponding <code>SystemSoundID</code>.
+If this file has previously been played, it will be loaded from cache and played immediately.</p>
+
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>The fileExtension parameter must be one of <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeCAF">kJSQSystemSoundTypeCAF</a></code>, <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeAIF">kJSQSystemSoundTypeAIF</a></code>,
+<code><a href="../Constants.html#/c:@kJSQSystemSoundTypeAIFF">kJSQSystemSoundTypeAIFF</a></code>, or <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeWAV">kJSQSystemSoundTypeWAV</a></code>.</p>
+
+</div>
+
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>If the system sound object cannot be created, this method does nothing.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">playSoundWithFilename</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">filename</span>
+                <span class="nf">fileExtension</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">fileExtension</span>
+                   <span class="nf">completion</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type Definitions.html#/c:JSQSystemSoundPlayer.h@T@JSQSystemSoundPlayerCompletionBlock">JSQSystemSoundPlayerCompletionBlock</a></span><span class="p">)</span>
+                                  <span class="n">completionBlock</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">playSoundWithFilename</span><span class="p">(</span><span class="nv">filename</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">fileExtension</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions.html#/c:JSQSystemSoundPlayer.h@T@JSQSystemSoundPlayerCompletionBlock">JSQSystemSoundPlayerCompletionBlock</a></span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>filename</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A string containing the base name of the audio file to play.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileExtension</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A string containing the extension of the audio file to play.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionBlock</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block called after the sound has stopped playing.
+This block is retained by <code>JSQSystemSoundPlayer</code>, temporarily cached, and released after its execution.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)JSQSystemSoundPlayer(im)playAlertSoundWithFilename:fileExtension:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-playAlertSoundWithFilename:fileExtension:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)JSQSystemSoundPlayer(im)playAlertSoundWithFilename:fileExtension:completion:">-playAlertSoundWithFilename:fileExtension:completion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Plays a system sound object <em>as an alert</em> corresponding to an audio file with the given filename and extension,
+and and excutes <code>completionBlock</code> when the sound has stopped playing.
+The system sound player will lazily initialize and load the file before playing it, and then cache its corresponding <code>SystemSoundID</code>.
+If this file has previously been played, it will be loaded from cache and played immediately.</p>
+
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>The fileExtension parameter must be one of <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeCAF">kJSQSystemSoundTypeCAF</a></code>, <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeAIF">kJSQSystemSoundTypeAIF</a></code>,
+<code><a href="../Constants.html#/c:@kJSQSystemSoundTypeAIFF">kJSQSystemSoundTypeAIFF</a></code>, or <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeWAV">kJSQSystemSoundTypeWAV</a></code>.</p>
+
+</div>
+
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>If the system sound object cannot be created, this method does nothing.</p>
+
+</div>
+
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>This method performs the same functions as <code>playSoundWithName: extension: completion:</code>,
+with the excepion that, depending on the particular iOS device, this method may invoke vibration.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">playAlertSoundWithFilename</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">filename</span>
+                     <span class="nf">fileExtension</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">fileExtension</span>
+                        <span class="nf">completion</span><span class="p">:</span>
+                            <span class="p">(</span><span class="n">nullable</span> <span class="n"><a href="../Type Definitions.html#/c:JSQSystemSoundPlayer.h@T@JSQSystemSoundPlayerCompletionBlock">JSQSystemSoundPlayerCompletionBlock</a></span><span class="p">)</span>
+                                <span class="n">completionBlock</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">playAlertSoundWithFilename</span><span class="p">(</span><span class="nv">filename</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">fileExtension</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions.html#/c:JSQSystemSoundPlayer.h@T@JSQSystemSoundPlayerCompletionBlock">JSQSystemSoundPlayerCompletionBlock</a></span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>filename</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A string containing the base name of the audio file to play.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileExtension</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A string containing the extension of the audio file to play.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionBlock</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block called after the sound has stopped playing.
+This block is retained by <code>JSQSystemSoundPlayer</code>, temporarily cached, and released after its execution.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)JSQSystemSoundPlayer(im)playSoundWithSoundID:asAlert:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-playSoundWithSoundID:asAlert:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)JSQSystemSoundPlayer(im)playSoundWithSoundID:asAlert:completion:">-playSoundWithSoundID:asAlert:completion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Plays the sound that corresponds to the specified <code>SystemSoundID</code>, optionally as an alert.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">playSoundWithSoundID</span><span class="p">:(</span><span class="n">SystemSoundID</span><span class="p">)</span><span class="nv">soundID</span>
+                     <span class="nf">asAlert</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">asAlert</span>
+                  <span class="nf">completion</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type Definitions.html#/c:JSQSystemSoundPlayer.h@T@JSQSystemSoundPlayerCompletionBlock">JSQSystemSoundPlayerCompletionBlock</a></span><span class="p">)</span>
+                                 <span class="n">completionBlock</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">playSoundWithSoundID</span><span class="p">(</span><span class="nv">soundID</span><span class="p">:</span> <span class="kt">SystemSoundID</span><span class="p">,</span> <span class="nv">asAlert</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions.html#/c:JSQSystemSoundPlayer.h@T@JSQSystemSoundPlayerCompletionBlock">JSQSystemSoundPlayerCompletionBlock</a></span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>soundID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The SystemSoundID to play.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>asAlert</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Specifies whether or not the sound should be played as an alert.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionBlock</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block called after the sound has stopped playing.
+ This block is retained by <code>JSQSystemSoundPlayer</code>, temporarily cached, and released after its execution.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)JSQSystemSoundPlayer(im)stopAllSounds"></a>
+                    <a name="//apple_ref/objc/Method/-stopAllSounds" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)JSQSystemSoundPlayer(im)stopAllSounds">-stopAllSounds</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stops playing all sounds immediately.</p>
+
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Any completion blocks attached to any currently playing sound will <em>not</em> be executed.
+Calling this method will purge all <code>SystemSoundID</code> objects from cache, regardless of whether or not they were currently playing.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">stopAllSounds</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">stopAllSounds</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)JSQSystemSoundPlayer(im)stopSoundWithFilename:"></a>
+                    <a name="//apple_ref/objc/Method/-stopSoundWithFilename:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)JSQSystemSoundPlayer(im)stopSoundWithFilename:">-stopSoundWithFilename:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stops playing the sound with the given filename immediately.</p>
+
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>If a completion block is attached to the given sound, it will <em>not</em> be executed.
+Calling this method will purge the <code>SystemSoundID</code> object for this file from cache, regardless of whether or not it was currently playing.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">stopSoundWithFilename</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">filename</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">stopSoundWithFilename</span><span class="p">(</span><span class="nv">filename</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>filename</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The filename of the sound to stop playing.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)JSQSystemSoundPlayer(im)preloadSoundWithFilename:fileExtension:"></a>
+                    <a name="//apple_ref/objc/Method/-preloadSoundWithFilename:fileExtension:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)JSQSystemSoundPlayer(im)preloadSoundWithFilename:fileExtension:">-preloadSoundWithFilename:fileExtension:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Preloads a system sound object corresponding to an audio file with the given filename and extension.
+The system sound player will initialize, load, and cache the corresponding <code>SystemSoundID</code>.</p>
+
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>The fileExtension parameter must be one of <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeCAF">kJSQSystemSoundTypeCAF</a></code>, <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeAIF">kJSQSystemSoundTypeAIF</a></code>,
+<code><a href="../Constants.html#/c:@kJSQSystemSoundTypeAIFF">kJSQSystemSoundTypeAIFF</a></code>, or <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeWAV">kJSQSystemSoundTypeWAV</a></code>.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">preloadSoundWithFilename</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">filename</span>
+                   <span class="nf">fileExtension</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">fileExtension</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">preloadSoundWithFilename</span><span class="p">(</span><span class="nv">filename</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">fileExtension</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>filename</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A string containing the base name of the audio file to play.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileExtension</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A string containing the extension of the audio file to play.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2016-09-10)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
