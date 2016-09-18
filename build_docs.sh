@@ -6,7 +6,7 @@
 
 jazzy --objc \
       --module 'JSQSystemSoundPlayer' \
-      --framework-root JSQSystemSoundPlayer/ \
+      --framework-root . \
       --umbrella-header Source/JSQSystemSoundPlayer.h \
       --readme README.md \
       --author 'Jesse Squires' \
