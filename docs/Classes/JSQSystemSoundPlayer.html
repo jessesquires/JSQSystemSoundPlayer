@@ -156,7 +156,7 @@ The default value is the main bundle. This value must not be <code>nil</code>.</
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">bundle</span><span class="p">:</span> <span class="kt">NSBundle</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">bundle</span><span class="p">:</span> <span class="kt">Bundle</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -188,7 +188,7 @@ The default value is the main bundle. This value must not be <code>nil</code>.</
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">sharedPlayer</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">JSQSystemSoundPlayer</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">shared</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">JSQSystemSoundPlayer</span></code></pre>
 
                         </div>
                       </div>
@@ -231,7 +231,7 @@ The default value is the main bundle. This value must not be <code>nil</code>.</
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">bundle</span><span class="p">:</span> <span class="kt">NSBundle</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">bundle</span><span class="p">:</span> <span class="kt">Bundle</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -339,7 +339,7 @@ This setting is persisted across application launches.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">toggleSoundPlayerOn</span><span class="p">(</span><span class="nv">on</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">toggle</span><span class="p">(</span><span class="nv">on</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -411,7 +411,7 @@ If this file has previously been played, it will be loaded from cache and played
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">playSoundWithFilename</span><span class="p">(</span><span class="nv">filename</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">fileExtension</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions.html#/c:JSQSystemSoundPlayer.h@T@JSQSystemSoundPlayerCompletionBlock">JSQSystemSoundPlayerCompletionBlock</a></span><span class="p">?)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">playSound</span><span class="p">(</span><span class="n">withFilename</span> <span class="nv">filename</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">fileExtension</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions.html#/c:JSQSystemSoundPlayer.h@T@JSQSystemSoundPlayerCompletionBlock">JSQSystemSoundPlayerCompletionBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -517,7 +517,7 @@ with the excepion that, depending on the particular iOS device, this method may 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">playAlertSoundWithFilename</span><span class="p">(</span><span class="nv">filename</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">fileExtension</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions.html#/c:JSQSystemSoundPlayer.h@T@JSQSystemSoundPlayerCompletionBlock">JSQSystemSoundPlayerCompletionBlock</a></span><span class="p">?)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">playAlertSound</span><span class="p">(</span><span class="n">withFilename</span> <span class="nv">filename</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">fileExtension</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions.html#/c:JSQSystemSoundPlayer.h@T@JSQSystemSoundPlayerCompletionBlock">JSQSystemSoundPlayerCompletionBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -599,7 +599,7 @@ This block is retained by <code>JSQSystemSoundPlayer</code>, temporarily cached,
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">playSoundWithSoundID</span><span class="p">(</span><span class="nv">soundID</span><span class="p">:</span> <span class="kt">SystemSoundID</span><span class="p">,</span> <span class="nv">asAlert</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions.html#/c:JSQSystemSoundPlayer.h@T@JSQSystemSoundPlayerCompletionBlock">JSQSystemSoundPlayerCompletionBlock</a></span><span class="p">?)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">playSound</span><span class="p">(</span><span class="n">withSoundID</span> <span class="nv">soundID</span><span class="p">:</span> <span class="kt">SystemSoundID</span><span class="p">,</span> <span class="nv">asAlert</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">completion</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions.html#/c:JSQSystemSoundPlayer.h@T@JSQSystemSoundPlayerCompletionBlock">JSQSystemSoundPlayerCompletionBlock</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -724,7 +724,7 @@ Calling this method will purge the <code>SystemSoundID</code> object for this fi
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">stopSoundWithFilename</span><span class="p">(</span><span class="nv">filename</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">stopSound</span><span class="p">(</span><span class="n">withFilename</span> <span class="nv">filename</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -785,7 +785,7 @@ The system sound player will initialize, load, and cache the corresponding <code
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">preloadSoundWithFilename</span><span class="p">(</span><span class="nv">filename</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">fileExtension</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">preloadSound</span><span class="p">(</span><span class="n">withFilename</span> <span class="nv">filename</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">fileExtension</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -830,8 +830,8 @@ The system sound player will initialize, load, and cache the corresponding <code
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2016-09-10)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2016 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2016-09-18)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
