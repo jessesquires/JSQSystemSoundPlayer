@@ -100,9 +100,6 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data) {
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self unloadSoundIDs];
-    _sounds = nil;
-    _completionBlocks = nil;
-    _bundle = nil;
 }
 
 
