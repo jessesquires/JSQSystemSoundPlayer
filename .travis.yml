@@ -1,19 +1,18 @@
 language: objective-c
-osx_image: xcode7.3
-
-cache:
-   - cocoapods
+osx_image: xcode8.1
 
 env:
    global:
    - LANG=en_US.UTF-8
    - PROJECT="JSQSystemSoundPlayer.xcodeproj"
+   
    - IOS_SCHEME="JSQSystemSoundPlayer-iOS"
    - OSX_SCHEME="JSQSystemSoundPlayer-OSX"
    - TVOS_SCHEME="JSQSystemSoundPlayer-tvOS"
-   - IOS_SDK=iphonesimulator9.3
-   - OSX_SDK=macosx10.11
-   - TVOS_SDK=appletvsimulator9.2
+   
+   - IOS_SDK=iphonesimulator10.1
+   - OSX_SDK=macosx10.12
+   - TVOS_SDK=appletvsimulator10.0
 
    matrix:
    - DESTINATION="OS=8.1,name=iPhone 4s" SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="NO" BUILD_EXAMPLE="YES" POD_LINT="YES"
@@ -26,12 +25,13 @@ env:
    - DESTINATION="OS=9.2,name=iPhone 6s Plus" SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES" BUILD_EXAMPLE="NO" POD_LINT="NO"
    - DESTINATION="OS=9.3,name=iPad Pro"       SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES" BUILD_EXAMPLE="NO" POD_LINT="NO"
 
+   - DESTINATION="OS=10.0,name=iPhone 6s" SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES" BUILD_EXAMPLE="YES" POD_LINT="NO"
+   - DESTINATION="OS=10.1,name=iPhone 7"  SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES" BUILD_EXAMPLE="YES" POD_LINT="NO"
+
    - DESTINATION="arch=x86_64" SDK="$OSX_SDK" SCHEME="$OSX_FRAMEWORK_SCHEME" RUN_TESTS="NO" BUILD_EXAMPLE="YES" POD_LINT="NO"
 
-   - DESTINATION="OS=9.0,name=Apple TV 1080p" SDK="$TVOS_SDK" SCHEME="$TVOS_SCHEME" RUN_TESTS="NO" BUILD_EXAMPLE="NO" POD_LINT="NO"
-
-before_install:
-   - gem install cocoapods # travis is not always on latest version
+   - DESTINATION="OS=9.0,name=Apple TV 1080p"  SDK="$TVOS_SDK" SCHEME="$TVOS_SCHEME" RUN_TESTS="NO" BUILD_EXAMPLE="NO" POD_LINT="NO"
+   - DESTINATION="OS=10.0,name=Apple TV 1080p" SDK="$TVOS_SDK" SCHEME="$TVOS_SCHEME" RUN_TESTS="NO" BUILD_EXAMPLE="NO" POD_LINT="NO"
 
 script:
 
@@ -59,7 +59,7 @@ script:
 
 # Build for reporting test coverage
 - if [ $RUN_TESTS == "YES" ]; then
-      xcodebuild test -project JSQSystemSoundPlayer.xcodeproj -scheme "JSQSystemSoundPlayer-iOS" -destination "platform=iOS Simulator,name=iPhone 6" CODE_SIGNING_REQUIRED=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES;
+      xcodebuild test -project JSQSystemSoundPlayer.xcodeproj -scheme "JSQSystemSoundPlayer-iOS" -destination "platform=iOS Simulator,name=iPhone 7" CODE_SIGNING_REQUIRED=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES;
   fi
 
 after_success:
