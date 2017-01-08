@@ -4,12 +4,15 @@
 # https://github.com/realm/jazzy
 # ------------------------------
 
-jazzy --objc \
-      --module 'JSQSystemSoundPlayer' \
-      --framework-root . \
-      --umbrella-header Source/JSQSystemSoundPlayer.h \
-      --readme README.md \
-      --author 'Jesse Squires' \
-      --author_url 'https://twitter.com/jesse_squires' \
-      --github_url 'https://github.com/jessesquires/JSQSystemSoundPlayer' \
-      --output docs/ \
+jazzy \
+    --clean \
+    --author 'Jesse Squires' \
+    --author_url 'https://twitter.com/jesse_squires' \
+    --github_url 'https://github.com/jessesquires/JSQSystemSoundPlayer' \
+    --module 'JSQSystemSoundPlayer' \
+    --umbrella-header 'Source/JSQSystemSoundPlayer.h' \
+    --framework-root . \
+    --objc \
+    --readme 'README.md' \
+    --documentation 'Guides/*.md' \
+    --output docs/ \

@@ -1,4 +1,5 @@
 # JSQSystemSoundPlayer
+
 [![Build Status](https://secure.travis-ci.org/jessesquires/JSQSystemSoundPlayer.svg)](http://travis-ci.org/jessesquires/JSQSystemSoundPlayer) [![Version Status](https://img.shields.io/cocoapods/v/JSQSystemSoundPlayer.svg)][podLink] [![license MIT](https://img.shields.io/cocoapods/l/JSQSystemSoundPlayer.svg)][mitLink] [![codecov](https://codecov.io/gh/jessesquires/JSQSystemSoundPlayer/branch/develop/graph/badge.svg)](https://codecov.io/gh/jessesquires/JSQSystemSoundPlayer) [![Platform](https://img.shields.io/cocoapods/p/JSQSystemSoundPlayer.svg)][docsLink] [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 *A fancy Obj-C wrapper for Cocoa [System Sound Services](https://developer.apple.com/library/ios/documentation/AudioToolbox/Reference/SystemSoundServicesReference/Reference/reference.html), for iOS and OS X.*
@@ -42,6 +43,7 @@ See [AVAudioPlayer](https://developer.apple.com/library/ios/DOCUMENTATION/AVFoun
 ## Installation
 
 ### [CocoaPods](https://cocoapods.org) (recommended)
+
 ````ruby
 pod 'JSQSystemSoundPlayer'
 ````
@@ -51,50 +53,6 @@ pod 'JSQSystemSoundPlayer'
 ````bash
 github "jessesquires/JSQSystemSoundPlayer"
 ````
-
-## Getting Started
-
-````swift
-@import JSQSystemSoundPlayer;
-````
-
-#### Playing sounds
-
-````objective-c
-[[JSQSystemSoundPlayer sharedPlayer] playSoundWithFilename:@"mySoundFile"
-                                             fileExtension:kJSQSystemSoundTypeAIF
-                                                completion:^{
-                                                   // completion block code
-                                                }];
-````
-
-String constants for file extensions provided for you:
-* `kJSQSystemSoundTypeCAF`
-* `kJSQSystemSoundTypeAIF`
-* `kJSQSystemSoundTypeAIFF`
-* `kJSQSystemSoundTypeWAV`
-
-#### Toggle sounds effects settings on/off
-
-Need a setting in your app's preferences to toggle sound effects on/off? `JSQSystemSoundPlayer` can do that, too! There's no need to ever check the saved settings (`[JSQSystemSoundPlayer sharedPlayer].on`) before you play a sound effect. Just play a sound like in the example above. `JSQSystemSoundPlayer` respects whatever setting has been previously saved.
-
-````objective-c
-[[JSQSystemSoundPlayer sharedPlayer] toggleSoundPlayerOn:YES];
-````
-
-#### Specifying a bundle
-
-Need to load your audio resources from a specific bundle? `JSQSystemSoundPlayer` uses the main bundle by default, but you can specify another.
-
-**NOTE:** for each sound that is played `JSQSystemSoundPlayer` will **always** search the **last specified bundle**. If you are playing sound effects from multiple bundles, you will need to specify the bundle before playing each sound.
-
-````objective-c
-[JSQSystemSoundPlayer sharedPlayer].bundle = [NSBundle mainBundle];
-````
-
-#### Demo project
-
-The included example app, `Example.xcodeproj`, exercises all functionality of this framework. There are applications for iOS as well as OS X.
 
 ## Documentation
 

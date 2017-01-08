@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Type Definitions  Reference</title>
+    <title>Getting Started  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,7 +10,7 @@
     
   </head>
   <body>
-    <a title="Type Definitions  Reference"></a>
+    <a title="Getting Started  Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="index.html">JSQSystemSoundPlayer Docs</a> (100% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="index.html">JSQSystemSoundPlayer Reference</a>
         <img id="carat" src="img/carat.png" />
-        Type Definitions  Reference
+        Getting Started  Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -82,47 +82,44 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Type Definitions</h1>
-            <p>The following type definitions are available globally.</p>
+            
+            <a href='#getting-started' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='getting-started'>Getting Started</h1>
 
-          </section>
-          <section class="section task-group-section">
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:JSQSystemSoundPlayer.h@T@JSQSystemSoundPlayerCompletionBlock"></a>
-                    <a name="//apple_ref/objc/Type/JSQSystemSoundPlayerCompletionBlock" class="dashAnchor"></a>
-                    <a class="token" href="#/c:JSQSystemSoundPlayer.h@T@JSQSystemSoundPlayerCompletionBlock">JSQSystemSoundPlayerCompletionBlock</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A completion block to be called after a system sound has finished playing.</p>
+<p>This guide provides a brief overview for how to get started using <code>JSQSystemSoundPlayer</code>.</p>
+<pre class="highlight swift"><code><span class="kd">@import</span> <span class="kt">JSQSystemSoundPlayer</span><span class="p">;</span>
+</code></pre>
+<a href='#playing-sounds' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='playing-sounds'>Playing sounds</h2>
+<pre class="highlight objective_c"><code><span class="p">[[</span><span class="n">JSQSystemSoundPlayer</span> <span class="nf">sharedPlayer</span><span class="p">]</span> <span class="nf">playSoundWithFilename</span><span class="p">:</span><span class="s">@"mySoundFile"</span>
+                                             <span class="nf">fileExtension</span><span class="p">:</span><span class="n">kJSQSystemSoundTypeAIF</span>
+                                                <span class="n">completion</span><span class="o">:^</span><span class="p">{</span>
+                                                   <span class="c1">// completion block code
+</span>                                                <span class="p">}];</span>
+</code></pre>
 
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">JSQSystemSoundPlayerCompletionBlock</span><span class="p">)(</span><span class="kt">void</span><span class="p">)</span></code></pre>
+<p>String constants for file extensions provided for you:</p>
 
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">JSQSystemSoundPlayerCompletionBlock</span> <span class="o">=</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+<ul>
+<li><code>kJSQSystemSoundTypeCAF</code></li>
+<li><code>kJSQSystemSoundTypeAIF</code></li>
+<li><code>kJSQSystemSoundTypeAIFF</code></li>
+<li><code>kJSQSystemSoundTypeWAV</code></li>
+</ul>
+<a href='#toggle-sounds-effects-settings-on-off' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='toggle-sounds-effects-settings-on-off'>Toggle sounds effects settings on/off</h2>
 
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
+<p>Need a setting in your app&rsquo;s preferences to toggle sound effects on/off? <code>JSQSystemSoundPlayer</code> can do that, too! There&rsquo;s no need to ever check the saved settings (<code>[JSQSystemSoundPlayer sharedPlayer].on</code>) before you play a sound effect. Just play a sound like in the example above. <code>JSQSystemSoundPlayer</code> respects whatever setting has been previously saved.</p>
+<pre class="highlight objective_c"><code><span class="p">[[</span><span class="n">JSQSystemSoundPlayer</span> <span class="nf">sharedPlayer</span><span class="p">]</span> <span class="nf">toggleSoundPlayerOn</span><span class="p">:</span><span class="nb">YES</span><span class="p">];</span>
+</code></pre>
+<a href='#specifying-a-bundle' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='specifying-a-bundle'>Specifying a bundle</h2>
+
+<p>Need to load your audio resources from a specific bundle? <code>JSQSystemSoundPlayer</code> uses the main bundle by default, but you can specify another.</p>
+
+<p><strong>NOTE:</strong> for each sound that is played <code>JSQSystemSoundPlayer</code> will <strong>always</strong> search the <strong>last specified bundle</strong>. If you are playing sound effects from multiple bundles, you will need to specify the bundle before playing each sound.</p>
+<pre class="highlight objective_c"><code><span class="p">[</span><span class="n">JSQSystemSoundPlayer</span> <span class="nf">sharedPlayer</span><span class="p">].</span><span class="n">bundle</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSBundle</span> <span class="nf">mainBundle</span><span class="p">];</span>
+</code></pre>
+<a href='#example' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='example'>Example</h2>
+
+<p>The included example app, <code>Example/Example.xcodeproj</code>, exercises all functionality of this framework. There are applications for iOS and OS X.</p>
+
           </section>
         </section>
         <section id="footer">
