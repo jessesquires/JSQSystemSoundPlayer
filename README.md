@@ -86,7 +86,7 @@ Created and maintained by [**@jesse_squires**](https://twitter.com/jesse_squires
 
 *Please provide attribution, it is greatly appreciated.*
 
-[docsLink]:http://www.jessesquires.com/JSQSystemSoundPlayer
+[docsLink]:http://jessesquires.github.io/JSQSystemSoundPlayer
 [podLink]:http://cocoapods.org/pods/JSQSystemSoundPlayer
 [mitLink]:http://opensource.org/licenses/MIT
 [imgLinkiOS]:https://raw.githubusercontent.com/jessesquires/JSQSystemSoundPlayer/develop/Screenshots/ios.png
