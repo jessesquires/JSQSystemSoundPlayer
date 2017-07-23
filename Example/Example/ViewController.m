@@ -4,7 +4,7 @@
 //
 //
 //  Documentation
-//  http://www.jessesquires.com/JSQSystemSoundPlayer
+//  http://jessesquires.github.io/JSQSystemSoundPlayer
 //
 //
 //  GitHub
