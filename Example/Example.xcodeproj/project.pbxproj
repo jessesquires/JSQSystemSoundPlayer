@@ -169,10 +169,10 @@
 				8842B1E91AF6ECBD000FFC99 /* AppDelegate.h */,
 				8842B1EA1AF6ECBD000FFC99 /* AppDelegate.m */,
 				8842B1F21AF6ECBD000FFC99 /* Images.xcassets */,
-				8842B1F41AF6ECBD000FFC99 /* LaunchScreen.xib */,
-				8842B1EF1AF6ECBD000FFC99 /* Main.storyboard */,
 				8842B1E61AF6ECBD000FFC99 /* Info.plist */,
+				8842B1F41AF6ECBD000FFC99 /* LaunchScreen.xib */,
 				8842B1E71AF6ECBD000FFC99 /* main.m */,
+				8842B1EF1AF6ECBD000FFC99 /* Main.storyboard */,
 				8842B1EC1AF6ECBD000FFC99 /* ViewController.h */,
 				8842B1ED1AF6ECBD000FFC99 /* ViewController.m */,
 			);
@@ -186,9 +186,9 @@
 				884ED3881AF6F412009CE403 /* AppDelegate.h */,
 				884ED3891AF6F412009CE403 /* AppDelegate.m */,
 				884ED38D1AF6F412009CE403 /* Images.xcassets */,
-				884ED38F1AF6F412009CE403 /* MainMenu.xib */,
 				884ED3871AF6F412009CE403 /* Info.plist */,
 				884ED38B1AF6F412009CE403 /* main.m */,
+				884ED38F1AF6F412009CE403 /* MainMenu.xib */,
 			);
 			path = "Example-OSX";
 			sourceTree = "<group>";
