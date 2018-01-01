@@ -7,6 +7,8 @@ The changelog for `JSQSystemSoundPlayer`. Also see the [releases](https://github
 5.0.0
 -----
 
+This release closes the [5.0.0 milestone](https://github.com/jessesquires/JSQSystemSoundPlayer/milestone/4).
+
 - Minimum iOS version 9.0
 - Minimum tvOS version 9.0
 - Minimum macOS version 10.10
@@ -15,7 +17,7 @@ The changelog for `JSQSystemSoundPlayer`. Also see the [releases](https://github
 4.4.0
 -----
 
-This release closes the [4.4.0 milestone](https://github.com/jessesquires/JSQSystemSoundPlayer/issues?utf8=✓&q=milestone%3A4.4.0+).
+This release closes the [4.4.0 milestone](https://github.com/jessesquires/JSQSystemSoundPlayer/milestone/8).
 
 ### New
 
@@ -25,17 +27,21 @@ This release closes the [4.4.0 milestone](https://github.com/jessesquires/JSQSys
 4.3.1
 -----
 
-This release closes the [4.3.1 milestone](https://github.com/jessesquires/JSQSystemSoundPlayer/issues?utf8=✓&q=+milestone%3A4.3.1+).
+This release closes the [4.3.1 milestone](https://github.com/jessesquires/JSQSystemSoundPlayer/milestone/7).
 
 - No new features, just clean up and organization.
 
 4.3.0
 -----
 
+This release closes the [4.3.0 milestone](https://github.com/jessesquires/JSQSystemSoundPlayer/milestone/6).
+
 Added tvOS support :tada:
 
 4.2.0
 -----
+
+This release closes the [4.2.0 milestone](https://github.com/jessesquires/JSQSystemSoundPlayer/milestone/5).
 
 You can now create a sound player instance via `init` or `initWithBundle:` instead of using the `sharedInstance`.
 
@@ -43,6 +49,8 @@ Technically, you always could have used `init`, but now it's more explicit and d
 
 4.1.0
 -----
+
+This release closes the [4.1.0 milestone](https://github.com/jessesquires/JSQSystemSoundPlayer/milestone/3).
 
 ## What's New
 
@@ -63,6 +71,8 @@ Use `playAlertSoundWithFilename:fileExtension:completion:` instead
 3.0.0
 -----
 
+This release closes the [3.0.0 milestone](https://github.com/jessesquires/JSQSystemSoundPlayer/milestone/2).
+
 Now uses Cocoa Touch framework! (#12)
 
 Carthage compatible! (#12)
@@ -78,7 +88,7 @@ Added example project for OS X
 
 Support for [CocoaPods 0.36](http://blog.cocoapods.org/Pod-Authors-Guide-to-CocoaPods-Frameworks/).
 
-See [milestone 2.0.1](https://github.com/jessesquires/JSQSystemSoundPlayer/issues?q=milestone%3A%22Release+2.0.1%22).
+See [milestone 2.0.1](https://github.com/jessesquires/JSQSystemSoundPlayer/milestone/1).
 
 2.0.0 - 1.0.0
 -------------
