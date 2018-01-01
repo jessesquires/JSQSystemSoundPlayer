@@ -114,7 +114,6 @@ receiving the <code>UIApplicationDidReceiveMemoryWarningNotification</code> noti
                         <p>Returns whether or not the sound player is on.
 That is, whether the sound player is enabled or disabled.
 If disabled, it will not play sounds.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <code>toggleSoundPlayerOn:</code>
@@ -203,7 +202,6 @@ The default value is the main bundle. This value must not be <code>nil</code>.</
                       <div>
                         <h4>Return Value</h4>
                         <p>A shared instance of <code>JSQSystemSoundPlayer</code>.</p>
-
                       </div>
                     </section>
                   </div>
@@ -222,7 +220,6 @@ The default value is the main bundle. This value must not be <code>nil</code>.</
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a new <code>JSQSystemSoundPlayer</code> instance with the specified bundle.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>Completion blocks are only called for sounds played with the shared player.</p>
@@ -256,7 +253,6 @@ The default value is the main bundle. This value must not be <code>nil</code>.</
                               <td>
                                 <div>
                                   <p>The bundle in which the sound player uses to search for sound file resources.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -266,7 +262,6 @@ The default value is the main bundle. This value must not be <code>nil</code>.</
                       <div>
                         <h4>Return Value</h4>
                         <p>An initialized <code>JSQSystemSoundPlayer</code> object.</p>
-
                       </div>
                     </section>
                   </div>
@@ -285,7 +280,6 @@ The default value is the main bundle. This value must not be <code>nil</code>.</
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a new <code>JSQSystemSoundPlayer</code> instance using the main bundle.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>Completion blocks are only called for sounds played with the shared player.</p>
@@ -309,7 +303,6 @@ The default value is the main bundle. This value must not be <code>nil</code>.</
                       <div>
                         <h4>Return Value</h4>
                         <p>An initialized <code>JSQSystemSoundPlayer</code> object.</p>
-
                       </div>
                     </section>
                   </div>
@@ -330,7 +323,6 @@ The default value is the main bundle. This value must not be <code>nil</code>.</
                         <p>Toggles the sound player on or off by setting the <code><a href="../Constants.html#/c:@kJSQSystemSoundPlayerUserDefaultsKey">kJSQSystemSoundPlayerUserDefaultsKey</a></code> key in <code>NSUserDefaults</code> to the given value.
 This will enable or disable the playing of sounds via <code>JSQSystemSoundPlayer</code> globally.
 This setting is persisted across application launches.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>Disabling the sound player (passing a value of <code>NO</code>) will invoke the <code>stopAllSounds</code> method.</p>
@@ -365,7 +357,6 @@ This setting is persisted across application launches.</p>
                                 <div>
                                   <p>A boolean indicating whether or not to enable or disable the sound player settings.
 Pass <code>YES</code> to turn sounds on, and <code>NO</code> to turn sounds off.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -392,14 +383,12 @@ Pass <code>YES</code> to turn sounds on, and <code>NO</code> to turn sounds off.
 and excutes <code>completionBlock</code> when the sound has stopped playing.
 The system sound player will lazily initialize and load the file before playing it, and then cache its corresponding <code>SystemSoundID</code>.
 If this file has previously been played, it will be loaded from cache and played immediately.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>The fileExtension parameter must be one of <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeCAF">kJSQSystemSoundTypeCAF</a></code>, <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeAIF">kJSQSystemSoundTypeAIF</a></code>,
 <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeAIFF">kJSQSystemSoundTypeAIFF</a></code>, or <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeWAV">kJSQSystemSoundTypeWAV</a></code>.</p>
 
 </div>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>If the system sound object cannot be created, this method does nothing.</p>
@@ -436,7 +425,6 @@ If this file has previously been played, it will be loaded from cache and played
                               <td>
                                 <div>
                                   <p>A string containing the base name of the audio file to play.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -449,7 +437,6 @@ If this file has previously been played, it will be loaded from cache and played
                               <td>
                                 <div>
                                   <p>A string containing the extension of the audio file to play.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -463,7 +450,6 @@ If this file has previously been played, it will be loaded from cache and played
                                 <div>
                                   <p>A block called after the sound has stopped playing.
 This block is retained by <code>JSQSystemSoundPlayer</code>, temporarily cached, and released after its execution.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -490,20 +476,17 @@ This block is retained by <code>JSQSystemSoundPlayer</code>, temporarily cached,
 and and excutes <code>completionBlock</code> when the sound has stopped playing.
 The system sound player will lazily initialize and load the file before playing it, and then cache its corresponding <code>SystemSoundID</code>.
 If this file has previously been played, it will be loaded from cache and played immediately.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>The fileExtension parameter must be one of <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeCAF">kJSQSystemSoundTypeCAF</a></code>, <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeAIF">kJSQSystemSoundTypeAIF</a></code>,
 <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeAIFF">kJSQSystemSoundTypeAIFF</a></code>, or <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeWAV">kJSQSystemSoundTypeWAV</a></code>.</p>
 
 </div>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>If the system sound object cannot be created, this method does nothing.</p>
 
 </div>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method performs the same functions as <code>playSoundWithName: extension: completion:</code>,
@@ -542,7 +525,6 @@ with the excepion that, depending on the particular iOS device, this method may 
                               <td>
                                 <div>
                                   <p>A string containing the base name of the audio file to play.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -555,7 +537,6 @@ with the excepion that, depending on the particular iOS device, this method may 
                               <td>
                                 <div>
                                   <p>A string containing the extension of the audio file to play.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -569,7 +550,6 @@ with the excepion that, depending on the particular iOS device, this method may 
                                 <div>
                                   <p>A block called after the sound has stopped playing.
 This block is retained by <code>JSQSystemSoundPlayer</code>, temporarily cached, and released after its execution.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -624,7 +604,6 @@ This block is retained by <code>JSQSystemSoundPlayer</code>, temporarily cached,
                               <td>
                                 <div>
                                   <p>The SystemSoundID to play.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -637,7 +616,6 @@ This block is retained by <code>JSQSystemSoundPlayer</code>, temporarily cached,
                               <td>
                                 <div>
                                   <p>Specifies whether or not the sound should be played as an alert.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -650,8 +628,7 @@ This block is retained by <code>JSQSystemSoundPlayer</code>, temporarily cached,
                               <td>
                                 <div>
                                   <p>A block called after the sound has stopped playing.
- This block is retained by <code>JSQSystemSoundPlayer</code>, temporarily cached, and released after its execution.</p>
-
+This block is retained by <code>JSQSystemSoundPlayer</code>, temporarily cached, and released after its execution.</p>
                                 </div>
                               </td>
                             </tr>
@@ -675,7 +652,6 @@ This block is retained by <code>JSQSystemSoundPlayer</code>, temporarily cached,
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Stops playing all sounds immediately.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     Any completion blocks attached to any currently playing sound will <em>not</em> be executed.
@@ -714,7 +690,6 @@ Calling this method will purge all <code>SystemSoundID</code> objects from cache
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Stops playing the sound with the given filename immediately.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>If a completion block is attached to the given sound, it will <em>not</em> be executed.
@@ -749,7 +724,6 @@ Calling this method will purge the <code>SystemSoundID</code> object for this fi
                               <td>
                                 <div>
                                   <p>The filename of the sound to stop playing.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -774,7 +748,6 @@ Calling this method will purge the <code>SystemSoundID</code> object for this fi
                       <div class="abstract">
                         <p>Preloads a system sound object corresponding to an audio file with the given filename and extension.
 The system sound player will initialize, load, and cache the corresponding <code>SystemSoundID</code>.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>The fileExtension parameter must be one of <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeCAF">kJSQSystemSoundTypeCAF</a></code>, <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeAIF">kJSQSystemSoundTypeAIF</a></code>,
@@ -810,7 +783,6 @@ The system sound player will initialize, load, and cache the corresponding <code
                               <td>
                                 <div>
                                   <p>A string containing the base name of the audio file to play.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -823,7 +795,6 @@ The system sound player will initialize, load, and cache the corresponding <code
                               <td>
                                 <div>
                                   <p>A string containing the extension of the audio file to play.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -838,8 +809,8 @@ The system sound player will initialize, load, and cache the corresponding <code
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2017-01-08)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2018 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2018-01-01)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
