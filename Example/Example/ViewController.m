@@ -1,10 +1,10 @@
 //
 //  Created by Jesse Squires
-//  http://www.jessesquires.com
+//  https://www.jessesquires.com
 //
 //
 //  Documentation
-//  http://jessesquires.github.io/JSQSystemSoundPlayer
+//  https://jessesquires.github.io/JSQSystemSoundPlayer
 //
 //
 //  GitHub
@@ -12,8 +12,8 @@
 //
 //
 //  License
-//  Copyright (c) 2015 Jesse Squires
-//  Released under an MIT license: http://opensource.org/licenses/MIT
+//  Copyright © 2013-present Jesse Squires
+//  Released under an MIT license: https://opensource.org/licenses/MIT
 //
 
 #import "ViewController.h"

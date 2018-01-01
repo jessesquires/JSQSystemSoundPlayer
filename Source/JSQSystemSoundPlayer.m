@@ -1,10 +1,10 @@
 //
 //  Created by Jesse Squires
-//  http://www.jessesquires.com
+//  https://www.jessesquires.com
 //
 //
 //  Documentation
-//  http://jessesquires.github.io/JSQSystemSoundPlayer
+//  https://jessesquires.github.io/JSQSystemSoundPlayer
 //
 //
 //  GitHub
@@ -12,8 +12,8 @@
 //
 //
 //  License
-//  Copyright (c) 2015 Jesse Squires
-//  Released under an MIT license: http://opensource.org/licenses/MIT
+//  Copyright © 2013-present Jesse Squires
+//  Released under an MIT license: https://opensource.org/licenses/MIT
 //
 
 #import "JSQSystemSoundPlayer.h"
@@ -81,12 +81,12 @@ static void systemServicesSoundCompletion(SystemSoundID  soundID, void *data) {
         _sounds = [[NSMutableDictionary alloc] init];
         _completionBlocks = [[NSMutableDictionary alloc] init];
 
-        #if TARGET_OS_IPHONE
+#if TARGET_OS_IPHONE
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(didReceiveMemoryWarningNotification:)
                                                      name:UIApplicationDidReceiveMemoryWarningNotification
                                                    object:nil];
-        #endif
+#endif
     }
     return self;
 }

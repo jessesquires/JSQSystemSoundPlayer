@@ -36,9 +36,9 @@ See [AVAudioPlayer](https://developer.apple.com/library/ios/DOCUMENTATION/AVFoun
 ## Requirements
 
 * Xcode 9+
-* iOS 6.0+
-* OS X 10.7+
+* iOS 9.0+
 * tvOS 9.0+
+* macOS 10.10+
 
 ## Installation
 

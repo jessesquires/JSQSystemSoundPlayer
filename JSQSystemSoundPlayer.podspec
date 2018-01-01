@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
 
    s.summary = 'A fancy Obj-C wrapper for Cocoa System Sound Services'
    s.homepage = 'https://github.com/jessesquires/JSQSystemSoundPlayer'
-   s.documentation_url = 'http://jessesquires.com/JSQSystemSoundPlayer'
+   s.documentation_url = 'https://jessesquires.github.io/JSQSystemSoundPlayer/'
 
    s.social_media_url = 'https://twitter.com/jesse_squires'
    s.author = 'Jesse Squires'
@@ -13,8 +13,8 @@ Pod::Spec.new do |s|
    s.source = { :git => 'https://github.com/jessesquires/JSQSystemSoundPlayer.git', :tag => s.version }
    s.source_files = 'Source/*.{h,m}'
 
-   s.ios.deployment_target = '6.0'
-   s.osx.deployment_target = '10.7'
+   s.ios.deployment_target = '9.0'
+   s.osx.deployment_target = '10.10'
    s.tvos.deployment_target = '9.0'
 
    s.frameworks = 'AudioToolbox'

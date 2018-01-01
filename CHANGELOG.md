@@ -4,6 +4,14 @@ The changelog for `JSQSystemSoundPlayer`. Also see the [releases](https://github
 
 --------------------------------------
 
+5.0.0
+-----
+
+- Minimum iOS version 9.0
+- Minimum tvOS version 9.0
+- Minimum macOS version 10.10
+- Modernize example projects, general cleanup
+
 4.4.0
 -----
 
