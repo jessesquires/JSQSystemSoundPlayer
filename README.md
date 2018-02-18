@@ -23,6 +23,26 @@ See [AVAudioPlayer](https://developer.apple.com/library/ios/DOCUMENTATION/AVFoun
 
 ![screenshot ios][imgLinkiOS] &nbsp;&nbsp;&nbsp; ![screenshot osx][imgLinkOSX]
 
+## Usage
+
+```objc
+JSQSystemSoundPlayer *sharedPlayer = [JSQSystemSoundPlayer sharedPlayer];
+
+// Play a built-in sound
+[sharedPlayer playSoundWithSoundID:1000 // new mail sound
+                           asAlert:YES
+                        completion:^{
+                            NSLog(@"Sound finished playing. Executing completion block...");
+                        }];
+
+// Play a sound from a file
+[sharedPlayer playSoundWithFilename:@"Basso"
+                      fileExtension:kJSQSystemSoundTypeAIF
+                         completion:^{
+                             NSLog(@"Sound finished playing. Executing completion block...");
+                         }];
+```
+
 ## Features
 
 * Play sound effects and alert sounds with a single line of code
