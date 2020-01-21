@@ -1,5 +1,7 @@
-language: objective-c
-osx_image: xcode10.1
+os: osx
+osx_image: xcode11.3
+rvm: 2.6.4
+
 branches:
   only:
     - master
@@ -14,9 +16,9 @@ env:
    - TVOS_SCHEME="JSQSystemSoundPlayer-tvOS"
    - OSX_SCHEME="JSQSystemSoundPlayer-OSX"
 
-   - IOS_SDK=iphonesimulator12.1
-   - TVOS_SDK=appletvsimulator12.1
-   - OSX_SDK=macosx10.14
+   - IOS_SDK=iphonesimulator13.2
+   - TVOS_SDK=appletvsimulator13.2
+   - OSX_SDK=macosx10.15
 
    matrix:
    - DESTINATION="OS=9.3,name=iPhone 6s" SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES" BUILD_EXAMPLE="YES" POD_LINT="YES"
@@ -27,10 +29,13 @@ env:
 
    - DESTINATION="OS=12.1,name=iPhone X" SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES" BUILD_EXAMPLE="YES" POD_LINT="NO"
 
+   - DESTINATION="OS=13.2.2,name=iPhone 11" SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES" BUILD_EXAMPLE="YES" POD_LINT="NO"
+
    - DESTINATION="arch=x86_64" SDK="$OSX_SDK" SCHEME="$OSX_SCHEME" RUN_TESTS="NO" BUILD_EXAMPLE="YES" POD_LINT="NO"
 
    - DESTINATION="OS=11.4,name=Apple TV" SDK="$TVOS_SDK" SCHEME="$TVOS_SCHEME" RUN_TESTS="NO" BUILD_EXAMPLE="NO" POD_LINT="NO"
    - DESTINATION="OS=12.1,name=Apple TV" SDK="$TVOS_SDK" SCHEME="$TVOS_SCHEME" RUN_TESTS="NO" BUILD_EXAMPLE="NO" POD_LINT="NO"
+   - DESTINATION="OS=13.2,name=Apple TV" SDK="$TVOS_SDK" SCHEME="$TVOS_SCHEME" RUN_TESTS="NO" BUILD_EXAMPLE="NO" POD_LINT="NO"
 
 before_install:
    - gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
