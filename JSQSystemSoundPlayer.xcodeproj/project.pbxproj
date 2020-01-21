@@ -237,7 +237,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = JSQ;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Jesse Squires";
 				TargetAttributes = {
 					884DF6621AF6E96700D97D16 = {
@@ -257,10 +257,11 @@
 			};
 			buildConfigurationList = 8892FA981AF6E4DA00F2D347 /* Build configuration list for PBXProject "JSQSystemSoundPlayer" */;
 			compatibilityVersion = "Xcode 8.0";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 8892FA941AF6E4DA00F2D347;
 			productRefGroup = 8892FA9F1AF6E4DA00F2D347 /* Products */;
@@ -402,6 +403,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -461,6 +463,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
