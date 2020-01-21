@@ -38,7 +38,7 @@ env:
    - DESTINATION="OS=13.2,name=Apple TV" SDK="$TVOS_SDK" SCHEME="$TVOS_SCHEME" RUN_TESTS="NO" BUILD_EXAMPLE="NO" POD_LINT="NO"
 
 before_install:
-   - gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
+   - gem install cocoapods --without=documentation
 
 script:
 - set -o pipefail
