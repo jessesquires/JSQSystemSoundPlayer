@@ -20,7 +20,7 @@
 #import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioToolbox.h>
 
-#import <JSQSystemSoundPlayer/JSQSystemSoundPlayer.h>
+#import "JSQSystemSoundPlayer.h"
 
 static NSString * const kSoundBasso = @"Basso";
 static NSString * const kSoundFunk = @"Funk";
@@ -72,7 +72,11 @@ static SystemSoundID const kSoundNewMail = 1000;
 - (void)setUp
 {
     [super setUp];
+    #ifdef SWIFTPM_MODULE_BUNDLE
+    self.soundPlayer = [[JSQSystemSoundPlayer alloc] initWithBundle:SWIFTPM_MODULE_BUNDLE];
+    #else
     self.soundPlayer = [[JSQSystemSoundPlayer alloc] initWithBundle:[NSBundle bundleForClass:[self class]]];
+    #endif
     [self.soundPlayer toggleSoundPlayerOn:YES];
 }
 
@@ -218,7 +222,11 @@ static SystemSoundID const kSoundNewMail = 1000;
 - (void)testSoundCompletionBlocks
 {
     JSQSystemSoundPlayer *player = [JSQSystemSoundPlayer sharedPlayer];
+    #ifdef SWIFTPM_MODULE_BUNDLE
+    player.bundle = SWIFTPM_MODULE_BUNDLE;
+    #else
     player.bundle = [NSBundle bundleForClass:[self class]];
+    #endif
     [player toggleSoundPlayerOn:YES];
 
     XCTestExpectation *expectation = [self expectationWithDescription:[NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__]];

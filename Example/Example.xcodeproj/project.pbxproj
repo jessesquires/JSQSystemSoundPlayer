@@ -17,16 +17,16 @@
 		884ED38C1AF6F412009CE403 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 884ED38B1AF6F412009CE403 /* main.m */; };
 		884ED38E1AF6F412009CE403 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 884ED38D1AF6F412009CE403 /* Images.xcassets */; };
 		884ED3911AF6F412009CE403 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 884ED38F1AF6F412009CE403 /* MainMenu.xib */; };
-		88785D371C68726C00E34EDA /* BalladPiano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 88785D341C68726C00E34EDA /* BalladPiano.caf */; };
-		88785D381C68726C00E34EDA /* BalladPiano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 88785D341C68726C00E34EDA /* BalladPiano.caf */; };
-		88785D391C68726C00E34EDA /* Basso.aif in Resources */ = {isa = PBXBuildFile; fileRef = 88785D351C68726C00E34EDA /* Basso.aif */; };
-		88785D3A1C68726C00E34EDA /* Basso.aif in Resources */ = {isa = PBXBuildFile; fileRef = 88785D351C68726C00E34EDA /* Basso.aif */; };
-		88785D3B1C68726C00E34EDA /* Funk.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 88785D361C68726C00E34EDA /* Funk.aiff */; };
-		88785D3C1C68726C00E34EDA /* Funk.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 88785D361C68726C00E34EDA /* Funk.aiff */; };
 		88785D3D1C68729B00E34EDA /* JSQSystemSoundPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88785D2B1C6871C600E34EDA /* JSQSystemSoundPlayer.framework */; };
 		88785D3E1C68729B00E34EDA /* JSQSystemSoundPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 88785D2B1C6871C600E34EDA /* JSQSystemSoundPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		88785D411C6872A300E34EDA /* JSQSystemSoundPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88785D2F1C6871C600E34EDA /* JSQSystemSoundPlayer.framework */; };
 		88785D421C6872A300E34EDA /* JSQSystemSoundPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 88785D2F1C6871C600E34EDA /* JSQSystemSoundPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8998859F28F34F15007BF23D /* Funk.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 8998859C28F34F15007BF23D /* Funk.aiff */; };
+		899885A028F34F15007BF23D /* Funk.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 8998859C28F34F15007BF23D /* Funk.aiff */; };
+		899885A128F34F15007BF23D /* BalladPiano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8998859D28F34F15007BF23D /* BalladPiano.caf */; };
+		899885A228F34F15007BF23D /* BalladPiano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8998859D28F34F15007BF23D /* BalladPiano.caf */; };
+		899885A328F34F15007BF23D /* Basso.aif in Resources */ = {isa = PBXBuildFile; fileRef = 8998859E28F34F15007BF23D /* Basso.aif */; };
+		899885A428F34F15007BF23D /* Basso.aif in Resources */ = {isa = PBXBuildFile; fileRef = 8998859E28F34F15007BF23D /* Basso.aif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,9 +118,9 @@
 		884ED38D1AF6F412009CE403 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		884ED3901AF6F412009CE403 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		88785D231C6871C600E34EDA /* JSQSystemSoundPlayer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSQSystemSoundPlayer.xcodeproj; path = ../JSQSystemSoundPlayer.xcodeproj; sourceTree = "<group>"; };
-		88785D341C68726C00E34EDA /* BalladPiano.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BalladPiano.caf; sourceTree = "<group>"; };
-		88785D351C68726C00E34EDA /* Basso.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = Basso.aif; sourceTree = "<group>"; };
-		88785D361C68726C00E34EDA /* Funk.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Funk.aiff; sourceTree = "<group>"; };
+		8998859C28F34F15007BF23D /* Funk.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Funk.aiff; sourceTree = "<group>"; };
+		8998859D28F34F15007BF23D /* BalladPiano.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BalladPiano.caf; sourceTree = "<group>"; };
+		8998859E28F34F15007BF23D /* Basso.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = Basso.aif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +149,7 @@
 				88785D231C6871C600E34EDA /* JSQSystemSoundPlayer.xcodeproj */,
 				8842B1E41AF6ECBD000FFC99 /* Example-iOS */,
 				884ED3851AF6F412009CE403 /* Example-OSX */,
-				88785D331C68726C00E34EDA /* Sample sounds */,
+				8998859B28F34F15007BF23D /* SampleSounds */,
 				8842B1E31AF6ECBD000FFC99 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -204,15 +204,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		88785D331C68726C00E34EDA /* Sample sounds */ = {
+		8998859B28F34F15007BF23D /* SampleSounds */ = {
 			isa = PBXGroup;
 			children = (
-				88785D341C68726C00E34EDA /* BalladPiano.caf */,
-				88785D351C68726C00E34EDA /* Basso.aif */,
-				88785D361C68726C00E34EDA /* Funk.aiff */,
+				8998859C28F34F15007BF23D /* Funk.aiff */,
+				8998859D28F34F15007BF23D /* BalladPiano.caf */,
+				8998859E28F34F15007BF23D /* Basso.aif */,
 			);
-			name = "Sample sounds";
-			path = "../Sample sounds";
+			name = SampleSounds;
+			path = ../Tests/SampleSounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,10 +336,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8842B1F11AF6ECBD000FFC99 /* Main.storyboard in Resources */,
-				88785D391C68726C00E34EDA /* Basso.aif in Resources */,
+				899885A328F34F15007BF23D /* Basso.aif in Resources */,
+				8998859F28F34F15007BF23D /* Funk.aiff in Resources */,
 				8842B1F61AF6ECBD000FFC99 /* LaunchScreen.xib in Resources */,
-				88785D3B1C68726C00E34EDA /* Funk.aiff in Resources */,
-				88785D371C68726C00E34EDA /* BalladPiano.caf in Resources */,
+				899885A128F34F15007BF23D /* BalladPiano.caf in Resources */,
 				8842B1F31AF6ECBD000FFC99 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,11 +348,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88785D381C68726C00E34EDA /* BalladPiano.caf in Resources */,
+				899885A028F34F15007BF23D /* Funk.aiff in Resources */,
+				899885A428F34F15007BF23D /* Basso.aif in Resources */,
 				884ED38E1AF6F412009CE403 /* Images.xcassets in Resources */,
+				899885A228F34F15007BF23D /* BalladPiano.caf in Resources */,
 				884ED3911AF6F412009CE403 /* MainMenu.xib in Resources */,
-				88785D3A1C68726C00E34EDA /* Basso.aif in Resources */,
-				88785D3C1C68726C00E34EDA /* Funk.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
