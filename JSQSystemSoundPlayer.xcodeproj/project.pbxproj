@@ -14,10 +14,10 @@
 		88785D0A1C68700700E34EDA /* JSQSystemSoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 88785D021C68700700E34EDA /* JSQSystemSoundPlayer.m */; };
 		88785D0B1C68700700E34EDA /* JSQSystemSoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 88785D021C68700700E34EDA /* JSQSystemSoundPlayer.m */; };
 		88785D101C68706300E34EDA /* JSQSystemSoundPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88785D0E1C68706300E34EDA /* JSQSystemSoundPlayerTests.m */; };
-		88785D1F1C68716900E34EDA /* BalladPiano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 88785D1C1C68716900E34EDA /* BalladPiano.caf */; };
-		88785D201C68716900E34EDA /* Basso.aif in Resources */ = {isa = PBXBuildFile; fileRef = 88785D1D1C68716900E34EDA /* Basso.aif */; };
-		88785D211C68716900E34EDA /* Funk.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 88785D1E1C68716900E34EDA /* Funk.aiff */; };
 		8892FAAA1AF6E4DA00F2D347 /* JSQSystemSoundPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8892FA9E1AF6E4DA00F2D347 /* JSQSystemSoundPlayer.framework */; };
+		896C479228F34E97008A5CFB /* Funk.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 896C478F28F34E97008A5CFB /* Funk.aiff */; };
+		896C479328F34E97008A5CFB /* BalladPiano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 896C479028F34E97008A5CFB /* BalladPiano.caf */; };
+		896C479428F34E97008A5CFB /* Basso.aif in Resources */ = {isa = PBXBuildFile; fileRef = 896C479128F34E97008A5CFB /* Basso.aif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,12 +37,12 @@
 		88785D021C68700700E34EDA /* JSQSystemSoundPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSQSystemSoundPlayer.m; sourceTree = "<group>"; };
 		88785D0D1C68706300E34EDA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88785D0E1C68706300E34EDA /* JSQSystemSoundPlayerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSQSystemSoundPlayerTests.m; sourceTree = "<group>"; };
-		88785D1C1C68716900E34EDA /* BalladPiano.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BalladPiano.caf; sourceTree = "<group>"; };
-		88785D1D1C68716900E34EDA /* Basso.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = Basso.aif; sourceTree = "<group>"; };
-		88785D1E1C68716900E34EDA /* Funk.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Funk.aiff; sourceTree = "<group>"; };
 		8892FA9E1AF6E4DA00F2D347 /* JSQSystemSoundPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSQSystemSoundPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8892FAA91AF6E4DA00F2D347 /* JSQSystemSoundPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSQSystemSoundPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88F4692F1C0BE399001F70F4 /* JSQSystemSoundPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSQSystemSoundPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		896C478F28F34E97008A5CFB /* Funk.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Funk.aiff; sourceTree = "<group>"; };
+		896C479028F34E97008A5CFB /* BalladPiano.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BalladPiano.caf; sourceTree = "<group>"; };
+		896C479128F34E97008A5CFB /* Basso.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = Basso.aif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,20 +93,10 @@
 			children = (
 				88785D0D1C68706300E34EDA /* Info.plist */,
 				88785D0E1C68706300E34EDA /* JSQSystemSoundPlayerTests.m */,
-				88785D1B1C68716900E34EDA /* Sample sounds */,
+				896C478E28F34E97008A5CFB /* SampleSounds */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
-		};
-		88785D1B1C68716900E34EDA /* Sample sounds */ = {
-			isa = PBXGroup;
-			children = (
-				88785D1C1C68716900E34EDA /* BalladPiano.caf */,
-				88785D1D1C68716900E34EDA /* Basso.aif */,
-				88785D1E1C68716900E34EDA /* Funk.aiff */,
-			);
-			path = "Sample sounds";
-			sourceTree = SOURCE_ROOT;
 		};
 		8892FA941AF6E4DA00F2D347 = {
 			isa = PBXGroup;
@@ -126,6 +116,16 @@
 				88F4692F1C0BE399001F70F4 /* JSQSystemSoundPlayer.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		896C478E28F34E97008A5CFB /* SampleSounds */ = {
+			isa = PBXGroup;
+			children = (
+				896C478F28F34E97008A5CFB /* Funk.aiff */,
+				896C479028F34E97008A5CFB /* BalladPiano.caf */,
+				896C479128F34E97008A5CFB /* Basso.aif */,
+			);
+			path = SampleSounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,9 +295,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88785D211C68716900E34EDA /* Funk.aiff in Resources */,
-				88785D1F1C68716900E34EDA /* BalladPiano.caf in Resources */,
-				88785D201C68716900E34EDA /* Basso.aif in Resources */,
+				896C479328F34E97008A5CFB /* BalladPiano.caf in Resources */,
+				896C479428F34E97008A5CFB /* Basso.aif in Resources */,
+				896C479228F34E97008A5CFB /* Funk.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
